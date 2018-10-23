@@ -1,3 +1,14 @@
-<p>
-  header works!
-</p>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+  <!-- logo -->
+  <a class="navbar-brand">
+      <img [src]="imgSrc"
+      (mouseover)="imgSrc = '../../assets/img/logoB.png'"
+      (mouseout)="imgSrc = '../../assets/img/logoA.png'" style="width: 120px; height: auto;">
+  </a>
+  <button class="square-top" (click)="toggleApp()" title="Hide/Show applications">
+      <span *ngIf="shareCollection.showApp==false" class="glyphicon glyphicon-resize-small"></span>
+      <span *ngIf="shareCollection.showApp==true" class="glyphicon glyphicon-resize-full"></span>
+  </button>
+  
+</nav>

@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "App1",
+        "icon": "../../assets/img/uxhub.png"
+    },
+    {
+        "id": 2,
+        "name": "App2",
+        "icon": "../../assets/img/uxhub.png"
+    },
+    {
+        "id": 3,
+        "name": "App3",
+        "icon": "../../assets/img/uxhub.png"
+    },
+    {
+        "id": 4,
+        "name": "App4",
+        "icon": "../../assets/img/uxhub.png"
+    },
+    {
+        "id": 5,
+        "name": "App5",
+        "icon": "../../assets/img/uxhub.png"
+    }
+]
