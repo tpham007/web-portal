@@ -23,5 +23,25 @@
         "id": 5,
         "name": "App5",
         "icon": "../../assets/img/uxhub.png"
+    },
+    {
+        "id": 6,
+        "name": "App6",
+        "icon": "../../assets/img/uxhub.png"
+    },
+    {
+        "id": 7,
+        "name": "App7",
+        "icon": "../../assets/img/uxhub.png"
+    },
+    {
+        "id": 8,
+        "name": "App8",
+        "icon": "../../assets/img/uxhub.png"
+    },
+    {
+        "id": 9,
+        "name": "App9",
+        "icon": "../../assets/img/uxhub.png"
     }
 ]

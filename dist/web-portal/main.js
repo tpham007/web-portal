@@ -78,7 +78,7 @@ module.exports = "@import url(\"//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bo
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<app-header [shareCollection]=\"shareCollection\"></app-header>\n\n<div class=\"parent\" [style.max-height.px]=\"height\">\n  <div class=\"col-sm-2\" style=\"text-align:center;\" [ngClass]=\"{'hiding-out':!shareCollection.showApp}\">\n    <app-left-panel [shareCollection]=\"shareCollection\"></app-left-panel>\n  </div>\n  <div class=\"col-sm-8\">\n    <app-workspace></app-workspace>\n  </div>\n  <div class=\"col-sm-2\" style=\"text-align:center;\" [ngClass]=\"{'hiding-out':!shareCollection.showApp}\">\n    <app-right-panel [shareCollection]=\"shareCollection\"></app-right-panel>\n  </div>\n</div>\n\n<app-footer></app-footer>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<app-header [shareCollection]=\"shareCollection\"></app-header>\n\n<div class=\"parent\" [style.max-height.px]=\"height\">\n  <div class=\"d-none d-md-block d-lg-block d-xl-block\" style=\"text-align:center;\" [ngStyle]=\"{'width':shareCollection.showApp==true?'12%':'0%'}\">\n    <app-left-panel [shareCollection]=\"shareCollection\"></app-left-panel>\n  </div>\n  <div [ngStyle]=\"{'width':shareCollection.showApp==true?'76%':'100%'}\">\n    <app-workspace></app-workspace>\n  </div>\n  <div class=\"d-none d-md-block d-lg-block d-xl-block\" style=\"text-align:center;\" [ngStyle]=\"{'width':shareCollection.showApp==true?'12%':'0%'}\">\n    <app-right-panel [shareCollection]=\"shareCollection\"></app-right-panel>\n  </div>\n</div>\n\n<app-footer></app-footer>\n"
 
 /***/ }),
 
@@ -113,12 +113,12 @@ var ShareCollection = /** @class */ (function () {
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'Harmonic Portal';
-        this.height = window.innerHeight - 120;
+        this.height = window.innerHeight - 180;
         this.shareCollection = new ShareCollection();
         this.shareCollection.showApp = true;
     }
     AppComponent.prototype.onResize = function (event) {
-        this.height = event.target.innerHeight - 120;
+        this.height = event.target.innerHeight - 180;
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('window:resize', ['$event']),
@@ -230,7 +230,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card\" style=\"margin:10px;\">\n  <div class=\"card-header\">{{app.name}}</div>\n  <div class=\"card-body\">\n    <img src=\"{{app.icon}}\" style=\"height:50px;width:auto;\">\n  </div>\n</div>"
+module.exports = "<div class=\"card\" style=\"margin:10px;\">\n  <div class=\"card-header\">{{app.name}}</div>\n  <div class=\"card-body\">\n    <img src=\"{{app.icon}}\" style=\"height:24px;width:auto;\">\n  </div>\n</div>"
 
 /***/ }),
 
@@ -371,7 +371,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".square-top {\n    position: absolute;\n    top: 80px;\n    width: 48px;\n    height: 22px;\n    z-index: 999;\n    left: 48%;\n    border-radius: 5px;\n    opacity: .5;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksbUJBQW1CO0lBQ25CLFVBQVU7SUFDVixZQUFZO0lBQ1osYUFBYTtJQUNiLGFBQWE7SUFDYixVQUFVO0lBQ1YsbUJBQW1CO0lBQ25CLFlBQVk7Q0FDZiIsImZpbGUiOiJzcmMvYXBwL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zcXVhcmUtdG9wIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiA4MHB4O1xuICAgIHdpZHRoOiA0OHB4O1xuICAgIGhlaWdodDogMjJweDtcbiAgICB6LWluZGV4OiA5OTk7XG4gICAgbGVmdDogNDglO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBvcGFjaXR5OiAuNTtcbn0iXX0= */"
+module.exports = ".square-top {\n    position: absolute;\n    top: 50px;\n    width: 48px;\n    height: 22px;\n    z-index: 999;\n    left: 48.1%;\n    border-radius: 5px;\n    opacity: .5;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksbUJBQW1CO0lBQ25CLFVBQVU7SUFDVixZQUFZO0lBQ1osYUFBYTtJQUNiLGFBQWE7SUFDYixZQUFZO0lBQ1osbUJBQW1CO0lBQ25CLFlBQVk7Q0FDZiIsImZpbGUiOiJzcmMvYXBwL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zcXVhcmUtdG9wIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiA1MHB4O1xuICAgIHdpZHRoOiA0OHB4O1xuICAgIGhlaWdodDogMjJweDtcbiAgICB6LWluZGV4OiA5OTk7XG4gICAgbGVmdDogNDguMSU7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIG9wYWNpdHk6IC41O1xufSJdfQ== */"
 
 /***/ }),
 
@@ -445,7 +445,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".app-panel {\n    width: 100%;\n    height: 100%;\n    overflow-y: scroll;\n    box-sizing: content-box; /* So the width will be 100% + 17px */\n    text-align: center;\n}\ni {\n    border: solid black;\n    border-width: 0 2px 2px 0;\n    display: inline-block;\n    padding: 4px;\n}\n.circle-top {\n    position: absolute;\n    top: 16px;\n    width: 32px;\n    height: 32px;\n    z-index: 999;\n    border-radius: 16px;\n    padding-top: 5px;\n    margin-left: -16px;\n    background-color: lightgray;\n    opacity: .7;\n}\n.circle-bottom {\n    position: absolute;\n    bottom: 16px;\n    width: 32px;\n    height: 32px;\n    z-index: 999;\n    border-radius: 16px;\n    margin-left: -16px;\n    background-color: lightgray;\n    opacity: .7;\n}\n.up {\n    transform: rotate(-135deg);\n    -webkit-transform: rotate(-135deg);\n}\n.down {\n    transform: rotate(45deg);\n    -webkit-transform: rotate(45deg);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGVmdC1wYW5lbC9sZWZ0LXBhbmVsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0lBQ1osYUFBYTtJQUNiLG1CQUFtQjtJQUNuQix3QkFBd0IsQ0FBQyxzQ0FBc0M7SUFDL0QsbUJBQW1CO0NBQ3RCO0FBQ0Q7SUFDSSxvQkFBb0I7SUFDcEIsMEJBQTBCO0lBQzFCLHNCQUFzQjtJQUN0QixhQUFhO0NBQ2hCO0FBQ0Q7SUFDSSxtQkFBbUI7SUFDbkIsVUFBVTtJQUNWLFlBQVk7SUFDWixhQUFhO0lBQ2IsYUFBYTtJQUNiLG9CQUFvQjtJQUNwQixpQkFBaUI7SUFDakIsbUJBQW1CO0lBQ25CLDRCQUE0QjtJQUM1QixZQUFZO0NBQ2Y7QUFDRDtJQUNJLG1CQUFtQjtJQUNuQixhQUFhO0lBQ2IsWUFBWTtJQUNaLGFBQWE7SUFDYixhQUFhO0lBQ2Isb0JBQW9CO0lBQ3BCLG1CQUFtQjtJQUNuQiw0QkFBNEI7SUFDNUIsWUFBWTtDQUNmO0FBQ0Q7SUFDSSwyQkFBMkI7SUFDM0IsbUNBQW1DO0NBQ3RDO0FBQ0Q7SUFDSSx5QkFBeUI7SUFDekIsaUNBQWlDO0NBQ3BDIiwiZmlsZSI6InNyYy9hcHAvbGVmdC1wYW5lbC9sZWZ0LXBhbmVsLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYXBwLXBhbmVsIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgb3ZlcmZsb3cteTogc2Nyb2xsO1xuICAgIGJveC1zaXppbmc6IGNvbnRlbnQtYm94OyAvKiBTbyB0aGUgd2lkdGggd2lsbCBiZSAxMDAlICsgMTdweCAqL1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbmkge1xuICAgIGJvcmRlcjogc29saWQgYmxhY2s7XG4gICAgYm9yZGVyLXdpZHRoOiAwIDJweCAycHggMDtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgcGFkZGluZzogNHB4O1xufVxuLmNpcmNsZS10b3Age1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICB0b3A6IDE2cHg7XG4gICAgd2lkdGg6IDMycHg7XG4gICAgaGVpZ2h0OiAzMnB4O1xuICAgIHotaW5kZXg6IDk5OTtcbiAgICBib3JkZXItcmFkaXVzOiAxNnB4O1xuICAgIHBhZGRpbmctdG9wOiA1cHg7XG4gICAgbWFyZ2luLWxlZnQ6IC0xNnB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IGxpZ2h0Z3JheTtcbiAgICBvcGFjaXR5OiAuNztcbn1cbi5jaXJjbGUtYm90dG9tIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgYm90dG9tOiAxNnB4O1xuICAgIHdpZHRoOiAzMnB4O1xuICAgIGhlaWdodDogMzJweDtcbiAgICB6LWluZGV4OiA5OTk7XG4gICAgYm9yZGVyLXJhZGl1czogMTZweDtcbiAgICBtYXJnaW4tbGVmdDogLTE2cHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogbGlnaHRncmF5O1xuICAgIG9wYWNpdHk6IC43O1xufVxuLnVwIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgtMTM1ZGVnKTtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKC0xMzVkZWcpO1xufVxuLmRvd24ge1xuICAgIHRyYW5zZm9ybTogcm90YXRlKDQ1ZGVnKTtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDQ1ZGVnKTtcbn0iXX0= */"
+module.exports = ".app-panel {\n    width: 100%;\n    height: 100%;\n    overflow-y: scroll;\n    box-sizing: content-box; /* So the width will be 100% + 17px */\n    text-align: center;\n}\ni {\n    border: solid black;\n    border-width: 0 2px 2px 0;\n    display: inline-block;\n    padding: 4px;\n}\n.circle-top {\n    position: -webkit-sticky;\n    position: sticky;\n    top: 16px;\n    width: 32px;\n    height: 32px;\n    z-index: 999;\n    border-radius: 16px;\n    padding-top: 5px;\n    background-color: lightgray;\n    opacity: .7;\n}\n.circle-bottom {\n    position: -webkit-sticky;\n    position: sticky;\n    bottom: 16px;\n    width: 32px;\n    height: 32px;\n    z-index: 999;\n    border-radius: 16px;\n    background-color: lightgray;\n    opacity: .7;\n}\n.up {\n    transform: rotate(-135deg);\n    -webkit-transform: rotate(-135deg);\n}\n.down {\n    transform: rotate(45deg);\n    -webkit-transform: rotate(45deg);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGVmdC1wYW5lbC9sZWZ0LXBhbmVsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0lBQ1osYUFBYTtJQUNiLG1CQUFtQjtJQUNuQix3QkFBd0IsQ0FBQyxzQ0FBc0M7SUFDL0QsbUJBQW1CO0NBQ3RCO0FBQ0Q7SUFDSSxvQkFBb0I7SUFDcEIsMEJBQTBCO0lBQzFCLHNCQUFzQjtJQUN0QixhQUFhO0NBQ2hCO0FBQ0Q7SUFDSSx5QkFBaUI7SUFBakIsaUJBQWlCO0lBQ2pCLFVBQVU7SUFDVixZQUFZO0lBQ1osYUFBYTtJQUNiLGFBQWE7SUFDYixvQkFBb0I7SUFDcEIsaUJBQWlCO0lBQ2pCLDRCQUE0QjtJQUM1QixZQUFZO0NBQ2Y7QUFDRDtJQUNJLHlCQUFpQjtJQUFqQixpQkFBaUI7SUFDakIsYUFBYTtJQUNiLFlBQVk7SUFDWixhQUFhO0lBQ2IsYUFBYTtJQUNiLG9CQUFvQjtJQUNwQiw0QkFBNEI7SUFDNUIsWUFBWTtDQUNmO0FBQ0Q7SUFDSSwyQkFBMkI7SUFDM0IsbUNBQW1DO0NBQ3RDO0FBQ0Q7SUFDSSx5QkFBeUI7SUFDekIsaUNBQWlDO0NBQ3BDIiwiZmlsZSI6InNyYy9hcHAvbGVmdC1wYW5lbC9sZWZ0LXBhbmVsLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYXBwLXBhbmVsIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgb3ZlcmZsb3cteTogc2Nyb2xsO1xuICAgIGJveC1zaXppbmc6IGNvbnRlbnQtYm94OyAvKiBTbyB0aGUgd2lkdGggd2lsbCBiZSAxMDAlICsgMTdweCAqL1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbmkge1xuICAgIGJvcmRlcjogc29saWQgYmxhY2s7XG4gICAgYm9yZGVyLXdpZHRoOiAwIDJweCAycHggMDtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgcGFkZGluZzogNHB4O1xufVxuLmNpcmNsZS10b3Age1xuICAgIHBvc2l0aW9uOiBzdGlja3k7XG4gICAgdG9wOiAxNnB4O1xuICAgIHdpZHRoOiAzMnB4O1xuICAgIGhlaWdodDogMzJweDtcbiAgICB6LWluZGV4OiA5OTk7XG4gICAgYm9yZGVyLXJhZGl1czogMTZweDtcbiAgICBwYWRkaW5nLXRvcDogNXB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IGxpZ2h0Z3JheTtcbiAgICBvcGFjaXR5OiAuNztcbn1cbi5jaXJjbGUtYm90dG9tIHtcbiAgICBwb3NpdGlvbjogc3RpY2t5O1xuICAgIGJvdHRvbTogMTZweDtcbiAgICB3aWR0aDogMzJweDtcbiAgICBoZWlnaHQ6IDMycHg7XG4gICAgei1pbmRleDogOTk5O1xuICAgIGJvcmRlci1yYWRpdXM6IDE2cHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogbGlnaHRncmF5O1xuICAgIG9wYWNpdHk6IC43O1xufVxuLnVwIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgtMTM1ZGVnKTtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKC0xMzVkZWcpO1xufVxuLmRvd24ge1xuICAgIHRyYW5zZm9ybTogcm90YXRlKDQ1ZGVnKTtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDQ1ZGVnKTtcbn0iXX0= */"
 
 /***/ }),
 
@@ -456,7 +456,7 @@ module.exports = ".app-panel {\n    width: 100%;\n    height: 100%;\n    overflo
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div #leftAppPanel class=\"app-panel animated\" \n  (mouseover)=\"roll=true\" (mouseout)=\"roll=false\"\n  [ngClass]=\"{'bounceInLeft':shareCollection.showApp,'bounceOutLeft':!shareCollection.showApp}\">\n    <button class=\"circle-top\" [ngStyle]=\"{'display':roll==true?'':'none'}\">\n      <i class=\"up\"></i>\n    </button>\n    <app-application *ngFor=\"let app of applications\"\n      [app]=\"app\"></app-application>\n    <button class=\"circle-bottom\" [ngStyle]=\"{'display':roll==true?'':'none'}\">\n      <i class=\"down\"></i>\n    </button>\n</div>\n"
+module.exports = "<div #leftAppPanel class=\"app-panel animated\" \n  (mouseover)=\"roll=true\" (mouseout)=\"roll=false\"\n  [ngClass]=\"{'bounceInLeft':shareCollection.showApp,'bounceOutLeft':!shareCollection.showApp}\">\n  <button class=\"circle-top\" [ngStyle]=\"{'display':(roll==true&&!isTop())?'':'none'}\">\n    <i class=\"up\"></i>\n  </button>\n  <app-application *ngFor=\"let app of applications\"\n    [attr.id]=\"app.id\"\n    [app]=\"app\"></app-application>\n  <button class=\"circle-bottom\" [ngStyle]=\"{'display':(roll==true&&!isBottom())==true?'':'none'}\">\n    <i class=\"down\"></i>\n  </button>\n</div>\n"
 
 /***/ }),
 
@@ -500,6 +500,20 @@ var LeftPanelComponent = /** @class */ (function () {
             // Log errors if any
             console.log('error: ', err);
         });
+    };
+    LeftPanelComponent.prototype.isTop = function () {
+        if (this.topAppElm == null) {
+            var topAppId = this.applications[0].id;
+            this.topAppElm = document.getElementById(topAppId);
+        }
+        return (this.topAppElm.offsetTop - this.topAppElm.parentElement.scrollTop) >= 0;
+    };
+    LeftPanelComponent.prototype.isBottom = function () {
+        if (this.bottomAppElm == null) {
+            var bottomAppId = this.applications[this.applications.length - 1].id;
+            this.bottomAppElm = document.getElementById(bottomAppId);
+        }
+        return (this.bottomAppElm.offsetTop - this.bottomAppElm.parentElement.scrollTop - this.bottomAppElm.parentElement.offsetHeight + this.bottomAppElm.parentElement.offsetTop) <= 2;
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
@@ -636,7 +650,7 @@ var RepositoryService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".app-panel {\n    width: 100%;\n    height: 100%;\n    overflow-y: scroll;\n    box-sizing: content-box; /* So the width will be 100% + 17px */\n    text-align: center;\n}\ni {\n    border: solid black;\n    border-width: 0 2px 2px 0;\n    display: inline-block;\n    padding: 4px;\n}\n.circle-top {\n    position: absolute;\n    top: 16px;\n    width: 32px;\n    height: 32px;\n    z-index: 999;\n    border-radius: 16px;\n    padding-top: 5px;\n    margin-left: -16px;\n    background-color: lightgray;\n    opacity: .7;\n}\n.circle-bottom {\n    position: absolute;\n    bottom: 16px;\n    width: 32px;\n    height: 32px;\n    z-index: 999;\n    border-radius: 16px;\n    margin-left: -16px;\n    background-color: lightgray;\n    opacity: .7;\n}\n.up {\n    transform: rotate(-135deg);\n    -webkit-transform: rotate(-135deg);\n}\n.down {\n    transform: rotate(45deg);\n    -webkit-transform: rotate(45deg);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmlnaHQtcGFuZWwvcmlnaHQtcGFuZWwuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFlBQVk7SUFDWixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLHdCQUF3QixDQUFDLHNDQUFzQztJQUMvRCxtQkFBbUI7Q0FDdEI7QUFDRDtJQUNJLG9CQUFvQjtJQUNwQiwwQkFBMEI7SUFDMUIsc0JBQXNCO0lBQ3RCLGFBQWE7Q0FDaEI7QUFDRDtJQUNJLG1CQUFtQjtJQUNuQixVQUFVO0lBQ1YsWUFBWTtJQUNaLGFBQWE7SUFDYixhQUFhO0lBQ2Isb0JBQW9CO0lBQ3BCLGlCQUFpQjtJQUNqQixtQkFBbUI7SUFDbkIsNEJBQTRCO0lBQzVCLFlBQVk7Q0FDZjtBQUNEO0lBQ0ksbUJBQW1CO0lBQ25CLGFBQWE7SUFDYixZQUFZO0lBQ1osYUFBYTtJQUNiLGFBQWE7SUFDYixvQkFBb0I7SUFDcEIsbUJBQW1CO0lBQ25CLDRCQUE0QjtJQUM1QixZQUFZO0NBQ2Y7QUFDRDtJQUNJLDJCQUEyQjtJQUMzQixtQ0FBbUM7Q0FDdEM7QUFDRDtJQUNJLHlCQUF5QjtJQUN6QixpQ0FBaUM7Q0FDcEMiLCJmaWxlIjoic3JjL2FwcC9yaWdodC1wYW5lbC9yaWdodC1wYW5lbC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmFwcC1wYW5lbCB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIG92ZXJmbG93LXk6IHNjcm9sbDtcbiAgICBib3gtc2l6aW5nOiBjb250ZW50LWJveDsgLyogU28gdGhlIHdpZHRoIHdpbGwgYmUgMTAwJSArIDE3cHggKi9cbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5pIHtcbiAgICBib3JkZXI6IHNvbGlkIGJsYWNrO1xuICAgIGJvcmRlci13aWR0aDogMCAycHggMnB4IDA7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgIHBhZGRpbmc6IDRweDtcbn1cbi5jaXJjbGUtdG9wIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAxNnB4O1xuICAgIHdpZHRoOiAzMnB4O1xuICAgIGhlaWdodDogMzJweDtcbiAgICB6LWluZGV4OiA5OTk7XG4gICAgYm9yZGVyLXJhZGl1czogMTZweDtcbiAgICBwYWRkaW5nLXRvcDogNXB4O1xuICAgIG1hcmdpbi1sZWZ0OiAtMTZweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBsaWdodGdyYXk7XG4gICAgb3BhY2l0eTogLjc7XG59XG4uY2lyY2xlLWJvdHRvbSB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogMTZweDtcbiAgICB3aWR0aDogMzJweDtcbiAgICBoZWlnaHQ6IDMycHg7XG4gICAgei1pbmRleDogOTk5O1xuICAgIGJvcmRlci1yYWRpdXM6IDE2cHg7XG4gICAgbWFyZ2luLWxlZnQ6IC0xNnB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IGxpZ2h0Z3JheTtcbiAgICBvcGFjaXR5OiAuNztcbn1cbi51cCB7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoLTEzNWRlZyk7XG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgtMTM1ZGVnKTtcbn1cbi5kb3duIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSg0NWRlZyk7XG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSg0NWRlZyk7XG59Il19 */"
+module.exports = ".app-panel {\n    width: 100%;\n    height: 100%;\n    overflow-y: scroll;\n    box-sizing: content-box; /* So the width will be 100% + 17px */\n    text-align: center;\n}\ni {\n    border: solid black;\n    border-width: 0 2px 2px 0;\n    display: inline-block;\n    padding: 4px;\n}\n.circle-top {\n    position: -webkit-sticky;\n    position: sticky;\n    top: 16px;\n    width: 32px;\n    height: 32px;\n    z-index: 999;\n    border-radius: 16px;\n    padding-top: 5px;\n    background-color: lightgray;\n    opacity: .7;\n}\n.circle-bottom {\n    position: -webkit-sticky;\n    position: sticky;\n    bottom: 16px;\n    width: 32px;\n    height: 32px;\n    z-index: 999;\n    border-radius: 16px;\n    background-color: lightgray;\n    opacity: .7;\n}\n.up {\n    transform: rotate(-135deg);\n    -webkit-transform: rotate(-135deg);\n}\n.down {\n    transform: rotate(45deg);\n    -webkit-transform: rotate(45deg);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmlnaHQtcGFuZWwvcmlnaHQtcGFuZWwuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFlBQVk7SUFDWixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLHdCQUF3QixDQUFDLHNDQUFzQztJQUMvRCxtQkFBbUI7Q0FDdEI7QUFDRDtJQUNJLG9CQUFvQjtJQUNwQiwwQkFBMEI7SUFDMUIsc0JBQXNCO0lBQ3RCLGFBQWE7Q0FDaEI7QUFDRDtJQUNJLHlCQUFpQjtJQUFqQixpQkFBaUI7SUFDakIsVUFBVTtJQUNWLFlBQVk7SUFDWixhQUFhO0lBQ2IsYUFBYTtJQUNiLG9CQUFvQjtJQUNwQixpQkFBaUI7SUFDakIsNEJBQTRCO0lBQzVCLFlBQVk7Q0FDZjtBQUNEO0lBQ0kseUJBQWlCO0lBQWpCLGlCQUFpQjtJQUNqQixhQUFhO0lBQ2IsWUFBWTtJQUNaLGFBQWE7SUFDYixhQUFhO0lBQ2Isb0JBQW9CO0lBQ3BCLDRCQUE0QjtJQUM1QixZQUFZO0NBQ2Y7QUFDRDtJQUNJLDJCQUEyQjtJQUMzQixtQ0FBbUM7Q0FDdEM7QUFDRDtJQUNJLHlCQUF5QjtJQUN6QixpQ0FBaUM7Q0FDcEMiLCJmaWxlIjoic3JjL2FwcC9yaWdodC1wYW5lbC9yaWdodC1wYW5lbC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmFwcC1wYW5lbCB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIG92ZXJmbG93LXk6IHNjcm9sbDtcbiAgICBib3gtc2l6aW5nOiBjb250ZW50LWJveDsgLyogU28gdGhlIHdpZHRoIHdpbGwgYmUgMTAwJSArIDE3cHggKi9cbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5pIHtcbiAgICBib3JkZXI6IHNvbGlkIGJsYWNrO1xuICAgIGJvcmRlci13aWR0aDogMCAycHggMnB4IDA7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgIHBhZGRpbmc6IDRweDtcbn1cbi5jaXJjbGUtdG9wIHtcbiAgICBwb3NpdGlvbjogc3RpY2t5O1xuICAgIHRvcDogMTZweDtcbiAgICB3aWR0aDogMzJweDtcbiAgICBoZWlnaHQ6IDMycHg7XG4gICAgei1pbmRleDogOTk5O1xuICAgIGJvcmRlci1yYWRpdXM6IDE2cHg7XG4gICAgcGFkZGluZy10b3A6IDVweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBsaWdodGdyYXk7XG4gICAgb3BhY2l0eTogLjc7XG59XG4uY2lyY2xlLWJvdHRvbSB7XG4gICAgcG9zaXRpb246IHN0aWNreTtcbiAgICBib3R0b206IDE2cHg7XG4gICAgd2lkdGg6IDMycHg7XG4gICAgaGVpZ2h0OiAzMnB4O1xuICAgIHotaW5kZXg6IDk5OTtcbiAgICBib3JkZXItcmFkaXVzOiAxNnB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IGxpZ2h0Z3JheTtcbiAgICBvcGFjaXR5OiAuNztcbn1cbi51cCB7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoLTEzNWRlZyk7XG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgtMTM1ZGVnKTtcbn1cbi5kb3duIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSg0NWRlZyk7XG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSg0NWRlZyk7XG59Il19 */"
 
 /***/ }),
 
@@ -647,7 +661,7 @@ module.exports = ".app-panel {\n    width: 100%;\n    height: 100%;\n    overflo
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div #rightAppPanel class=\"app-panel animated bounceInRight\" \n  (mouseover)=\"roll=true\" (mouseout)=\"roll=false\"\n  [ngClass]=\"{'bounceInRight':shareCollection.showApp,'bounceOutRight':!shareCollection.showApp}\">\n  <button class=\"circle-top\" [ngStyle]=\"{'display':roll==true?'':'none'}\">\n    <i class=\"up\"></i>\n  </button>\n  <app-application *ngFor=\"let app of applications\"\n    [app]=\"app\"></app-application>\n  <button class=\"circle-bottom\" [ngStyle]=\"{'display':roll==true?'':'none'}\">\n    <i class=\"down\"></i>\n  </button>\n</div>\n"
+module.exports = "<div #rightAppPanel class=\"app-panel animated bounceInRight\" \n  (mouseover)=\"roll=true\" (mouseout)=\"roll=false\"\n  [ngClass]=\"{'bounceInRight':shareCollection.showApp,'bounceOutRight':!shareCollection.showApp}\">\n  <button class=\"circle-top\" [ngStyle]=\"{'display':(roll==true&&!isTop())?'':'none'}\">\n    <i class=\"up\"></i>\n  </button>\n  <app-application *ngFor=\"let app of applications\"\n    [attr.id]=\"app.id\"\n    [app]=\"app\"></app-application>\n  <button class=\"circle-bottom\" [ngStyle]=\"{'display':(roll==true&&!isBottom())?'':'none'}\">\n    <i class=\"down\"></i>\n  </button>\n</div>\n"
 
 /***/ }),
 
@@ -692,6 +706,20 @@ var RightPanelComponent = /** @class */ (function () {
             console.log('error: ', err);
         });
     };
+    RightPanelComponent.prototype.isTop = function () {
+        if (this.topAppElm == null) {
+            var topAppId = this.applications[0].id;
+            this.topAppElm = document.getElementById(topAppId);
+        }
+        return (this.topAppElm.offsetTop - this.topAppElm.parentElement.scrollTop) >= 0;
+    };
+    RightPanelComponent.prototype.isBottom = function () {
+        if (this.bottomAppElm == null) {
+            var bottomAppId = this.applications[this.applications.length - 1].id;
+            this.bottomAppElm = document.getElementById(bottomAppId);
+        }
+        return (this.bottomAppElm.offsetTop - this.bottomAppElm.parentElement.scrollTop - this.bottomAppElm.parentElement.offsetHeight + this.bottomAppElm.parentElement.offsetTop) <= 2;
+    };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", _app_component__WEBPACK_IMPORTED_MODULE_2__["ShareCollection"])
@@ -718,7 +746,7 @@ var RightPanelComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".app-workspace {\n    width: 100%;\n    height: 100%;\n    overflow-y: scroll;\n    padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */\n    box-sizing: content-box; /* So the width will be 100% + 17px */\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvd29ya3NwYWNlL3dvcmtzcGFjZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksWUFBWTtJQUNaLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsb0JBQW9CLENBQUMsa0VBQWtFO0lBQ3ZGLHdCQUF3QixDQUFDLHNDQUFzQztDQUNsRSIsImZpbGUiOiJzcmMvYXBwL3dvcmtzcGFjZS93b3Jrc3BhY2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5hcHAtd29ya3NwYWNlIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgb3ZlcmZsb3cteTogc2Nyb2xsO1xuICAgIHBhZGRpbmctcmlnaHQ6IDE3cHg7IC8qIEluY3JlYXNlL2RlY3JlYXNlIHRoaXMgdmFsdWUgZm9yIGNyb3NzLWJyb3dzZXIgY29tcGF0aWJpbGl0eSAqL1xuICAgIGJveC1zaXppbmc6IGNvbnRlbnQtYm94OyAvKiBTbyB0aGUgd2lkdGggd2lsbCBiZSAxMDAlICsgMTdweCAqL1xufVxuIl19 */"
+module.exports = ".app-workspace {\n    width: 100%;\n    height: 100%;\n    overflow-y: scroll;\n    padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */\n    box-sizing: content-box; /* So the width will be 100% + 17px */\n    text-align: center;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvd29ya3NwYWNlL3dvcmtzcGFjZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksWUFBWTtJQUNaLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsb0JBQW9CLENBQUMsa0VBQWtFO0lBQ3ZGLHdCQUF3QixDQUFDLHNDQUFzQztJQUMvRCxtQkFBbUI7Q0FDdEIiLCJmaWxlIjoic3JjL2FwcC93b3Jrc3BhY2Uvd29ya3NwYWNlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYXBwLXdvcmtzcGFjZSB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIG92ZXJmbG93LXk6IHNjcm9sbDtcbiAgICBwYWRkaW5nLXJpZ2h0OiAxN3B4OyAvKiBJbmNyZWFzZS9kZWNyZWFzZSB0aGlzIHZhbHVlIGZvciBjcm9zcy1icm93c2VyIGNvbXBhdGliaWxpdHkgKi9cbiAgICBib3gtc2l6aW5nOiBjb250ZW50LWJveDsgLyogU28gdGhlIHdpZHRoIHdpbGwgYmUgMTAwJSArIDE3cHggKi9cbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -729,7 +757,7 @@ module.exports = ".app-workspace {\n    width: 100%;\n    height: 100%;\n    ove
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"app-workspace\" >\n  <router-outlet></router-outlet>\n</div>\n\n"
+module.exports = "<div class=\"app-workspace\" >\n  OOO\n  <router-outlet></router-outlet>\n</div>\n\n"
 
 /***/ }),
 
