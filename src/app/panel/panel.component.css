@@ -4,6 +4,17 @@
     overflow-y: scroll;
     box-sizing: content-box; /* So the width will be 100% + 17px */
     text-align: center;
+    margin-top: 10px;
+}
+.app-anchor {
+    position: relative;
+    top: 5px;
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    opacity: .8;
+    border-color: transparent;
+    cursor: pointer;
 }
 i {
     border: solid black;
@@ -25,7 +36,7 @@ i {
 }
 .circle-bottom {
     position: sticky;
-    bottom: 16px;
+    bottom: 96px;
     width: 32px;
     height: 32px;
     z-index: 999;

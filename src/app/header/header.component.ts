@@ -15,7 +15,4 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-  toggleApp() {
-    this.shareCollection.showApp = !(this.shareCollection.showApp);
-  }
 }

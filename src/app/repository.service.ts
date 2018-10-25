@@ -7,10 +7,11 @@ import { HttpClient } from '@angular/common/http';
 export class RepositoryService {
 
   constructor(private http: HttpClient) { }
-  getLeftApplications() {
-    return this.http.get('../assets/left-applications.json');
-  }
-  getRightApplications() {
-    return this.http.get('../assets/right-applications.json');
+  getApplications(type: String) {
+    if (type == 'Operation') {
+      return this.http.get('../assets/operation-applications.json');
+    } else {
+      return this.http.get('../assets/tool-applications.json');
+    }
   }
 }

@@ -1,6 +1,8 @@
 import { Component, HostListener } from '@angular/core';
 export class ShareCollection {
   showApp: boolean;
+  bodyHeight: any;
+  shownAppType: any;
 }
 @Component({
   selector: 'app-root',
@@ -9,12 +11,13 @@ export class ShareCollection {
 })
 export class AppComponent {
   title = 'Harmonic Portal';
-  height = window.innerHeight-180;
   shareCollection = new ShareCollection();
   constructor(){
     this.shareCollection.showApp = true;
+    this.shareCollection.bodyHeight = window.innerHeight-180;
+    this.shareCollection.shownAppType = 'Operation';
   }
   @HostListener('window:resize', ['$event']) onResize(event: any) {
-    this.height = event.target.innerHeight-180;
+    this.shareCollection.bodyHeight = event.target.innerHeight-180;
   }
 }

@@ -4,23 +4,25 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
-import { LeftPanelComponent } from './left-panel/left-panel.component';
-import { RightPanelComponent } from './right-panel/right-panel.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { ApplicationComponent } from './application/application.component';
+import { BodyComponent } from './body/body.component';
+import { TAB_COMPONENTS  } from './workspace/tabset';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    LeftPanelComponent,
-    RightPanelComponent,
     FooterComponent,
     HeaderComponent,
     WorkspaceComponent,
-    ApplicationComponent
+    ApplicationComponent,
+    TAB_COMPONENTS,
+    BodyComponent,
+    PanelComponent
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-header [shareCollection]="shareCollection"></app-header>
 
-<div class="parent" [style.max-height.px]="height">
-  <div class="d-none d-md-block d-lg-block d-xl-block" style="text-align:center;max-height:inherit;" [ngStyle]="{'width':shareCollection.showApp==true?'12%':'0%'}">
-    <app-left-panel [shareCollection]="shareCollection"></app-left-panel>
-  </div>
-  <div style="max-height:inherit;margin-left:0.5%;margin-right:0.5%;" [ngStyle]="{'width':shareCollection.showApp==true?'75%':'100%'}">
-    <app-workspace></app-workspace>
-  </div>
-  <div class="d-none d-md-block d-lg-block d-xl-block" style="text-align:center;max-height:inherit;" [ngStyle]="{'width':shareCollection.showApp==true?'12%':'0%'}">
-    <app-right-panel [shareCollection]="shareCollection"></app-right-panel>
-  </div>
-</div>
+<app-body [shareCollection]="shareCollection"></app-body>
 
 <app-footer></app-footer>

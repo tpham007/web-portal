@@ -67,7 +67,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url(\"//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css\");\n.parent { \n    height: 100%;\n    width: 100%;\n    overflow: hidden;\n    display: flex;\n    flex-wrap: wrap;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsK0VBQStFO0FBQy9FO0lBQ0ksYUFBYTtJQUNiLFlBQVk7SUFDWixpQkFBaUI7SUFDakIsY0FBYztJQUNkLGdCQUFnQjtDQUNuQiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCB1cmwoXCIvL25ldGRuYS5ib290c3RyYXBjZG4uY29tL2Jvb3RzdHJhcC8zLjAuMC9jc3MvYm9vdHN0cmFwLm1pbi5jc3NcIik7XG4ucGFyZW50IHsgXG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LXdyYXA6IHdyYXA7XG59Il19 */"
+module.exports = "\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -78,7 +78,7 @@ module.exports = "@import url(\"//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bo
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<app-header [shareCollection]=\"shareCollection\"></app-header>\n\n<div class=\"parent\" [style.max-height.px]=\"height\">\n  <div class=\"d-none d-md-block d-lg-block d-xl-block\" style=\"text-align:center;max-height:inherit;\" [ngStyle]=\"{'width':shareCollection.showApp==true?'12%':'0%'}\">\n    <app-left-panel [shareCollection]=\"shareCollection\"></app-left-panel>\n  </div>\n  <div style=\"max-height:inherit;margin-left:0.5%;margin-right:0.5%;\" [ngStyle]=\"{'width':shareCollection.showApp==true?'75%':'100%'}\">\n    <app-workspace></app-workspace>\n  </div>\n  <div class=\"d-none d-md-block d-lg-block d-xl-block\" style=\"text-align:center;max-height:inherit;\" [ngStyle]=\"{'width':shareCollection.showApp==true?'12%':'0%'}\">\n    <app-right-panel [shareCollection]=\"shareCollection\"></app-right-panel>\n  </div>\n</div>\n\n<app-footer></app-footer>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<app-header [shareCollection]=\"shareCollection\"></app-header>\n\n<app-body [shareCollection]=\"shareCollection\"></app-body>\n\n<app-footer></app-footer>\n"
 
 /***/ }),
 
@@ -113,12 +113,13 @@ var ShareCollection = /** @class */ (function () {
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'Harmonic Portal';
-        this.height = window.innerHeight - 180;
         this.shareCollection = new ShareCollection();
         this.shareCollection.showApp = true;
+        this.shareCollection.bodyHeight = window.innerHeight - 180;
+        this.shareCollection.shownAppType = 'Operation';
     }
     AppComponent.prototype.onResize = function (event) {
-        this.height = event.target.innerHeight - 180;
+        this.shareCollection.bodyHeight = event.target.innerHeight - 180;
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('window:resize', ['$event']),
@@ -157,18 +158,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _menu_menu_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./menu/menu.component */ "./src/app/menu/menu.component.ts");
-/* harmony import */ var _left_panel_left_panel_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./left-panel/left-panel.component */ "./src/app/left-panel/left-panel.component.ts");
-/* harmony import */ var _right_panel_right_panel_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./right-panel/right-panel.component */ "./src/app/right-panel/right-panel.component.ts");
-/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
-/* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./header/header.component */ "./src/app/header/header.component.ts");
-/* harmony import */ var _workspace_workspace_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./workspace/workspace.component */ "./src/app/workspace/workspace.component.ts");
-/* harmony import */ var _application_application_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./application/application.component */ "./src/app/application/application.component.ts");
+/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
+/* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./header/header.component */ "./src/app/header/header.component.ts");
+/* harmony import */ var _workspace_workspace_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./workspace/workspace.component */ "./src/app/workspace/workspace.component.ts");
+/* harmony import */ var _application_application_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./application/application.component */ "./src/app/application/application.component.ts");
+/* harmony import */ var _body_body_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./body/body.component */ "./src/app/body/body.component.ts");
+/* harmony import */ var _workspace_tabset__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./workspace/tabset */ "./src/app/workspace/tabset.ts");
+/* harmony import */ var _panel_panel_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./panel/panel.component */ "./src/app/panel/panel.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -189,12 +192,13 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
                 _menu_menu_component__WEBPACK_IMPORTED_MODULE_5__["MenuComponent"],
-                _left_panel_left_panel_component__WEBPACK_IMPORTED_MODULE_6__["LeftPanelComponent"],
-                _right_panel_right_panel_component__WEBPACK_IMPORTED_MODULE_7__["RightPanelComponent"],
-                _footer_footer_component__WEBPACK_IMPORTED_MODULE_8__["FooterComponent"],
-                _header_header_component__WEBPACK_IMPORTED_MODULE_9__["HeaderComponent"],
-                _workspace_workspace_component__WEBPACK_IMPORTED_MODULE_10__["WorkspaceComponent"],
-                _application_application_component__WEBPACK_IMPORTED_MODULE_11__["ApplicationComponent"]
+                _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"],
+                _header_header_component__WEBPACK_IMPORTED_MODULE_7__["HeaderComponent"],
+                _workspace_workspace_component__WEBPACK_IMPORTED_MODULE_8__["WorkspaceComponent"],
+                _application_application_component__WEBPACK_IMPORTED_MODULE_9__["ApplicationComponent"],
+                _workspace_tabset__WEBPACK_IMPORTED_MODULE_11__["TAB_COMPONENTS"],
+                _body_body_component__WEBPACK_IMPORTED_MODULE_10__["BodyComponent"],
+                _panel_panel_component__WEBPACK_IMPORTED_MODULE_12__["PanelComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -219,7 +223,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".card:hover {\n    border-color: black;\n    cursor: pointer;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwbGljYXRpb24vYXBwbGljYXRpb24uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLG9CQUFvQjtJQUNwQixnQkFBZ0I7Q0FDbkIiLCJmaWxlIjoic3JjL2FwcC9hcHBsaWNhdGlvbi9hcHBsaWNhdGlvbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNhcmQ6aG92ZXIge1xuICAgIGJvcmRlci1jb2xvcjogYmxhY2s7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufSJdfQ== */"
+module.exports = ".card:hover {\n    border-color: black;\n    cursor: pointer;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwbGljYXRpb24vYXBwbGljYXRpb24uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLG9CQUFvQjtJQUNwQixnQkFBZ0I7SUFDaEIsMEJBQWtCO09BQWxCLHVCQUFrQjtRQUFsQixzQkFBa0I7WUFBbEIsa0JBQWtCO0NBQ3JCIiwiZmlsZSI6InNyYy9hcHAvYXBwbGljYXRpb24vYXBwbGljYXRpb24uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYXJkOmhvdmVyIHtcbiAgICBib3JkZXItY29sb3I6IGJsYWNrO1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICB1c2VyLXNlbGVjdDogbm9uZTtcbn0iXX0= */"
 
 /***/ }),
 
@@ -301,6 +305,75 @@ var Application = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/body/body.component.css":
+/*!*****************************************!*\
+  !*** ./src/app/body/body.component.css ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".body { \n    height: 100%;\n    width: 100%;\n    overflow: hidden;\n    display: flex;\n    flex-wrap: wrap;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYm9keS9ib2R5LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0lBQ2IsWUFBWTtJQUNaLGlCQUFpQjtJQUNqQixjQUFjO0lBQ2QsZ0JBQWdCO0NBQ25CIiwiZmlsZSI6InNyYy9hcHAvYm9keS9ib2R5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYm9keSB7IFxuICAgIGhlaWdodDogMTAwJTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC13cmFwOiB3cmFwO1xufVxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/body/body.component.html":
+/*!******************************************!*\
+  !*** ./src/app/body/body.component.html ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"body\" [style.max-height.px]=\"shareCollection.bodyHeight\">\n  <div style=\"max-height:inherit;margin-top:10px;margin-left:0.5%;;margin-right:0.5%;transition: width 0.5s;\"\n    class=\"float-none\"\n    [ngStyle]=\"{'width':shareCollection.showApp==true?'85%':'99%'}\">\n    <app-workspace [shareCollection]=\"shareCollection\"></app-workspace>\n  </div>\n  <div class=\"d-none d-md-block d-lg-block d-xl-block\" \n    style=\"text-align:center;max-height:inherit;transition: width 0.5s;\"\n    [ngStyle]=\"{'width':shareCollection.showApp==true?'14%':'0%'}\">\n    <app-panel [shareCollection]=\"shareCollection\"></app-panel>\n  </div>\n</div>\n  "
+
+/***/ }),
+
+/***/ "./src/app/body/body.component.ts":
+/*!****************************************!*\
+  !*** ./src/app/body/body.component.ts ***!
+  \****************************************/
+/*! exports provided: BodyComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BodyComponent", function() { return BodyComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../app.component */ "./src/app/app.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var BodyComponent = /** @class */ (function () {
+    function BodyComponent() {
+    }
+    BodyComponent.prototype.ngOnInit = function () {
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", _app_component__WEBPACK_IMPORTED_MODULE_1__["ShareCollection"])
+    ], BodyComponent.prototype, "shareCollection", void 0);
+    BodyComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-body',
+            template: __webpack_require__(/*! ./body.component.html */ "./src/app/body/body.component.html"),
+            styles: [__webpack_require__(/*! ./body.component.css */ "./src/app/body/body.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], BodyComponent);
+    return BodyComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/footer/footer.component.css":
 /*!*********************************************!*\
   !*** ./src/app/footer/footer.component.css ***!
@@ -371,7 +444,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".square-top {\n    position: absolute;\n    top: 50px;\n    width: 48px;\n    height: 22px;\n    z-index: 999;\n    left: 48.1%;\n    border-radius: 5px;\n    opacity: .5;\n    border-color: transparent;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksbUJBQW1CO0lBQ25CLFVBQVU7SUFDVixZQUFZO0lBQ1osYUFBYTtJQUNiLGFBQWE7SUFDYixZQUFZO0lBQ1osbUJBQW1CO0lBQ25CLFlBQVk7SUFDWiwwQkFBMEI7Q0FDN0IiLCJmaWxlIjoic3JjL2FwcC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc3F1YXJlLXRvcCB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogNTBweDtcbiAgICB3aWR0aDogNDhweDtcbiAgICBoZWlnaHQ6IDIycHg7XG4gICAgei1pbmRleDogOTk5O1xuICAgIGxlZnQ6IDQ4LjElO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBvcGFjaXR5OiAuNTtcbiAgICBib3JkZXItY29sb3I6IHRyYW5zcGFyZW50O1xufSJdfQ== */"
+module.exports = ".navbar {\n    border-radius: 0px!important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksNkJBQTZCO0NBQ2hDIiwiZmlsZSI6InNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm5hdmJhciB7XG4gICAgYm9yZGVyLXJhZGl1czogMHB4IWltcG9ydGFudDtcbn0iXX0= */"
 
 /***/ }),
 
@@ -382,7 +455,7 @@ module.exports = ".square-top {\n    position: absolute;\n    top: 50px;\n    wi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-sm bg-dark navbar-dark\">\n\n  <!-- logo -->\n  <a class=\"navbar-brand\">\n      <img [src]=\"imgSrc\"\n      (mouseover)=\"imgSrc = '../../assets/img/logoB.png'\"\n      (mouseout)=\"imgSrc = '../../assets/img/logoA.png'\" style=\"width: 120px; height: auto;\">\n  </a>\n  <button class=\"square-top\" (click)=\"toggleApp()\" title=\"Hide/Show applications\">\n      <span *ngIf=\"shareCollection.showApp==false\" class=\"glyphicon glyphicon-resize-small\"></span>\n      <span *ngIf=\"shareCollection.showApp==true\" class=\"glyphicon glyphicon-resize-full\"></span>\n  </button>\n  \n</nav>"
+module.exports = "<nav class=\"navbar navbar-expand-sm bg-dark navbar-dark\" style=\"text-align: center;\">\n\n  <!-- logo -->\n  <a class=\"navbar-brand\">\n      <img [src]=\"imgSrc\"\n      (mouseover)=\"imgSrc = '../../assets/img/logoB.png'\"\n      (mouseout)=\"imgSrc = '../../assets/img/logoA.png'\" style=\"width: 120px; height: auto;\">\n  </a>\n</nav>"
 
 /***/ }),
 
@@ -416,9 +489,6 @@ var HeaderComponent = /** @class */ (function () {
     }
     HeaderComponent.prototype.ngOnInit = function () {
     };
-    HeaderComponent.prototype.toggleApp = function () {
-        this.shareCollection.showApp = !(this.shareCollection.showApp);
-    };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", _app_component__WEBPACK_IMPORTED_MODULE_1__["ShareCollection"])
@@ -432,102 +502,6 @@ var HeaderComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], HeaderComponent);
     return HeaderComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/left-panel/left-panel.component.css":
-/*!*****************************************************!*\
-  !*** ./src/app/left-panel/left-panel.component.css ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".app-panel {\n    width: 100%;\n    height: 100%;\n    overflow-y: scroll;\n    box-sizing: content-box; /* So the width will be 100% + 17px */\n    text-align: center;\n}\ni {\n    border: solid black;\n    border-width: 0 2px 2px 0;\n    display: inline-block;\n    padding: 4px;\n}\n.circle-top {\n    position: -webkit-sticky;\n    position: sticky;\n    top: 16px;\n    width: 32px;\n    height: 32px;\n    z-index: 999;\n    border-radius: 16px;\n    padding-top: 5px;\n    background-color: lightgray;\n    border-color: transparent;\n    opacity: .7;\n}\n.circle-bottom {\n    position: -webkit-sticky;\n    position: sticky;\n    bottom: 16px;\n    width: 32px;\n    height: 32px;\n    z-index: 999;\n    border-radius: 16px;\n    background-color: lightgray;\n    border-color: transparent;\n    opacity: .7;\n}\n.up {\n    transform: rotate(-135deg);\n    -webkit-transform: rotate(-135deg);\n}\n.down {\n    transform: rotate(45deg);\n    -webkit-transform: rotate(45deg);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGVmdC1wYW5lbC9sZWZ0LXBhbmVsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0lBQ1osYUFBYTtJQUNiLG1CQUFtQjtJQUNuQix3QkFBd0IsQ0FBQyxzQ0FBc0M7SUFDL0QsbUJBQW1CO0NBQ3RCO0FBQ0Q7SUFDSSxvQkFBb0I7SUFDcEIsMEJBQTBCO0lBQzFCLHNCQUFzQjtJQUN0QixhQUFhO0NBQ2hCO0FBQ0Q7SUFDSSx5QkFBaUI7SUFBakIsaUJBQWlCO0lBQ2pCLFVBQVU7SUFDVixZQUFZO0lBQ1osYUFBYTtJQUNiLGFBQWE7SUFDYixvQkFBb0I7SUFDcEIsaUJBQWlCO0lBQ2pCLDRCQUE0QjtJQUM1QiwwQkFBMEI7SUFDMUIsWUFBWTtDQUNmO0FBQ0Q7SUFDSSx5QkFBaUI7SUFBakIsaUJBQWlCO0lBQ2pCLGFBQWE7SUFDYixZQUFZO0lBQ1osYUFBYTtJQUNiLGFBQWE7SUFDYixvQkFBb0I7SUFDcEIsNEJBQTRCO0lBQzVCLDBCQUEwQjtJQUMxQixZQUFZO0NBQ2Y7QUFDRDtJQUNJLDJCQUEyQjtJQUMzQixtQ0FBbUM7Q0FDdEM7QUFDRDtJQUNJLHlCQUF5QjtJQUN6QixpQ0FBaUM7Q0FDcEMiLCJmaWxlIjoic3JjL2FwcC9sZWZ0LXBhbmVsL2xlZnQtcGFuZWwuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5hcHAtcGFuZWwge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBvdmVyZmxvdy15OiBzY3JvbGw7XG4gICAgYm94LXNpemluZzogY29udGVudC1ib3g7IC8qIFNvIHRoZSB3aWR0aCB3aWxsIGJlIDEwMCUgKyAxN3B4ICovXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuaSB7XG4gICAgYm9yZGVyOiBzb2xpZCBibGFjaztcbiAgICBib3JkZXItd2lkdGg6IDAgMnB4IDJweCAwO1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgICBwYWRkaW5nOiA0cHg7XG59XG4uY2lyY2xlLXRvcCB7XG4gICAgcG9zaXRpb246IHN0aWNreTtcbiAgICB0b3A6IDE2cHg7XG4gICAgd2lkdGg6IDMycHg7XG4gICAgaGVpZ2h0OiAzMnB4O1xuICAgIHotaW5kZXg6IDk5OTtcbiAgICBib3JkZXItcmFkaXVzOiAxNnB4O1xuICAgIHBhZGRpbmctdG9wOiA1cHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogbGlnaHRncmF5O1xuICAgIGJvcmRlci1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gICAgb3BhY2l0eTogLjc7XG59XG4uY2lyY2xlLWJvdHRvbSB7XG4gICAgcG9zaXRpb246IHN0aWNreTtcbiAgICBib3R0b206IDE2cHg7XG4gICAgd2lkdGg6IDMycHg7XG4gICAgaGVpZ2h0OiAzMnB4O1xuICAgIHotaW5kZXg6IDk5OTtcbiAgICBib3JkZXItcmFkaXVzOiAxNnB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IGxpZ2h0Z3JheTtcbiAgICBib3JkZXItY29sb3I6IHRyYW5zcGFyZW50O1xuICAgIG9wYWNpdHk6IC43O1xufVxuLnVwIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgtMTM1ZGVnKTtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKC0xMzVkZWcpO1xufVxuLmRvd24ge1xuICAgIHRyYW5zZm9ybTogcm90YXRlKDQ1ZGVnKTtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDQ1ZGVnKTtcbn0iXX0= */"
-
-/***/ }),
-
-/***/ "./src/app/left-panel/left-panel.component.html":
-/*!******************************************************!*\
-  !*** ./src/app/left-panel/left-panel.component.html ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div #leftAppPanel class=\"app-panel animated\" \n  (mouseover)=\"roll=true\" (mouseout)=\"roll=false\"\n  [ngClass]=\"{'bounceInLeft':shareCollection.showApp,'bounceOutLeft':!shareCollection.showApp}\">\n  <button class=\"circle-top\" [ngStyle]=\"{'display':(roll==true&&!isTop())?'':'none'}\">\n    <i class=\"up\"></i>\n  </button>\n  <app-application *ngFor=\"let app of applications\"\n    [attr.id]=\"app.id\"\n    [app]=\"app\"></app-application>\n  <button class=\"circle-bottom\" [ngStyle]=\"{'display':(roll==true&&!isBottom())==true?'':'none'}\">\n    <i class=\"down\"></i>\n  </button>\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/left-panel/left-panel.component.ts":
-/*!****************************************************!*\
-  !*** ./src/app/left-panel/left-panel.component.ts ***!
-  \****************************************************/
-/*! exports provided: LeftPanelComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LeftPanelComponent", function() { return LeftPanelComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _repository_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../repository.service */ "./src/app/repository.service.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../app.component */ "./src/app/app.component.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var LeftPanelComponent = /** @class */ (function () {
-    function LeftPanelComponent(repo) {
-        this.repo = repo;
-        this.roll = false;
-    }
-    LeftPanelComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.repo.getLeftApplications().subscribe(function (data) {
-            _this.applications = data;
-        }, // Bind to view
-        function (// Bind to view
-        err) {
-            // Log errors if any
-            console.log('error: ', err);
-        });
-    };
-    LeftPanelComponent.prototype.isTop = function () {
-        if (this.topAppElm == null) {
-            var topAppId = this.applications[0].id;
-            this.topAppElm = document.getElementById(topAppId);
-        }
-        return (this.topAppElm.offsetTop - this.topAppElm.parentElement.scrollTop) >= 0;
-    };
-    LeftPanelComponent.prototype.isBottom = function () {
-        if (this.bottomAppElm == null) {
-            var bottomAppId = this.applications[this.applications.length - 1].id;
-            this.bottomAppElm = document.getElementById(bottomAppId);
-        }
-        return (this.bottomAppElm.offsetTop - this.bottomAppElm.parentElement.scrollTop - this.bottomAppElm.parentElement.offsetHeight + this.bottomAppElm.parentElement.offsetTop) <= 2;
-    };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", _app_component__WEBPACK_IMPORTED_MODULE_2__["ShareCollection"])
-    ], LeftPanelComponent.prototype, "shareCollection", void 0);
-    LeftPanelComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-left-panel',
-            template: __webpack_require__(/*! ./left-panel.component.html */ "./src/app/left-panel/left-panel.component.html"),
-            styles: [__webpack_require__(/*! ./left-panel.component.css */ "./src/app/left-panel/left-panel.component.css")]
-        }),
-        __metadata("design:paramtypes", [_repository_service__WEBPACK_IMPORTED_MODULE_1__["RepositoryService"]])
-    ], LeftPanelComponent);
-    return LeftPanelComponent;
 }());
 
 
@@ -597,6 +571,121 @@ var MenuComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/panel/panel.component.css":
+/*!*******************************************!*\
+  !*** ./src/app/panel/panel.component.css ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".app-panel {\n    width: 100%;\n    height: 100%;\n    overflow-y: scroll;\n    box-sizing: content-box; /* So the width will be 100% + 17px */\n    text-align: center;\n    margin-top: 10px;\n}\n.app-anchor {\n    position: relative;\n    top: 5px;\n    width: 32px;\n    height: 32px;\n    border-radius: 5px;\n    opacity: .8;\n    border-color: transparent;\n    cursor: pointer;\n}\ni {\n    border: solid black;\n    border-width: 0 2px 2px 0;\n    display: inline-block;\n    padding: 4px;\n}\n.circle-top {\n    position: -webkit-sticky;\n    position: sticky;\n    top: 16px;\n    width: 32px;\n    height: 32px;\n    z-index: 999;\n    border-radius: 16px;\n    padding-top: 5px;\n    background-color: lightgray;\n    border-color: transparent;\n    opacity: .7;\n}\n.circle-bottom {\n    position: -webkit-sticky;\n    position: sticky;\n    bottom: 96px;\n    width: 32px;\n    height: 32px;\n    z-index: 999;\n    border-radius: 16px;\n    background-color: lightgray;\n    border-color: transparent;\n    opacity: .7;\n}\n.up {\n    transform: rotate(-135deg);\n    -webkit-transform: rotate(-135deg);\n}\n.down {\n    transform: rotate(45deg);\n    -webkit-transform: rotate(45deg);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFuZWwvcGFuZWwuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFlBQVk7SUFDWixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLHdCQUF3QixDQUFDLHNDQUFzQztJQUMvRCxtQkFBbUI7SUFDbkIsaUJBQWlCO0NBQ3BCO0FBQ0Q7SUFDSSxtQkFBbUI7SUFDbkIsU0FBUztJQUNULFlBQVk7SUFDWixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLFlBQVk7SUFDWiwwQkFBMEI7SUFDMUIsZ0JBQWdCO0NBQ25CO0FBQ0Q7SUFDSSxvQkFBb0I7SUFDcEIsMEJBQTBCO0lBQzFCLHNCQUFzQjtJQUN0QixhQUFhO0NBQ2hCO0FBQ0Q7SUFDSSx5QkFBaUI7SUFBakIsaUJBQWlCO0lBQ2pCLFVBQVU7SUFDVixZQUFZO0lBQ1osYUFBYTtJQUNiLGFBQWE7SUFDYixvQkFBb0I7SUFDcEIsaUJBQWlCO0lBQ2pCLDRCQUE0QjtJQUM1QiwwQkFBMEI7SUFDMUIsWUFBWTtDQUNmO0FBQ0Q7SUFDSSx5QkFBaUI7SUFBakIsaUJBQWlCO0lBQ2pCLGFBQWE7SUFDYixZQUFZO0lBQ1osYUFBYTtJQUNiLGFBQWE7SUFDYixvQkFBb0I7SUFDcEIsNEJBQTRCO0lBQzVCLDBCQUEwQjtJQUMxQixZQUFZO0NBQ2Y7QUFDRDtJQUNJLDJCQUEyQjtJQUMzQixtQ0FBbUM7Q0FDdEM7QUFDRDtJQUNJLHlCQUF5QjtJQUN6QixpQ0FBaUM7Q0FDcEMiLCJmaWxlIjoic3JjL2FwcC9wYW5lbC9wYW5lbC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmFwcC1wYW5lbCB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIG92ZXJmbG93LXk6IHNjcm9sbDtcbiAgICBib3gtc2l6aW5nOiBjb250ZW50LWJveDsgLyogU28gdGhlIHdpZHRoIHdpbGwgYmUgMTAwJSArIDE3cHggKi9cbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgbWFyZ2luLXRvcDogMTBweDtcbn1cbi5hcHAtYW5jaG9yIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgdG9wOiA1cHg7XG4gICAgd2lkdGg6IDMycHg7XG4gICAgaGVpZ2h0OiAzMnB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBvcGFjaXR5OiAuODtcbiAgICBib3JkZXItY29sb3I6IHRyYW5zcGFyZW50O1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn1cbmkge1xuICAgIGJvcmRlcjogc29saWQgYmxhY2s7XG4gICAgYm9yZGVyLXdpZHRoOiAwIDJweCAycHggMDtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgcGFkZGluZzogNHB4O1xufVxuLmNpcmNsZS10b3Age1xuICAgIHBvc2l0aW9uOiBzdGlja3k7XG4gICAgdG9wOiAxNnB4O1xuICAgIHdpZHRoOiAzMnB4O1xuICAgIGhlaWdodDogMzJweDtcbiAgICB6LWluZGV4OiA5OTk7XG4gICAgYm9yZGVyLXJhZGl1czogMTZweDtcbiAgICBwYWRkaW5nLXRvcDogNXB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IGxpZ2h0Z3JheTtcbiAgICBib3JkZXItY29sb3I6IHRyYW5zcGFyZW50O1xuICAgIG9wYWNpdHk6IC43O1xufVxuLmNpcmNsZS1ib3R0b20ge1xuICAgIHBvc2l0aW9uOiBzdGlja3k7XG4gICAgYm90dG9tOiA5NnB4O1xuICAgIHdpZHRoOiAzMnB4O1xuICAgIGhlaWdodDogMzJweDtcbiAgICB6LWluZGV4OiA5OTk7XG4gICAgYm9yZGVyLXJhZGl1czogMTZweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBsaWdodGdyYXk7XG4gICAgYm9yZGVyLWNvbG9yOiB0cmFuc3BhcmVudDtcbiAgICBvcGFjaXR5OiAuNztcbn1cbi51cCB7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoLTEzNWRlZyk7XG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgtMTM1ZGVnKTtcbn1cbi5kb3duIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSg0NWRlZyk7XG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSg0NWRlZyk7XG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/panel/panel.component.html":
+/*!********************************************!*\
+  !*** ./src/app/panel/panel.component.html ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div #appGroup>\n  <span class=\"btn btn-sm\" style=\"margin:5px;\" \n    (click)=\"changeAppType('Operation')\"\n    [ngClass]=\"{'btn-success':shareCollection.shownAppType=='Operation','btn-secondary':shareCollection.shownAppType!='Operation'}\"\n    [ngStyle]=\"{'box-shadow':shareCollection.shownAppType=='Operation'?'2px 2px 2px 2px grey':''}\">Operations</span>\n  <span class=\"btn btn-sm\" style=\"margin:5px;\"\n    (click)=\"changeAppType('Tool')\"\n    [ngClass]=\"{'btn-info':shareCollection.shownAppType=='Tool','btn-secondary':shareCollection.shownAppType!='Tool'}\"\n    [ngStyle]=\"{'box-shadow':shareCollection.shownAppType=='Tool'?'2px 2px 2px 2px grey':''}\">Tools</span>\n</div>\n<span class=\"app-anchor\" (click)=\"toggleApp()\"\n  [ngStyle]=\"{'margin-left':shareCollection.showApp==false?'-45px':'0px','top':shareCollection.showApp==false?'-70px':''}\">\n  <span *ngIf=\"shareCollection.showApp==false\" class=\"oi oi-arrow-circle-left\" title=\"Show Apps\"></span>\n  <span *ngIf=\"shareCollection.showApp==true\" class=\"oi oi-arrow-circle-right\" title=\"Hide Apps\"></span>\n</span>\n<div #appPanel class=\"app-panel animated\" \n  (mouseover)=\"roll=true\" (mouseout)=\"roll=false\"\n  style=\"animation-delay: .3s;\"\n  [ngClass]=\"{'fadeIn':shareCollection.showApp,'fadeOut':!shareCollection.showApp}\">\n  <button class=\"circle-top\" [ngStyle]=\"{'display':(roll==true&&!isTop())?'':'none'}\">\n    <i class=\"up\"></i>\n  </button>\n  <app-application *ngFor=\"let app of applications\"\n    [attr.id]=\"app.id\"\n    [app]=\"app\"></app-application>\n  <button class=\"circle-bottom\" [ngStyle]=\"{'display':(roll==true&&!isBottom())==true?'':'none'}\">\n    <i class=\"down\"></i>\n  </button>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/panel/panel.component.ts":
+/*!******************************************!*\
+  !*** ./src/app/panel/panel.component.ts ***!
+  \******************************************/
+/*! exports provided: PanelComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PanelComponent", function() { return PanelComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _repository_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../repository.service */ "./src/app/repository.service.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../app.component */ "./src/app/app.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var PanelComponent = /** @class */ (function () {
+    function PanelComponent(repo) {
+        this.repo = repo;
+        this.roll = false;
+    }
+    PanelComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.repo.getApplications(this.shareCollection.shownAppType).subscribe(function (data) {
+            _this.applications = data;
+        }, // Bind to view
+        function (// Bind to view
+        err) {
+            // Log errors if any
+            console.log('error: ', err);
+        });
+    };
+    PanelComponent.prototype.toggleApp = function () {
+        this.shareCollection.showApp = !this.shareCollection.showApp;
+    };
+    PanelComponent.prototype.isTop = function () {
+        if (this.topAppElm == null) {
+            var topAppId = this.applications[0].id;
+            this.topAppElm = document.getElementById(topAppId);
+        }
+        return (this.topAppElm.offsetTop - this.topAppElm.parentElement.scrollTop) >= 0;
+    };
+    PanelComponent.prototype.isBottom = function () {
+        if (this.bottomAppElm == null) {
+            var bottomAppId = this.applications[this.applications.length - 1].id;
+            this.bottomAppElm = document.getElementById(bottomAppId);
+        }
+        return (this.bottomAppElm.offsetTop - this.bottomAppElm.parentElement.scrollTop - this.bottomAppElm.parentElement.offsetHeight + this.bottomAppElm.parentElement.offsetTop) <= 2;
+    };
+    PanelComponent.prototype.changeAppType = function (type) {
+        var _this = this;
+        if (this.shareCollection.shownAppType != type) {
+            this.shareCollection.shownAppType = type;
+            this.repo.getApplications(type).subscribe(function (data) {
+                _this.applications = data;
+                _this.topAppElm = null;
+                _this.bottomAppElm = null;
+            }, // Bind to view
+            function (// Bind to view
+            err) {
+                // Log errors if any
+                console.log('error: ', err);
+            });
+        }
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", _app_component__WEBPACK_IMPORTED_MODULE_2__["ShareCollection"])
+    ], PanelComponent.prototype, "shareCollection", void 0);
+    PanelComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-panel',
+            template: __webpack_require__(/*! ./panel.component.html */ "./src/app/panel/panel.component.html"),
+            styles: [__webpack_require__(/*! ./panel.component.css */ "./src/app/panel/panel.component.css")]
+        }),
+        __metadata("design:paramtypes", [_repository_service__WEBPACK_IMPORTED_MODULE_1__["RepositoryService"]])
+    ], PanelComponent);
+    return PanelComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/repository.service.ts":
 /*!***************************************!*\
   !*** ./src/app/repository.service.ts ***!
@@ -624,11 +713,13 @@ var RepositoryService = /** @class */ (function () {
     function RepositoryService(http) {
         this.http = http;
     }
-    RepositoryService.prototype.getLeftApplications = function () {
-        return this.http.get('../assets/left-applications.json');
-    };
-    RepositoryService.prototype.getRightApplications = function () {
-        return this.http.get('../assets/right-applications.json');
+    RepositoryService.prototype.getApplications = function (type) {
+        if (type == 'Operation') {
+            return this.http.get('../assets/operation-applications.json');
+        }
+        else {
+            return this.http.get('../assets/tool-applications.json');
+        }
     };
     RepositoryService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
@@ -643,41 +734,71 @@ var RepositoryService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/right-panel/right-panel.component.css":
-/*!*******************************************************!*\
-  !*** ./src/app/right-panel/right-panel.component.css ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".app-panel {\n    width: 100%;\n    height: 100%;\n    overflow-y: scroll;\n    box-sizing: content-box; /* So the width will be 100% + 17px */\n    text-align: center;\n}\ni {\n    border: solid black;\n    border-width: 0 2px 2px 0;\n    display: inline-block;\n    padding: 4px;\n}\n.circle-top {\n    position: -webkit-sticky;\n    position: sticky;\n    top: 16px;\n    width: 32px;\n    height: 32px;\n    z-index: 999;\n    border-radius: 16px;\n    padding-top: 5px;\n    background-color: lightgray;\n    border-color: transparent;\n    opacity: .7;\n}\n.circle-bottom {\n    position: -webkit-sticky;\n    position: sticky;\n    bottom: 16px;\n    width: 32px;\n    height: 32px;\n    z-index: 999;\n    border-radius: 16px;\n    background-color: lightgray;\n    border-color: transparent;\n    opacity: .7;\n}\n.up {\n    transform: rotate(-135deg);\n    -webkit-transform: rotate(-135deg);\n}\n.down {\n    transform: rotate(45deg);\n    -webkit-transform: rotate(45deg);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmlnaHQtcGFuZWwvcmlnaHQtcGFuZWwuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFlBQVk7SUFDWixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLHdCQUF3QixDQUFDLHNDQUFzQztJQUMvRCxtQkFBbUI7Q0FDdEI7QUFDRDtJQUNJLG9CQUFvQjtJQUNwQiwwQkFBMEI7SUFDMUIsc0JBQXNCO0lBQ3RCLGFBQWE7Q0FDaEI7QUFDRDtJQUNJLHlCQUFpQjtJQUFqQixpQkFBaUI7SUFDakIsVUFBVTtJQUNWLFlBQVk7SUFDWixhQUFhO0lBQ2IsYUFBYTtJQUNiLG9CQUFvQjtJQUNwQixpQkFBaUI7SUFDakIsNEJBQTRCO0lBQzVCLDBCQUEwQjtJQUMxQixZQUFZO0NBQ2Y7QUFDRDtJQUNJLHlCQUFpQjtJQUFqQixpQkFBaUI7SUFDakIsYUFBYTtJQUNiLFlBQVk7SUFDWixhQUFhO0lBQ2IsYUFBYTtJQUNiLG9CQUFvQjtJQUNwQiw0QkFBNEI7SUFDNUIsMEJBQTBCO0lBQzFCLFlBQVk7Q0FDZjtBQUNEO0lBQ0ksMkJBQTJCO0lBQzNCLG1DQUFtQztDQUN0QztBQUNEO0lBQ0kseUJBQXlCO0lBQ3pCLGlDQUFpQztDQUNwQyIsImZpbGUiOiJzcmMvYXBwL3JpZ2h0LXBhbmVsL3JpZ2h0LXBhbmVsLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYXBwLXBhbmVsIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgb3ZlcmZsb3cteTogc2Nyb2xsO1xuICAgIGJveC1zaXppbmc6IGNvbnRlbnQtYm94OyAvKiBTbyB0aGUgd2lkdGggd2lsbCBiZSAxMDAlICsgMTdweCAqL1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbmkge1xuICAgIGJvcmRlcjogc29saWQgYmxhY2s7XG4gICAgYm9yZGVyLXdpZHRoOiAwIDJweCAycHggMDtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgcGFkZGluZzogNHB4O1xufVxuLmNpcmNsZS10b3Age1xuICAgIHBvc2l0aW9uOiBzdGlja3k7XG4gICAgdG9wOiAxNnB4O1xuICAgIHdpZHRoOiAzMnB4O1xuICAgIGhlaWdodDogMzJweDtcbiAgICB6LWluZGV4OiA5OTk7XG4gICAgYm9yZGVyLXJhZGl1czogMTZweDtcbiAgICBwYWRkaW5nLXRvcDogNXB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IGxpZ2h0Z3JheTtcbiAgICBib3JkZXItY29sb3I6IHRyYW5zcGFyZW50O1xuICAgIG9wYWNpdHk6IC43O1xufVxuLmNpcmNsZS1ib3R0b20ge1xuICAgIHBvc2l0aW9uOiBzdGlja3k7XG4gICAgYm90dG9tOiAxNnB4O1xuICAgIHdpZHRoOiAzMnB4O1xuICAgIGhlaWdodDogMzJweDtcbiAgICB6LWluZGV4OiA5OTk7XG4gICAgYm9yZGVyLXJhZGl1czogMTZweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBsaWdodGdyYXk7XG4gICAgYm9yZGVyLWNvbG9yOiB0cmFuc3BhcmVudDtcbiAgICBvcGFjaXR5OiAuNztcbn1cbi51cCB7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoLTEzNWRlZyk7XG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgtMTM1ZGVnKTtcbn1cbi5kb3duIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSg0NWRlZyk7XG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSg0NWRlZyk7XG59Il19 */"
-
-/***/ }),
-
-/***/ "./src/app/right-panel/right-panel.component.html":
-/*!********************************************************!*\
-  !*** ./src/app/right-panel/right-panel.component.html ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div #rightAppPanel class=\"app-panel animated bounceInRight\" \n  (mouseover)=\"roll=true\" (mouseout)=\"roll=false\"\n  [ngClass]=\"{'bounceInRight':shareCollection.showApp,'bounceOutRight':!shareCollection.showApp}\">\n  <button class=\"circle-top\" [ngStyle]=\"{'display':(roll==true&&!isTop())?'':'none'}\">\n    <i class=\"up\"></i>\n  </button>\n  <app-application *ngFor=\"let app of applications\"\n    [attr.id]=\"app.id\"\n    [app]=\"app\"></app-application>\n  <button class=\"circle-bottom\" [ngStyle]=\"{'display':(roll==true&&!isBottom())?'':'none'}\">\n    <i class=\"down\"></i>\n  </button>\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/right-panel/right-panel.component.ts":
-/*!******************************************************!*\
-  !*** ./src/app/right-panel/right-panel.component.ts ***!
-  \******************************************************/
-/*! exports provided: RightPanelComponent */
+/***/ "./src/app/workspace/tab.ts":
+/*!**********************************!*\
+  !*** ./src/app/workspace/tab.ts ***!
+  \**********************************/
+/*! exports provided: Tab */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RightPanelComponent", function() { return RightPanelComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Tab", function() { return Tab; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _repository_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../repository.service */ "./src/app/repository.service.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../app.component */ "./src/app/app.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var Tab = /** @class */ (function () {
+    function Tab() {
+        this.title = '';
+        this.active = false;
+        this.disabled = false;
+    }
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], Tab.prototype, "title", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], Tab.prototype, "active", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], Tab.prototype, "disabled", void 0);
+    Tab = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'tab',
+            template: "\n    <ng-content *ngIf=\"active\"></ng-content>\n  "
+        })
+    ], Tab);
+    return Tab;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/workspace/tabset.ts":
+/*!*************************************!*\
+  !*** ./src/app/workspace/tabset.ts ***!
+  \*************************************/
+/*! exports provided: Tabset, TAB_COMPONENTS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Tabset", function() { return Tabset; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TAB_COMPONENTS", function() { return TAB_COMPONENTS; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _tab__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tab */ "./src/app/workspace/tab.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -689,52 +810,51 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-
-var RightPanelComponent = /** @class */ (function () {
-    function RightPanelComponent(repo) {
-        this.repo = repo;
-        this.roll = false;
+var Tabset = /** @class */ (function () {
+    function Tabset() {
+        this.onSelect = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
     }
-    RightPanelComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.repo.getRightApplications().subscribe(function (data) {
-            _this.applications = data;
-        }, // Bind to view
-        function (// Bind to view
-        err) {
-            // Log errors if any
-            console.log('error: ', err);
-        });
-    };
-    RightPanelComponent.prototype.isTop = function () {
-        if (this.topAppElm == null) {
-            var topAppId = this.applications[0].id;
-            this.topAppElm = document.getElementById(topAppId);
+    Tabset.prototype.ngAfterContentInit = function () {
+        var tabs = this.tabs.toArray();
+        var actives = this.tabs.filter(function (t) { return t.active; });
+        if (actives.length > 1) {
+            console.error("Multiple active tabs set 'active'");
         }
-        return (this.topAppElm.offsetTop - this.topAppElm.parentElement.scrollTop) >= 0;
-    };
-    RightPanelComponent.prototype.isBottom = function () {
-        if (this.bottomAppElm == null) {
-            var bottomAppId = this.applications[this.applications.length - 1].id;
-            this.bottomAppElm = document.getElementById(bottomAppId);
+        else if (!actives.length && tabs.length) {
+            tabs[0].active = true;
         }
-        return (this.bottomAppElm.offsetTop - this.bottomAppElm.parentElement.scrollTop - this.bottomAppElm.parentElement.offsetHeight + this.bottomAppElm.parentElement.offsetTop) <= 2;
+    };
+    Tabset.prototype.tabClicked = function (tab) {
+        var tabs = this.tabs.toArray();
+        tabs.forEach(function (tab) { return tab.active = false; });
+        tab.active = true;
+        this.onSelect.emit(tab);
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", _app_component__WEBPACK_IMPORTED_MODULE_2__["ShareCollection"])
-    ], RightPanelComponent.prototype, "shareCollection", void 0);
-    RightPanelComponent = __decorate([
+        __metadata("design:type", Object)
+    ], Tabset.prototype, "vertical", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", Object)
+    ], Tabset.prototype, "onSelect", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChildren"])(_tab__WEBPACK_IMPORTED_MODULE_1__["Tab"]),
+        __metadata("design:type", Object)
+    ], Tabset.prototype, "tabs", void 0);
+    Tabset = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-right-panel',
-            template: __webpack_require__(/*! ./right-panel.component.html */ "./src/app/right-panel/right-panel.component.html"),
-            styles: [__webpack_require__(/*! ./right-panel.component.css */ "./src/app/right-panel/right-panel.component.css")]
-        }),
-        __metadata("design:paramtypes", [_repository_service__WEBPACK_IMPORTED_MODULE_1__["RepositoryService"]])
-    ], RightPanelComponent);
-    return RightPanelComponent;
+            selector: 'tabset',
+            template: "\n      <section class=\"tab-set\">\n        <ul\n          class=\"nav\"\n          [class.nav-pills]=\"vertical\"\n          [class.nav-tabs]=\"!vertical\">\n          <li\n            *ngFor=\"let tab of tabs\"\n            [class.active]=\"tab.active\">\n            <a\n              (click)=\"tabClicked(tab)\"\n              class=\"btn\"\n              [class.disabled]=\"tab.disabled\">\n              <span>{{tab.title}}</span>\n            </a>\n          </li>\n        </ul>\n        <div class=\"tab-content\">\n          <ng-content></ng-content>\n        </div>\n      </section>\n    "
+        })
+    ], Tabset);
+    return Tabset;
 }());
 
+var TAB_COMPONENTS = [
+    Tabset,
+    _tab__WEBPACK_IMPORTED_MODULE_1__["Tab"]
+];
 
 
 /***/ }),
@@ -746,7 +866,7 @@ var RightPanelComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".app-workspace {\n    width: 100%;\n    height: 100%;\n    overflow-y: scroll;\n    padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */\n    box-sizing: content-box; /* So the width will be 100% + 17px */\n    text-align: center;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvd29ya3NwYWNlL3dvcmtzcGFjZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksWUFBWTtJQUNaLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsb0JBQW9CLENBQUMsa0VBQWtFO0lBQ3ZGLHdCQUF3QixDQUFDLHNDQUFzQztJQUMvRCxtQkFBbUI7Q0FDdEIiLCJmaWxlIjoic3JjL2FwcC93b3Jrc3BhY2Uvd29ya3NwYWNlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYXBwLXdvcmtzcGFjZSB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIG92ZXJmbG93LXk6IHNjcm9sbDtcbiAgICBwYWRkaW5nLXJpZ2h0OiAxN3B4OyAvKiBJbmNyZWFzZS9kZWNyZWFzZSB0aGlzIHZhbHVlIGZvciBjcm9zcy1icm93c2VyIGNvbXBhdGliaWxpdHkgKi9cbiAgICBib3gtc2l6aW5nOiBjb250ZW50LWJveDsgLyogU28gdGhlIHdpZHRoIHdpbGwgYmUgMTAwJSArIDE3cHggKi9cbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4iXX0= */"
+module.exports = ".app-workspace {\n    width: 100%;\n    height: 100%;\n    overflow-y: scroll;\n    padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */\n    box-sizing: content-box; /* So the width will be 100% + 17px */\n    text-align: center\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvd29ya3NwYWNlL3dvcmtzcGFjZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksWUFBWTtJQUNaLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsb0JBQW9CLENBQUMsa0VBQWtFO0lBQ3ZGLHdCQUF3QixDQUFDLHNDQUFzQztJQUMvRCxrQkFBa0I7Q0FDckIiLCJmaWxlIjoic3JjL2FwcC93b3Jrc3BhY2Uvd29ya3NwYWNlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYXBwLXdvcmtzcGFjZSB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIG92ZXJmbG93LXk6IHNjcm9sbDtcbiAgICBwYWRkaW5nLXJpZ2h0OiAxN3B4OyAvKiBJbmNyZWFzZS9kZWNyZWFzZSB0aGlzIHZhbHVlIGZvciBjcm9zcy1icm93c2VyIGNvbXBhdGliaWxpdHkgKi9cbiAgICBib3gtc2l6aW5nOiBjb250ZW50LWJveDsgLyogU28gdGhlIHdpZHRoIHdpbGwgYmUgMTAwJSArIDE3cHggKi9cbiAgICB0ZXh0LWFsaWduOiBjZW50ZXJcbn0iXX0= */"
 
 /***/ }),
 
@@ -757,7 +877,7 @@ module.exports = ".app-workspace {\n    width: 100%;\n    height: 100%;\n    ove
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"app-workspace\" >\n  OOO\n  <router-outlet></router-outlet>\n</div>\n\n"
+module.exports = "<div class=\"app-workspace\" >\n  <tabset>\n    <tab title=\"Dog\">\n      Dogs are my fav!\n    </tab>\n    <tab title=\"Panda\">\n      Pandas are cool animals\n    </tab>\n    <tab title=\"Duck\">\n      Ducks are cool animals too\n    </tab>\n  </tabset>\n  <router-outlet></router-outlet>\n</div>\n\n"
 
 /***/ }),
 
@@ -772,6 +892,7 @@ module.exports = "<div class=\"app-workspace\" >\n  OOO\n  <router-outlet></rout
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WorkspaceComponent", function() { return WorkspaceComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../app.component */ "./src/app/app.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -782,12 +903,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var WorkspaceComponent = /** @class */ (function () {
     function WorkspaceComponent() {
         this.show = false;
     }
     WorkspaceComponent.prototype.ngOnInit = function () {
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", _app_component__WEBPACK_IMPORTED_MODULE_1__["ShareCollection"])
+    ], WorkspaceComponent.prototype, "shareCollection", void 0);
     WorkspaceComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-workspace',
@@ -864,7 +990,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! c:\vos\web-portal\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/mac/Documents/angular/web-portal/src/main.ts */"./src/main.ts");
 
 
 /***/ })
