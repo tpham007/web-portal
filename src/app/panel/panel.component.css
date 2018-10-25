@@ -1,20 +1,41 @@
 .app-panel {
     width: 100%;
-    height: 100%;
+    height:  calc(100% - 140px);
     overflow-y: scroll;
     box-sizing: content-box; /* So the width will be 100% + 17px */
     text-align: center;
     margin-top: 10px;
+    padding-bottom: 100px;
 }
 .app-anchor {
     position: relative;
-    top: 5px;
     width: 32px;
     height: 32px;
     border-radius: 5px;
-    opacity: .8;
+    opacity: 1;
     border-color: transparent;
     cursor: pointer;
+    margin-left: 5px!important;
+    margin-right: 5px!important;
+}
+.app-anchor.anchor-close {
+    margin-left: -45px!important;
+    top: -67px;
+}
+.anchor-close > .oi-expand-left {
+    display: none;
+}
+.app-anchor.anchor-open  {
+    margin-left: 0px;
+}
+.anchor-open > .oi-list {
+    display: none;
+}
+.anchor-open > .oi.oi-expand-left {
+    top: 10px!important;
+}
+.anchor-close > .oi.oi-list {
+    top: 0px!important;
 }
 i {
     border: solid black;
@@ -29,27 +50,20 @@ i {
     height: 32px;
     z-index: 999;
     border-radius: 16px;
-    padding-top: 5px;
+    padding-bottom: 4px;
     background-color: lightgray;
     border-color: transparent;
     opacity: .7;
 }
 .circle-bottom {
     position: sticky;
-    bottom: 96px;
+    bottom: 32px;
     width: 32px;
     height: 32px;
     z-index: 999;
     border-radius: 16px;
+    padding-top: 4px;
     background-color: lightgray;
     border-color: transparent;
     opacity: .7;
-}
-.up {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-}
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
 }

@@ -5,3 +5,14 @@
     display: flex;
     flex-wrap: wrap;
 }
+.workspace-only {
+    width: 99%;
+}
+.workspace-app {
+    width: 85%;
+}
+@media screen and (max-width:  768px) {
+    .workspace-app {
+        width: 99%!important;
+    }
+}

@@ -3,6 +3,7 @@ export class ShareCollection {
   showApp: boolean;
   bodyHeight: any;
   shownAppType: any;
+  selectedApp: any;
 }
 @Component({
   selector: 'app-root',
@@ -14,10 +15,10 @@ export class AppComponent {
   shareCollection = new ShareCollection();
   constructor(){
     this.shareCollection.showApp = true;
-    this.shareCollection.bodyHeight = window.innerHeight-180;
+    this.shareCollection.bodyHeight = window.innerHeight-60;
     this.shareCollection.shownAppType = 'Operation';
   }
   @HostListener('window:resize', ['$event']) onResize(event: any) {
-    this.shareCollection.bodyHeight = event.target.innerHeight-180;
+    this.shareCollection.bodyHeight = event.target.innerHeight-60;
   }
 }

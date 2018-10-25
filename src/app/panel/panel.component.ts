@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { RepositoryService } from '../repository.service';
 import { ShareCollection } from '../app.component';
+
 @Component({
   selector: 'app-panel',
   templateUrl: './panel.component.html',
@@ -37,11 +38,12 @@ export class PanelComponent implements OnInit {
       let bottomAppId = this.applications[this.applications.length-1].id;
       this.bottomAppElm = document.getElementById(bottomAppId);
     }
-    return (this.bottomAppElm.offsetTop -this.bottomAppElm.parentElement.scrollTop-this.bottomAppElm.parentElement.offsetHeight+this.bottomAppElm.parentElement.offsetTop) <= 2;
+    let pos = (this.bottomAppElm.offsetTop -this.bottomAppElm.parentElement.scrollTop-this.bottomAppElm.parentElement.offsetHeight+this.bottomAppElm.parentElement.offsetTop);
+    return pos <= 130;
   }
   changeAppType(type: String) {
-    if(this.shareCollection.shownAppType != type) {
-      this.shareCollection.shownAppType = type;
+    if (this.shareCollection.shownAppType != type) {
+      this.shareCollection.shownAppType = null;
       this.repo.getApplications(type).subscribe(data => {
         this.applications = data;
         this.topAppElm = null;
@@ -51,6 +53,9 @@ export class PanelComponent implements OnInit {
         // Log errors if any
         console.log('error: ', err);
       });
+      window.setTimeout(function(shareCollection, type) {
+        shareCollection.shownAppType = type;
+      },50, this.shareCollection, type);
     }
   }
 }

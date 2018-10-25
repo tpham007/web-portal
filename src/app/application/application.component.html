@@ -1,4 +1,6 @@
-<div class="card" style="margin:10px;">
+<div #appHead class="card" style="margin:10px;"
+  [ngClass]="{'active':shareCollection.selectedApp==app}"
+  (click)="selectMe()">
   <div class="card-header">{{app.name}}</div>
   <div class="card-body">
     <img src="{{app.icon}}" style="height:24px;width:auto;">

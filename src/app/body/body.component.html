@@ -1,9 +1,9 @@
 <div class="body" [style.max-height.px]="shareCollection.bodyHeight">
-  <div style="max-height:inherit;margin-top:10px;margin-left:0.5%;;margin-right:0.5%;transition: width 0.5s;"
-    class="float-none"
-    [ngStyle]="{'width':shareCollection.showApp==true?'85%':'99%'}">
-    <app-workspace [shareCollection]="shareCollection"></app-workspace>
-  </div>
+  
+  <app-workspace 
+    [ngClass]="{'workspace-only':!shareCollection.showApp,'workspace-app':shareCollection.showApp}"
+    [shareCollection]="shareCollection"></app-workspace>
+  
   <div class="d-none d-md-block d-lg-block d-xl-block" 
     style="text-align:center;max-height:inherit;transition: width 0.5s;"
     [ngStyle]="{'width':shareCollection.showApp==true?'14%':'0%'}">
