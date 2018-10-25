@@ -9,7 +9,7 @@
     [ngStyle]="{'box-shadow':shareCollection.shownAppType=='Tool'?'2px 2px 2px 2px grey':''}">Tools</span>
 </div>
 <span class="app-anchor" (click)="toggleApp()"
-  [ngStyle]="{'margin-left':shareCollection.showApp==false?'-45px':'0px','top':shareCollection.showApp==false?'-70px':''}">
+  [ngStyle]="{'margin-left':shareCollection.showApp==false?'-45px':'0px','top':shareCollection.showApp==false?'-25px':''}">
   <span *ngIf="shareCollection.showApp==false" class="oi oi-arrow-circle-left" title="Show Apps"></span>
   <span *ngIf="shareCollection.showApp==true" class="oi oi-arrow-circle-right" title="Hide Apps"></span>
 </span>
