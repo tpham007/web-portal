@@ -58,7 +58,6 @@ export class PanelComponent implements OnInit {
           },50, this.shareCollection, type);
         },
         err => {
-          // Log errors if any
           console.log('error: ', err);
         });
       } else {
