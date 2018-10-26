@@ -7,8 +7,8 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display app logo', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to web-portal!');
+    expect(page.getLogo()).toContain('logoA.png');
   });
 });
