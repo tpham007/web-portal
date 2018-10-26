@@ -9,14 +9,17 @@ import { ShareCollection } from '../app.component';
 })
 export class PanelComponent implements OnInit {
   @Input() shareCollection: ShareCollection;
+  mApplications: any;
   applications: any;
   roll = false;
   topAppElm: any;
   bottomAppElm: any;
   constructor(private repo: RepositoryService) { }
   ngOnInit() {
+    this.mApplications = {};
     this.repo.getApplications(this.shareCollection.shownAppType).subscribe(data => {
       this.applications = data;
+      this.mApplications[this.shareCollection.shownAppType] = data;
     }, // Bind to view
     err => {
       // Log errors if any
@@ -41,21 +44,29 @@ export class PanelComponent implements OnInit {
     let pos = (this.bottomAppElm.offsetTop -this.bottomAppElm.parentElement.scrollTop-this.bottomAppElm.parentElement.offsetHeight+this.bottomAppElm.parentElement.offsetTop);
     return pos <= 130;
   }
-  changeAppType(type: String) {
+  changeAppType(type: any) {
     if (this.shareCollection.shownAppType != type) {
       this.shareCollection.shownAppType = null;
-      this.repo.getApplications(type).subscribe(data => {
-        this.applications = data;
-        this.topAppElm = null;
-        this.bottomAppElm = null;
-      }, // Bind to view
-      err => {
-        // Log errors if any
-        console.log('error: ', err);
-      });
-      window.setTimeout(function(shareCollection, type) {
-        shareCollection.shownAppType = type;
-      },50, this.shareCollection, type);
+      this.topAppElm = null;
+      this.bottomAppElm = null;
+      if (this.mApplications[type] == null) {
+        this.repo.getApplications(type).subscribe(data => {
+          this.applications = data;
+          this.mApplications[type] = data;
+          window.setTimeout(function(shareCollection, type) {
+            shareCollection.shownAppType = type;
+          },50, this.shareCollection, type);
+        }, // Bind to view
+        err => {
+          // Log errors if any
+          console.log('error: ', err);
+        });
+      } else {
+        this.applications = this.mApplications[type];
+        window.setTimeout(function(shareCollection, type) {
+          shareCollection.shownAppType = type;
+        },50, this.shareCollection, type);
+      }
     }
   }
 }
