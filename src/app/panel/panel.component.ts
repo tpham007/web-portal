@@ -56,7 +56,7 @@ export class PanelComponent implements OnInit {
           window.setTimeout(function(shareCollection, type) {
             shareCollection.shownAppType = type;
           },50, this.shareCollection, type);
-        }, // Bind to view
+        },
         err => {
           // Log errors if any
           console.log('error: ', err);
