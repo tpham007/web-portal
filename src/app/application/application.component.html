@@ -1,8 +1,8 @@
-<div #appHead class="card" style="margin:10px;"
-  [ngClass]="{'active':shareCollection.selectedApp==app}"
-  (click)="selectMe()">
+<a class="card" style="margin:10px;"
+  routerLink="/vos/{{app.name}}"
+  [ngClass]="{'active':shareCollection.selectedApp==app}">
   <div class="card-header">{{app.name}}</div>
   <div class="card-body">
-    <img src="{{app.icon}}" style="height:24px;width:auto;">
+    <img src="{{app.icon}}" style="width:48px;height:auto;">
   </div>
-</div>
+</a>

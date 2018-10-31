@@ -11,6 +11,10 @@ import { ApplicationComponent } from './application/application.component';
 import { BodyComponent } from './body/body.component';
 import { TAB_COMPONENTS  } from './workspace/tabset';
 import { PanelComponent } from './panel/panel.component';
+import { ApplicationFilter } from './pipe/application.filter';
+import { ApplicationOrder } from './pipe/application.order';
+
+import {APP_BASE_HREF} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,14 +26,18 @@ import { PanelComponent } from './panel/panel.component';
     ApplicationComponent,
     TAB_COMPONENTS,
     BodyComponent,
-    PanelComponent
+    PanelComponent,
+    ApplicationFilter,
+    ApplicationOrder
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide: APP_BASE_HREF, useValue: '/'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

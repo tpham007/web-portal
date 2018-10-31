@@ -14,8 +14,12 @@
   style="animation-delay: .5s;"
   (click)="toggleApp()"
   [ngClass]="{'anchor-open fadeInLeft':shareCollection.showApp,'anchor-close fadeInRight':!shareCollection.showApp}">
-  <span class="oi oi-list" title="Show Apps"></span>
-  <span class="oi oi-expand-left" title="Hide Apps"></span>
+  <span title="Show Apps">
+    <img id="showApp" src="assets/img/app-list.png" width="32" height="32">
+  </span>
+  <span title="Hide Apps">
+    <img id="hideApp" src="assets/img/hide.png" width="16" height="16">
+  </span>
 </span>
 <div #appPanel class="app-panel animated" 
   style="animation-delay: .5s;"
@@ -23,9 +27,8 @@
   [ngStyle]="{'display':(!shareCollection.showApp||shareCollection.shownAppType==null)?'none':'block'}"
   [ngClass]="{'fadeIn':shareCollection.showApp&&shareCollection.shownAppType!=null}">
   <button class="circle-top oi oi-caret-top" [ngStyle]="{'display':(roll==true&&!isTop())?'inline':'none'}"></button>
-  <app-application *ngFor="let app of applications"
+  <app-application *ngFor="let app of mApplications[shareCollection.shownAppType]"
     [attr.id]="app.id"
-    [shareCollection]="shareCollection"
     [app]="app"></app-application>
-  <button class="circle-bottom oi oi-caret-bottom" [ngStyle]="{'display':(roll==true&&!isBottom())==true?'inline':'none'}"></button>
+  <button class="circle-bottom oi oi-caret-bottom" [ngStyle]="{'display':(roll==true&&!isBottom())?'inline':'none'}"></button>
 </div>

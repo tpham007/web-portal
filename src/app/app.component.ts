@@ -1,10 +1,6 @@
 import { Component, HostListener } from '@angular/core';
-export class ShareCollection {
-  showApp: boolean;
-  bodyHeight: any;
-  shownAppType: any;
-  selectedApp: any;
-}
+import { RepositoryService } from './repository.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,11 +8,9 @@ export class ShareCollection {
 })
 export class AppComponent {
   title = 'Harmonic Portal';
-  shareCollection = new ShareCollection();
-  constructor(){
-    this.shareCollection.showApp = true;
-    this.shareCollection.bodyHeight = window.innerHeight-60;
-    this.shareCollection.shownAppType = 'Operation';
+  public shareCollection: any;
+  constructor(private repo: RepositoryService){
+    this.shareCollection = this.repo.shareCollection;
   }
   @HostListener('window:resize', ['$event']) onResize(event: any) {
     this.shareCollection.bodyHeight = event.target.innerHeight-60;

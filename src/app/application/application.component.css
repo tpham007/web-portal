@@ -2,7 +2,11 @@
     border-color: black;
     cursor: pointer;
     user-select: none;
+    text-decoration: none;
 }
 .card.active {
-    box-shadow: 2px 2px 2px 2px grey;
+    border: 2px solid black;
+}
+.card-header {
+    color: black;
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ShareCollection } from '../app.component';
+import { RepositoryService } from '../repository.service';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +7,11 @@ import { ShareCollection } from '../app.component';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Input() shareCollection: ShareCollection;
+  shareCollection: any;
   title = "Harmonic Portal";
-  imgSrc ="../../assets/img/logoA.png";
-  constructor() { 
+  imgSrc ="../../assets/img/logo1.png";
+  constructor(private repo: RepositoryService) { 
+    this.shareCollection = this.repo.shareCollection;
   }
 
   ngOnInit() {

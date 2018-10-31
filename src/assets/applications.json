@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Projects",
+        "icon": "../../assets/img/project.png",
+        "type": "Operation"
+    },
+    {
+        "id": 2,
+        "name": "Schedulers",
+        "icon": "../../assets/img/schedule.png",
+        "type": "Operation"
+    },
+    {
+        "id": 3,
+        "name": "Tasks",
+        "icon": "../../assets/img/task.png",
+        "type": "Operation"
+    },
+    {
+        "id": 4,
+        "name": "Users",
+        "icon": "../../assets/img/user.png",
+        "type": "Operation"
+    },
+    {
+        "id": 5,
+        "name": "Reports",
+        "icon": "../../assets/img/report.png",
+        "type": "Operation"
+    },
+    {
+        "id": 6,
+        "name": "Meetings",
+        "icon": "../../assets/img/meeting.png",
+        "type": "Operation"
+    },
+    {
+        "id": 7,
+        "name": "Supports",
+        "icon": "../../assets/img/support.png",
+        "type": "Operation"
+    },
+    {
+        "id": 10,
+        "name": "Lookup",
+        "icon": "../../assets/img/search.png",
+        "type": "Tool"
+    },
+    {
+        "id": 20,
+        "name": "Logs",
+        "icon": "../../assets/img/log.png",
+        "type": "Tool"
+    },
+    {
+        "id": 30,
+        "name": "Settings",
+        "icon": "../../assets/img/settings.png",
+        "type": "Tool"
+    }
+]
