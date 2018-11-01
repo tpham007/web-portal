@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, EventEmitter} from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd, Params} from "@angular/router";
 import { DomSanitizer, SafeResourceUrl}  from '@angular/platform-browser';
 import { RepositoryService } from '../repository.service';

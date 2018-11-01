@@ -9,10 +9,11 @@ import { HeaderComponent } from './header/header.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { ApplicationComponent } from './application/application.component';
 import { BodyComponent } from './body/body.component';
-import { TAB_COMPONENTS  } from './workspace/tabset';
 import { PanelComponent } from './panel/panel.component';
 import { ApplicationFilter } from './pipe/application.filter';
 import { ApplicationOrder } from './pipe/application.order';
+
+import { LogModule } from '../../node_modules/cableos-applications';
 
 import {APP_BASE_HREF} from '@angular/common';
 
@@ -24,7 +25,6 @@ import {APP_BASE_HREF} from '@angular/common';
     HeaderComponent,
     WorkspaceComponent,
     ApplicationComponent,
-    TAB_COMPONENTS,
     BodyComponent,
     PanelComponent,
     ApplicationFilter,
@@ -33,7 +33,8 @@ import {APP_BASE_HREF} from '@angular/common';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    LogModule
   ],
   providers: [
     {provide: APP_BASE_HREF, useValue: '/'}
