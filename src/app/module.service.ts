@@ -30,15 +30,20 @@ export class ModuleService {
         let THIS = this;
         let promise = new Promise((resolve, reject) => {
             THIS.repo.getApplications().then(function(applications) {
+                let allp = [];
                 applications.forEach(app => {
                     if (app.registered) {
-                        THIS.loadModule(app).subscribe((exports) => {
-                            THIS.routerService.createAndRegisterRoute(app, exports);
-                            resolve();
-                        }, () => console.log(`${app.moduleName} could not be found, did you copy the umd file to ${app.location}?`));
+                        let p = new Promise((resolve, reject) => {
+                            THIS.loadModule(app).subscribe((exports) => {
+                                THIS.routerService.createAndRegisterRoute(app, exports);
+                                resolve();
+                            }, () => console.log(`${app.moduleName} could not be found, did you copy the umd file to ${app.location}?`));    
+                        });
+                        allp.push(p);
                     }
                 });
-            })
+                Promise.all(allp).then(rs => resolve());
+            });
         });
         return promise;
     }

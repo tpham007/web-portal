@@ -8,7 +8,7 @@
         "location": "./assets/dist/project.umd.js",
         "moduleName": "ProjectModule",
         "description": "Project Management",
-        "registered": false
+        "registered": true
     },
     {
         "id": 2,
@@ -19,7 +19,7 @@
         "location": "./assets/dist/scheduler.umd.js",
         "moduleName": "SchedulerModule",
         "description": "Scheduler Management",
-        "registered": false
+        "registered": true
     },
     {
         "id": 3,
@@ -30,7 +30,7 @@
         "location": "./assets/dist/task.umd.js",
         "moduleName": "TaskModule",
         "description": "Task Management",
-        "registered": false
+        "registered": true
     },
     {
         "id": 4,
@@ -40,7 +40,6 @@
         "path": "user",
         "location": "./assets/dist/user.umd.js",
         "moduleName": "UserModule",
-        "componentName": "UserComponent",
         "description": "Users Management",
         "registered": true
     },
@@ -53,7 +52,7 @@
         "location": "./assets/dist/report.umd.js",
         "moduleName": "ReportModule",
         "description": "Report Management",
-        "registered": false
+        "registered": true
     },
     {
         "id": 6,
@@ -64,7 +63,7 @@
         "location": "./assets/dist/meeting.umd.js",
         "moduleName": "MeetingModule",
         "description": "Meeting Management",
-        "registered": false
+        "registered": true
     },
     {
         "id": 7,
@@ -75,7 +74,7 @@
         "location": "./assets/dist/support.umd.js",
         "moduleName": "SupportModule",
         "description": "Support Management",
-        "registered": false
+        "registered": true
     },
     {
         "id": 10,
@@ -86,7 +85,7 @@
         "location": "./assets/dist/lookup.umd.js",
         "moduleName": "LookupModule",
         "description": "Lookup Management",
-        "registered": false
+        "registered": true
     },
     {
         "id": 20,
@@ -97,7 +96,7 @@
         "location": "./assets/dist/log.umd.js",
         "moduleName": "LogModule",
         "description": "Log Management",
-        "registered": false
+        "registered": true
     },
     {
         "id": 30,
@@ -108,6 +107,6 @@
         "location": "./assets/dist/setting.umd.js",
         "moduleName": "SettingModule",
         "description": "Setting Management",
-        "registered": false
+        "registered": true
     }
 ]

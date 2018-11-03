@@ -35,6 +35,60 @@
       ],
       "customize/*": [
         "dist/customize/*"
+      ],
+      "log": [
+        "dist/log"
+      ],
+      "log/*": [
+        "dist/log/*"
+      ],
+      "report": [
+        "dist/report"
+      ],
+      "report/*": [
+        "dist/report/*"
+      ],
+      "setting": [
+        "dist/setting"
+      ],
+      "setting/*": [
+        "dist/setting/*"
+      ],
+      "meeting": [
+        "dist/meeting"
+      ],
+      "meeting/*": [
+        "dist/meeting/*"
+      ],
+      "project": [
+        "dist/project"
+      ],
+      "project/*": [
+        "dist/project/*"
+      ],
+      "scheduler": [
+        "dist/scheduler"
+      ],
+      "scheduler/*": [
+        "dist/scheduler/*"
+      ],
+      "task": [
+        "dist/task"
+      ],
+      "task/*": [
+        "dist/task/*"
+      ],
+      "support": [
+        "dist/support"
+      ],
+      "support/*": [
+        "dist/support/*"
+      ],
+      "lookup": [
+        "dist/lookup"
+      ],
+      "lookup/*": [
+        "dist/lookup/*"
       ]
     }
   }

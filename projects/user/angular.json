@@ -1,5 +1,0 @@
-{
-  "assets": [
-    { "glob": "**/*", "input": "../../dist/user/bundles", "output": "../../src/assets/dist" }
-  ]
-}
