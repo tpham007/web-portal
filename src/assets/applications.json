@@ -3,60 +3,111 @@
         "id": 1,
         "name": "Projects",
         "icon": "../../assets/img/project.png",
-        "type": "Operation"
+        "type": "Operation",
+        "path": "project",
+        "location": "./assets/dist/project.umd.js",
+        "moduleName": "ProjectModule",
+        "description": "Project Management",
+        "registered": false
     },
     {
         "id": 2,
         "name": "Schedulers",
         "icon": "../../assets/img/schedule.png",
-        "type": "Operation"
+        "type": "Operation",
+        "path": "scheduler",
+        "location": "./assets/dist/scheduler.umd.js",
+        "moduleName": "SchedulerModule",
+        "description": "Scheduler Management",
+        "registered": false
     },
     {
         "id": 3,
         "name": "Tasks",
         "icon": "../../assets/img/task.png",
-        "type": "Operation"
+        "type": "Operation",
+        "path": "task",
+        "location": "./assets/dist/task.umd.js",
+        "moduleName": "TaskModule",
+        "description": "Task Management",
+        "registered": false
     },
     {
         "id": 4,
         "name": "Users",
         "icon": "../../assets/img/user.png",
-        "type": "Operation"
+        "type": "Operation",
+        "path": "user",
+        "location": "./assets/dist/user.umd.js",
+        "moduleName": "UserModule",
+        "componentName": "UserComponent",
+        "description": "Users Management",
+        "registered": true
     },
     {
         "id": 5,
         "name": "Reports",
         "icon": "../../assets/img/report.png",
-        "type": "Operation"
+        "type": "Operation",
+        "path": "report",
+        "location": "./assets/dist/report.umd.js",
+        "moduleName": "ReportModule",
+        "description": "Report Management",
+        "registered": false
     },
     {
         "id": 6,
         "name": "Meetings",
         "icon": "../../assets/img/meeting.png",
-        "type": "Operation"
+        "type": "Operation",
+        "path": "meeting",
+        "location": "./assets/dist/meeting.umd.js",
+        "moduleName": "MeetingModule",
+        "description": "Meeting Management",
+        "registered": false
     },
     {
         "id": 7,
         "name": "Supports",
         "icon": "../../assets/img/support.png",
-        "type": "Operation"
+        "type": "Operation",
+        "path": "support",
+        "location": "./assets/dist/support.umd.js",
+        "moduleName": "SupportModule",
+        "description": "Support Management",
+        "registered": false
     },
     {
         "id": 10,
         "name": "Lookup",
         "icon": "../../assets/img/search.png",
-        "type": "Tool"
+        "type": "Tool",
+        "path": "lookup",
+        "location": "./assets/dist/lookup.umd.js",
+        "moduleName": "LookupModule",
+        "description": "Lookup Management",
+        "registered": false
     },
     {
         "id": 20,
         "name": "Logs",
         "icon": "../../assets/img/log.png",
-        "type": "Tool"
+        "type": "Tool",
+        "path": "log",
+        "location": "./assets/dist/log.umd.js",
+        "moduleName": "LogModule",
+        "description": "Log Management",
+        "registered": false
     },
     {
         "id": 30,
         "name": "Settings",
         "icon": "../../assets/img/settings.png",
-        "type": "Tool"
+        "type": "Tool",
+        "path": "setting",
+        "location": "./assets/dist/setting.umd.js",
+        "moduleName": "SettingModule",
+        "description": "Setting Management",
+        "registered": false
     }
 ]

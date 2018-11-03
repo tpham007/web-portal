@@ -132,6 +132,76 @@
           }
         }
       }
+    },
+    "user": {
+      "root": "projects/user",
+      "sourceRoot": "projects/user/src",
+      "projectType": "library",
+      "prefix": "cos",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/user/tsconfig.lib.json",
+            "project": "projects/user/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/user/src/test.ts",
+            "tsConfig": "projects/user/tsconfig.spec.json",
+            "karmaConfig": "projects/user/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/user/tsconfig.lib.json",
+              "projects/user/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "customize": {
+      "root": "projects/customize",
+      "sourceRoot": "projects/customize/src",
+      "projectType": "library",
+      "prefix": "cos",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/customize/tsconfig.lib.json",
+            "project": "projects/customize/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/customize/src/test.ts",
+            "tsConfig": "projects/customize/tsconfig.spec.json",
+            "karmaConfig": "projects/customize/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/customize/tsconfig.lib.json",
+              "projects/customize/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "web-portal"

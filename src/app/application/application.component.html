@@ -1,5 +1,5 @@
 <a class="card" style="margin:10px;"
-  routerLink="/vos/{{app.name}}"
+[routerLink]="app.path"
   [ngClass]="{'active':shareCollection.selectedApp==app}">
   <div class="card-header">{{app.name}}</div>
   <div class="card-body">

@@ -1,12 +1,11 @@
 <div class="body" [style.max-height.px]="shareCollection.bodyHeight"
   [class.workspace-only]="!shareCollection.showApp"
   [class.workspace-app]="shareCollection.showApp">
-  <!--
+  
   <app-workspace 
-    [ngClass]="{'workspace-only':!shareCollection.showApp,'workspace-app':shareCollection.showApp}"
-    [shareCollection]="shareCollection"></app-workspace>
-  -->
-  <router-outlet></router-outlet>
+    [ngClass]="{'workspace-only':!shareCollection.showApp,'workspace-app':shareCollection.showApp}">
+  </app-workspace>
+
   <div class="d-none d-md-block d-lg-block d-xl-block" 
     style="text-align:center;max-height:inherit;transition: width 0.5s;"
     [ngStyle]="{'width':shareCollection.showApp==true?'14%':'0%'}">

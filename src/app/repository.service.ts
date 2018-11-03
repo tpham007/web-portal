@@ -36,8 +36,8 @@ export class RepositoryService {
       return [];
     }
   }
-  async getApplication(name: string) {
+  async getApplication(path: string) {
     let applications = await this.getApplications();
-    return applications.filter(app => app.name === name)[0];
+    return applications.filter(app => app.path === path)[0];
   }
 }

@@ -1,5 +1,6 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, EventEmitter, HostListener } from '@angular/core';
 import { RepositoryService } from './repository.service';
+
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ export class AppComponent {
   public shareCollection: any;
   constructor(private repo: RepositoryService){
     this.shareCollection = this.repo.shareCollection;
+    this.shareCollection.appEvent = new EventEmitter<any>();
   }
   @HostListener('window:resize', ['$event']) onResize(event: any) {
     this.shareCollection.bodyHeight = event.target.innerHeight-60;

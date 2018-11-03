@@ -16,6 +16,26 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "user": [
+        "dist/user"
+      ],
+      "user/*": [
+        "dist/user/*"
+      ],
+      "common": [
+        "dist/common"
+      ],
+      "common/*": [
+        "dist/common/*"
+      ],
+      "customize": [
+        "dist/customize"
+      ],
+      "customize/*": [
+        "dist/customize/*"
+      ]
+    }
   }
 }

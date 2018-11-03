@@ -3,4 +3,10 @@ export class Application {
     name: string;
     icon: string;
     type: string;
+    path: string;
+    location: string;
+    moduleName: string;
+    rootComponent?: string;
+    description: string;
+    registered?: boolean;
 }

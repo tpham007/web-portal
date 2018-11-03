@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { RepositoryService } from '../repository.service';
+import { Router, NavigationEnd  } from '@angular/router';
 
 @Component({
   selector: 'app-panel',
@@ -13,7 +14,7 @@ export class PanelComponent implements OnInit {
   roll = false;
   topAppElm: any;
   bottomAppElm: any;
-  constructor(private repo: RepositoryService) { 
+  constructor(private repo: RepositoryService, private router: Router) { 
     this.shareCollection = this.repo.shareCollection;
     this.mApplications = {};
   }
@@ -29,15 +30,26 @@ export class PanelComponent implements OnInit {
         this.mApplications[app.type].push(app);
       }
     }
-    this.shareCollection.appChangedEvent.subscribe(app => this.selectApp(app));
-  }
-  selectApp(app: any) {
-    let idx = this.mApplications[app.type].indexOf(app);
-    this.mApplications[app.type].splice(idx, 1);
-    this.mApplications[app.type].unshift(app);
-    this.panel.nativeElement.scrollTop = 0;
-    this.topAppElm = null;
-    this.bottomAppElm = null;
+    let THIS = this;
+    this.router.events.subscribe(async routerEvent => {
+      if (routerEvent instanceof NavigationEnd) {
+        let params = routerEvent.url.split('/');
+        if (params.length > 1 && params[1] !== '') {
+          THIS.repo.getApplication(params[1]).then(function(app) {
+            if (app != null) {
+              THIS.repo.shareCollection.selectedApp = app;
+              THIS.repo.shareCollection.shownAppType = THIS.repo.shareCollection.selectedApp.type;
+              let idx = THIS.mApplications[app.type].indexOf(app);
+              THIS.mApplications[app.type].splice(idx, 1);
+              THIS.mApplications[app.type].unshift(app);
+              THIS.panel.nativeElement.scrollTop = 0;
+              THIS.topAppElm = null;
+              THIS.bottomAppElm = null;
+            }
+          });
+        }
+      }
+    });
   }
   toggleApp() {
     this.shareCollection.showApp = !this.shareCollection.showApp;
