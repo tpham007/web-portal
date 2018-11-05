@@ -1,9 +1,10 @@
 import { Observable } from 'rxjs/Observable';
 import { Application } from './application/application';
 import { Http } from '@angular/http';
-import { Injectable, Compiler } from '@angular/core';
+import { Injectable, Compiler, Injector } from '@angular/core';
 import { RepositoryService } from './repository.service';
 import { RouterService } from './router.service';
+import { Route } from '@angular/router';
 import 'rxjs/add/operator/map';
 
 // Needed for the new modules
@@ -14,13 +15,14 @@ import * as AngularClarity from '@clr/angular';
 import * as BrowserModule  from '@angular/platform-browser';
 import * as CustomizeModule from 'customize';
 
-
+declare var SystemJS: any;
 
 @Injectable()
 export class ModuleService {
     source = `http://${window.location.host}/`;
 
-    constructor(private compiler: Compiler, 
+    constructor(private injector: Injector,
+                private compiler: Compiler, 
                 private http: Http, 
                 private repo: RepositoryService,
                 private routerService: RouterService) {
@@ -34,10 +36,13 @@ export class ModuleService {
                 applications.forEach(app => {
                     if (app.registered) {
                         let p = new Promise((resolve, reject) => {
-                            THIS.loadModule(app).subscribe((exports) => {
+                            THIS.loadModuleSystemJS(app).then((exports) => {
                                 THIS.routerService.createAndRegisterRoute(app, exports);
                                 resolve();
-                            }, () => console.log(`${app.moduleName} could not be found, did you copy the umd file to ${app.location}?`));    
+                            }, (err) => {
+                                console.log(`${app.moduleName} could not be found, did you copy the umd file to ${app.location}?`);
+                                console.log('error=' + err);
+                            }); 
                         });
                         allp.push(p);
                     }
@@ -47,30 +52,22 @@ export class ModuleService {
         });
         return promise;
     }
-    loadModule(appInfo: Application): Observable<any> {
-        let url = this.source + appInfo.location;
-        return this.http.get(url)
-            .map(res => res.text())
-            .map(source => {
-                const exports = {}; // this will hold module exports
-                const modules = {   // this is the list of modules accessible by plugins
-                    '@angular/core': AngularCore,
-                    '@angular/common': AngularCommon,
-                    '@angular/router': AngularRouter,
-                    '@angular/platform-browser': BrowserModule,
-                    '@clr/angular': AngularClarity,
-                    'customize': CustomizeModule
-                };
+    loadModuleSystemJS(moduleInfo: any): Promise<any> {
+        let url = this.source + moduleInfo.location;
+        SystemJS.set('@angular/core', SystemJS.newModule(AngularCore));
+        SystemJS.set('@angular/common', SystemJS.newModule(AngularCommon));
+        SystemJS.set('@angular/router', SystemJS.newModule(AngularRouter));
+        SystemJS.set('@angular/platform-browser', SystemJS.newModule(BrowserModule));
+        SystemJS.set('@clr/angular', SystemJS.newModule(AngularClarity));
+        SystemJS.set('customize', SystemJS.newModule(CustomizeModule));
 
-                // shim 'require' and eval
-                const require: any = (module) => modules[module];
-                eval(source);
-
-                // Need to check if there is another solution for eval as this is described as 'Evil'
-
-                this.compiler.compileModuleAndAllComponentsSync(exports[`${appInfo.moduleName}`])
-                //console.log(exports); // disabled as this object is cleared anyway
-                return exports;
+        // now, import the new module
+        return SystemJS.import(`${url}`).then((module) => {
+            console.log(module);
+            return this.compiler.compileModuleAndAllComponentsAsync(module[`${moduleInfo.moduleName}`]).then(compiled => {
+                console.log(compiled);
+                return module;
             });
+        });
     }
 }

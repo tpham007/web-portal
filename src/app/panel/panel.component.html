@@ -11,14 +11,16 @@
     [ngStyle]="{'box-shadow':shareCollection.shownAppType=='Tool'?'1px 1px 1px 1px grey':''}">Tools</span>
 </span>
 <span #appAnchor class="app-anchor animated" 
-  style="animation-delay: .5s;"
-  (click)="toggleApp()"
+  style="animation-delay: .3s;"
   [ngClass]="{'anchor-open fadeInLeft':shareCollection.showApp,'anchor-close fadeInRight':!shareCollection.showApp}">
-  <span title="Show Apps">
+  <span title="Show Apps" (mouseenter)="toggleApp()">
     <img id="showApp" src="assets/img/app-list.png" width="32" height="32">
   </span>
-  <span title="Hide Apps">
-    <img id="hideApp" src="assets/img/hide.png" width="16" height="16">
+  <span *ngIf="shareCollection.pinApp==false" title="Pin Apps" (click)="shareCollection.pinApp=true">
+    <img id="hideApp" src="assets/img/pin.png" width="16" height="16">
+  </span>
+  <span *ngIf="shareCollection.pinApp==true" title="Hide Apps" (click)="shareCollection.pinApp=false">
+    <img id="hideApp" src="assets/img/unpin.png" width="16" height="16">
   </span>
 </span>
 <div #appPanel class="app-panel animated" 

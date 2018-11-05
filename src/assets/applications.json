@@ -5,7 +5,7 @@
         "icon": "../../assets/img/project.png",
         "type": "Operation",
         "path": "project",
-        "location": "./assets/dist/project.umd.js",
+        "location": "assets/dist/project.umd.js",
         "moduleName": "ProjectModule",
         "description": "Project Management",
         "registered": true
@@ -16,7 +16,7 @@
         "icon": "../../assets/img/schedule.png",
         "type": "Operation",
         "path": "scheduler",
-        "location": "./assets/dist/scheduler.umd.js",
+        "location": "assets/dist/scheduler.umd.js",
         "moduleName": "SchedulerModule",
         "description": "Scheduler Management",
         "registered": true
@@ -27,7 +27,7 @@
         "icon": "../../assets/img/task.png",
         "type": "Operation",
         "path": "task",
-        "location": "./assets/dist/task.umd.js",
+        "location": "assets/dist/task.umd.js",
         "moduleName": "TaskModule",
         "description": "Task Management",
         "registered": true
@@ -38,7 +38,7 @@
         "icon": "../../assets/img/user.png",
         "type": "Operation",
         "path": "user",
-        "location": "./assets/dist/user.umd.js",
+        "location": "assets/dist/user.umd.min.js",
         "moduleName": "UserModule",
         "description": "Users Management",
         "registered": true
@@ -49,7 +49,7 @@
         "icon": "../../assets/img/report.png",
         "type": "Operation",
         "path": "report",
-        "location": "./assets/dist/report.umd.js",
+        "location": "assets/dist/report.umd.js",
         "moduleName": "ReportModule",
         "description": "Report Management",
         "registered": true
@@ -60,7 +60,7 @@
         "icon": "../../assets/img/meeting.png",
         "type": "Operation",
         "path": "meeting",
-        "location": "./assets/dist/meeting.umd.js",
+        "location": "assets/dist/meeting.umd.js",
         "moduleName": "MeetingModule",
         "description": "Meeting Management",
         "registered": true
@@ -71,7 +71,7 @@
         "icon": "../../assets/img/support.png",
         "type": "Operation",
         "path": "support",
-        "location": "./assets/dist/support.umd.js",
+        "location": "assets/dist/support.umd.js",
         "moduleName": "SupportModule",
         "description": "Support Management",
         "registered": true
@@ -82,7 +82,7 @@
         "icon": "../../assets/img/search.png",
         "type": "Tool",
         "path": "lookup",
-        "location": "./assets/dist/lookup.umd.js",
+        "location": "assets/dist/lookup.umd.js",
         "moduleName": "LookupModule",
         "description": "Lookup Management",
         "registered": true
@@ -93,7 +93,7 @@
         "icon": "../../assets/img/log.png",
         "type": "Tool",
         "path": "log",
-        "location": "./assets/dist/log.umd.js",
+        "location": "assets/dist/log.umd.js",
         "moduleName": "LogModule",
         "description": "Log Management",
         "registered": true
@@ -104,7 +104,7 @@
         "icon": "../../assets/img/settings.png",
         "type": "Tool",
         "path": "setting",
-        "location": "./assets/dist/setting.umd.js",
+        "location": "assets/dist/setting.umd.js",
         "moduleName": "SettingModule",
         "description": "Setting Management",
         "registered": true

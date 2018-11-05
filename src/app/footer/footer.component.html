@@ -1,3 +1,9 @@
 <footer class="footer navbar navbar-expand-sm bg-dark navbar-dark">
-  <a href>CableOS Information</a>
+  <a style="position:absolute;right:10px;font-size:12px;"
+    href>CableOS Information</a>
+  <div *ngIf="shareCollection.selectedApp!=null" 
+    style="font-size:12px;">
+    <span style="color:gray">Current app</span>
+    <span style="margin-left:5px;font-weight:bold;color:white;">{{shareCollection.selectedApp.name}}</span>
+</div>
 </footer>

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Application } from './application/application';
 
 export class ShareCollection {
+  pinApp: boolean;
   showApp: boolean;
   bodyHeight: any;
   shownAppType: any;
@@ -18,7 +19,8 @@ export class RepositoryService {
   public shareCollection: ShareCollection;
   constructor(private http: HttpClient) { 
     this.shareCollection = new ShareCollection();
-    this.shareCollection.showApp = true;
+    this.shareCollection.pinApp = false;
+    this.shareCollection.showApp = false;
     this.shareCollection.bodyHeight = window.innerHeight-60;
     this.shareCollection.shownAppType = 'Operation';
     this.shareCollection.applications = this.getApplications();
