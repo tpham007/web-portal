@@ -8,4 +8,18 @@
 }
 .app-tooltip {
     font-size: 12px;
+    margin-top: 18px;
+    min-width: 150px;
+}
+.app-tooltip > .popover-header {
+    background-color: #333333;
+    color: white;
+    font-size: 14px;
+}
+
+.app-tooltip > .arrow {
+    margin-top: -26px!important;
+}
+.app-tooltip > .arrow:after, .arrow:before {
+    border-left-color: #333333;
 }
