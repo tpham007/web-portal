@@ -1,10 +1,11 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation} from '@angular/core';
 import { Application } from './application';
 import { RepositoryService } from '../repository.service';
 
 @Component({
   selector: 'app-application',
   templateUrl: './application.component.html',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./application.component.css']
 })
 export class ApplicationComponent implements OnInit {

@@ -11,7 +11,7 @@ import { RepositoryService } from '../repository.service';
   
     transform(applications: Application[], args: any[]): any {
       if (Array.isArray(applications)) {
-        applications.sort((a,b) => (a.name > b.name || (this.repo.shareCollection.selectedApp != null && b.name == this.repo.shareCollection.selectedApp.name)) ? 1 : ((b.name > a.name) ? -1 : 0)); 
+        applications.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)); 
       }
       return applications;
     }

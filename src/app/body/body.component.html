@@ -12,7 +12,8 @@
 
   <div class="d-none d-md-block d-lg-block d-xl-block"
     style="text-align:center;max-height:inherit;transition: width 0.5s;"
-    [ngStyle]="{'width':shareCollection.showApp==true?'14%':'0%'}">
+    [class.app-panel-show]="shareCollection.showApp"
+    [class.app-panel-hide]="!shareCollection.showApp">
     <app-panel></app-panel>
   </div>
 </div>

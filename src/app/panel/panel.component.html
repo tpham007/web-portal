@@ -1,26 +1,14 @@
-<span #appGroup class="animated"
-  [ngClass]="{'bounceIn':shareCollection.showApp,'bounceOut':!shareCollection.showApp}"
-  style="animation-delay: .5s;">
-  <span class="btn btn-sm" style="margin:5px;" 
-    (click)="changeAppType('Operation')"
-    [ngClass]="{'btn-success':shareCollection.shownAppType=='Operation','btn-secondary':shareCollection.shownAppType!='Operation'}"
-    [ngStyle]="{'box-shadow':shareCollection.shownAppType=='Operation'?'1px 1px 1px 1px grey':''}">Operations</span>
-  <span class="btn btn-sm" style="margin:5px;"
-    (click)="changeAppType('Tool')"
-    [ngClass]="{'btn-info':shareCollection.shownAppType=='Tool','btn-secondary':shareCollection.shownAppType!='Tool'}"
-    [ngStyle]="{'box-shadow':shareCollection.shownAppType=='Tool'?'1px 1px 1px 1px grey':''}">Tools</span>
-</span>
 <span #appAnchor class="app-anchor animated" 
   style="animation-delay: .3s;"
   [ngClass]="{'anchor-open fadeInLeft':shareCollection.showApp,'anchor-close fadeInRight':!shareCollection.showApp}">
-  <span title="Show Apps" (mouseenter)="toggleApp()">
-    <img id="showApp" src="assets/img/app-list.png" width="32" height="32">
-  </span>
   <span *ngIf="shareCollection.pinApp==false" title="Pin Apps" (click)="shareCollection.pinApp=true">
-    <img id="hideApp" src="assets/img/pin.png" width="16" height="16">
+    <img id="pinApp" src="assets/img/pin.png" width="16" height="16">
   </span>
-  <span *ngIf="shareCollection.pinApp==true" title="Hide Apps" (click)="shareCollection.pinApp=false">
-    <img id="hideApp" src="assets/img/unpin.png" width="16" height="16">
+  <span *ngIf="shareCollection.pinApp==true" title="Unpin Apps" (click)="shareCollection.pinApp=false">
+    <img id="pinApp" src="assets/img/unpin.png" width="16" height="16">
+  </span>
+  <span title="Show Apps" (mouseenter)="shareCollection.showApp = !shareCollection.showApp;">
+    <img id="showApp" src="assets/img/app-list.png" width="32" height="32">
   </span>
 </span>
 <div #appPanel class="app-panel animated" 
@@ -28,9 +16,11 @@
   (mouseover)="roll=true" (mouseout)="roll=false"
   [ngStyle]="{'display':(!shareCollection.showApp||shareCollection.shownAppType==null)?'none':'block'}"
   [ngClass]="{'fadeIn':shareCollection.showApp&&shareCollection.shownAppType!=null}">
-  <button class="circle-top oi oi-caret-top" [ngStyle]="{'display':(roll==true&&!isTop())?'inline':'none'}"></button>
-  <app-application *ngFor="let app of mApplications[shareCollection.shownAppType]"
+  <app-application *ngFor="let app of shareCollection.applications | applicationFilter:[{type:'Operation'}]"
     [attr.id]="app.id"
     [app]="app"></app-application>
-  <button class="circle-bottom oi oi-caret-bottom" [ngStyle]="{'display':(roll==true&&!isBottom())?'inline':'none'}"></button>
+  <hr style="width: 50%;">
+  <app-application *ngFor="let app of shareCollection.applications | applicationFilter:[{type:'Tool'}]"
+    [attr.id]="app.id"
+    [app]="app"></app-application>
 </div>

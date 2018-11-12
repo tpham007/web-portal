@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
       lookup works!
     </p>
   `,
-  styles: []
+  styles: ['/lookup.component.css']
 })
 export class LookupComponent implements OnInit {
 

@@ -4,8 +4,9 @@
     overflow-y: scroll;
     box-sizing: content-box; /* So the width will be 100% + 17px */
     text-align: center;
-    margin-top: 10px;
     padding-bottom: 100px;
+    margin-top: 20px;
+    padding-top: 20px;
 }
 .app-anchor {
     position: relative;
@@ -15,12 +16,10 @@
     opacity: 1;
     border-color: transparent;
     cursor: pointer;
-    margin-left: 5px!important;
-    margin-right: 5px!important;
+    top: 10px;
 }
 .app-anchor.anchor-close {
-    margin-left: -45px!important;
-    top: -71px;
+    margin-left: -55px!important;
 }
 .app-anchor.anchor-open  {
     margin-left: 0px;
@@ -28,36 +27,6 @@
 .anchor-open #showApp {
     display: none;
 }
-.anchor-close #hideApp {
+.anchor-close #pinApp {
     display: none;
-}
-i {
-    border: solid black;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 4px;
-}
-.circle-top {
-    position: sticky;
-    top: 32px;
-    width: 32px;
-    height: 32px;
-    z-index: 999;
-    border-radius: 16px;
-    padding-bottom: 4px;
-    background-color: lightgray;
-    border-color: transparent;
-    opacity: .7;
-}
-.circle-bottom {
-    position: sticky;
-    bottom: 128px;
-    width: 32px;
-    height: 32px;
-    z-index: 999;
-    border-radius: 16px;
-    padding-top: 4px;
-    background-color: lightgray;
-    border-color: transparent;
-    opacity: .7;
 }

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
       scheduler works!
     </p>
   `,
-  styles: []
+  styles: ['/scheduler.component.css']
 })
 export class SchedulerComponent implements OnInit {
 

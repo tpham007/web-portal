@@ -1,12 +1,11 @@
-.card:hover {
-    border-color: black;
-    cursor: pointer;
-    user-select: none;
-    text-decoration: none;
+.app-logo {
+    width: 32px;
+    height: auto;
+    margin: 10px;
 }
-.card.active {
-    border: 2px solid black;
+.app-logo.active {
+    box-shadow: 0px 0px 20px 5px lightslategrey;
 }
-.card-header {
-    color: black;
+.app-tooltip {
+    font-size: 12px;
 }

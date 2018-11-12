@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
       support works!
     </p>
   `,
-  styles: []
+  styles: ['/support.component.css']
 })
 export class SupportComponent implements OnInit {
 

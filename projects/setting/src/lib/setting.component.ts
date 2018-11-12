@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
       setting works!
     </p>
   `,
-  styles: []
+  styles: ['/setting.component.css']
 })
 export class SettingComponent implements OnInit {
 

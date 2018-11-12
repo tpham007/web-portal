@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
       project works!
     </p>
   `,
-  styles: []
+  styles: ['/project.component.css']
 })
 export class ProjectComponent implements OnInit {
 

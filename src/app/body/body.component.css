@@ -9,7 +9,13 @@
     width: 99%!important;
 }
 .workspace-app >>> app-workspace {
-    width: 85%!important;
+    width: 93%!important;
+}
+.app-panel-show {
+    width: 6%;
+}
+.app-panel-hide {
+    width: 0%;
 }
 @media screen and (max-width:  768px) {
     .workspace-app >>> app-workspace {

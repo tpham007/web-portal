@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
       task works!
     </p>
   `,
-  styles: []
+  styles: ['/task.component.css']
 })
 export class TaskComponent implements OnInit {
 

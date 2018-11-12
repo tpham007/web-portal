@@ -1,8 +1,10 @@
-<a class="card" style="margin:10px;"
-[routerLink]="app.path"
-  [ngClass]="{'active':shareCollection.selectedApp==app}">
-  <div class="card-header">{{app.name}}</div>
-  <div class="card-body">
-    <img src="{{app.icon}}" style="width:48px;height:auto;">
-  </div>
+<a [routerLink]="app.path">
+    <img src="{{app.icon}}"
+      class="app-logo" 
+      [ngClass]="{'active':shareCollection.selectedApp==app}"
+      ngbPopover="{{app.description}}" 
+      triggers="mouseenter:mouseleave" 
+      popoverTitle="{{app.name}}" 
+      placement="left" container="body"
+      popoverClass="app-tooltip">
 </a>

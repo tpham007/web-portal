@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'cos-user',
   templateUrl: './user.component.html',
-  styles: []
+  styles: ['/user.component.css']
 })
 export class UserComponent implements OnInit {
 

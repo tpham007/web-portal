@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
       meeting works!
     </p>
   `,
-  styles: []
+  styles: ['/metting.component.css']
 })
 export class MeetingComponent implements OnInit {
 

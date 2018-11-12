@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
       report works!
     </p>
   `,
-  styles: []
+  styles: ['/report.component.css']
 })
 export class ReportComponent implements OnInit {
 
