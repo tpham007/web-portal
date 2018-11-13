@@ -89,6 +89,12 @@
       ],
       "lookup/*": [
         "dist/lookup/*"
+      ],
+      "dashboard": [
+        "dist/dashboard"
+      ],
+      "dashboard/*": [
+        "dist/dashboard/*"
       ]
     }
   }

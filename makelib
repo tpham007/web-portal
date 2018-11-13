@@ -1,6 +1,8 @@
 #!/bin/bash
 ng build customize
 cp ./dist/customize/bundles/*.* ./src/assets/dist/.
+ng build dashboard
+cp ./dist/dashboard/bundles/*.* ./src/assets/dist/.
 ng build log
 cp ./dist/log/bundles/*.* ./src/assets/dist/.
 ng build lookup
