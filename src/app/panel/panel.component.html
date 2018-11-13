@@ -1,21 +1,19 @@
-<span #appAnchor class="app-anchor animated" 
-  style="animation-delay: .3s;"
-  [ngClass]="{'anchor-open fadeInLeft':shareCollection.showApp,'anchor-close fadeInRight':!shareCollection.showApp}">
-  <span *ngIf="shareCollection.pinApp==false" title="Pin Apps" (click)="shareCollection.pinApp=true">
-    <img id="pinApp" src="assets/img/pin.png" width="16" height="16">
+<span #appAnchor class="app-anchor">
+  <span class="anchor-open animated fadeIn" *ngIf="shareCollection.showApp||shareCollection.pinApp">
+    <span *ngIf="shareCollection.pinApp==false" title="Pin Apps" (click)="shareCollection.pinApp=true">
+      <img src="assets/img/pin.png" width="16" height="16">
+    </span>
+    <span *ngIf="shareCollection.pinApp==true" title="Unpin Apps" (click)="shareCollection.pinApp=false">
+      <img src="assets/img/unpin.png" width="16" height="16">
+    </span>
   </span>
-  <span *ngIf="shareCollection.pinApp==true" title="Unpin Apps" (click)="shareCollection.pinApp=false">
-    <img id="pinApp" src="assets/img/unpin.png" width="16" height="16">
-  </span>
-  <span title="Show Apps" (mouseenter)="shareCollection.showApp = !shareCollection.showApp;">
-    <img id="showApp" src="assets/img/app-list.png" width="32" height="32">
+  <span class="anchor-close animated fadeIn" *ngIf="!shareCollection.showApp&&!shareCollection.pinApp"
+    title="Show Apps" (mouseenter)="shareCollection.showApp = !shareCollection.showApp">
+    <img src="assets/img/app-list.png" width="32" height="32">
   </span>
 </span>
-<div #appPanel class="app-panel animated" 
-  style="animation-delay: .5s;"
-  (mouseover)="roll=true" (mouseout)="roll=false"
-  [ngStyle]="{'display':(!shareCollection.showApp||shareCollection.shownAppType==null)?'none':'block'}"
-  [ngClass]="{'fadeIn':shareCollection.showApp&&shareCollection.shownAppType!=null}">
+<div #appPanel class="app-panel animated"
+  [ngClass]="{'fadeInRight':shareCollection.showApp||shareCollection.pinApp,'fadeOutRight':!shareCollection.showApp&&!shareCollection.pinApp}">
   <app-application *ngFor="let app of shareCollection.applications | applicationFilter:[{type:'Operation'}]"
     [attr.id]="app.id"
     [app]="app"></app-application>

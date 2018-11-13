@@ -18,15 +18,16 @@
     cursor: pointer;
     top: 10px;
 }
-.app-anchor.anchor-close {
+.app-anchor > .anchor-close {
+    animation-delay: .5s;
+}
+.app-anchor > .anchor-open  {
+    animation-delay: .5s;
+}
+.anchor-open > span > img {
+    opacity: 0.5;
+}
+.anchor-close > img {
     margin-left: -55px!important;
-}
-.app-anchor.anchor-open  {
-    margin-left: 0px;
-}
-.anchor-open #showApp {
-    display: none;
-}
-.anchor-close #pinApp {
-    display: none;
+    margin-top: 3px!important;
 }
