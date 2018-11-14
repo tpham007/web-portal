@@ -17,5 +17,5 @@ import { CustomizeModule  } from 'customize';
   ],
   exports: [DashboardComponent]
 })
-export class SettingModule { }
+export class DashboardModule { }
 
