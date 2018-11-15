@@ -1,11 +1,9 @@
 <span #appAnchor class="app-anchor">
-  <span class="anchor-open animated fadeIn" *ngIf="shareCollection.showApp||shareCollection.pinApp">
-    <span *ngIf="shareCollection.pinApp==false" title="Pin Apps" (click)="shareCollection.pinApp=true">
-      <!-- <img src="assets/img/pin.png" width="16" height="16"> -->
+  <span class="animated fadeIn" *ngIf="shareCollection.showApp||shareCollection.pinApp">
+    <span *ngIf="shareCollection.pinApp==false" title="Pin Apps" (click)="shareCollection.pinApp=true">      
       &#9875;
     </span>
-    <span *ngIf="shareCollection.pinApp==true" title="Unpin Apps" (click)="shareCollection.pinApp=false;shareCollection.showApp=false;">
-      <!--<img src="assets/img/unpin.png" width="32" height="32">-->
+    <span *ngIf="shareCollection.pinApp==true" title="Unpin Apps" (click)="shareCollection.pinApp=false;shareCollection.showApp=false;">      
       &#10008;
     </span>
   </span>

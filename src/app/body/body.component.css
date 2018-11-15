@@ -6,10 +6,10 @@
     flex-wrap: wrap;
 }
 .workspace-only >>>  app-workspace {
-    width: 99%!important;
+    width: 100%!important;
 }
 .workspace-app >>> app-workspace {
-    width: 93%!important;
+    width: 94%!important;
 }
 .app-panel-show {
     width: 6%;
@@ -19,6 +19,6 @@
 }
 @media screen and (max-width:  768px) {
     .workspace-app >>> app-workspace {
-        width: 99%!important;
+        width: 100%!important;
     }
 }
