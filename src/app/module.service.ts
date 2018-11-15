@@ -8,6 +8,7 @@ import { Route } from '@angular/router';
 import 'rxjs/add/operator/map';
 
 // Needed for the new modules
+import * as HttpClient from '@angular/common/http';
 import * as AngularCore from '@angular/core';
 import * as AngularCommon from '@angular/common';
 import * as AngularRouter from '@angular/router';
@@ -56,6 +57,7 @@ export class ModuleService {
         let url = this.source + moduleInfo.location;
         SystemJS.set('@angular/core', SystemJS.newModule(AngularCore));
         SystemJS.set('@angular/common', SystemJS.newModule(AngularCommon));
+        SystemJS.set('@angular/common/http', SystemJS.newModule(HttpClient));
         SystemJS.set('@angular/router', SystemJS.newModule(AngularRouter));
         SystemJS.set('@angular/platform-browser', SystemJS.newModule(BrowserModule));
         SystemJS.set('@clr/angular', SystemJS.newModule(AngularClarity));

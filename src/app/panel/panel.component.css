@@ -24,8 +24,8 @@
 .app-anchor > .anchor-open  {
     animation-delay: .5s;
 }
-.anchor-open > span > img {
-    opacity: 0.5;
+.anchor-open > span  {
+    opacity: .5;
 }
 .anchor-close > img {
     margin-left: -55px!important;

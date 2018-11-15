@@ -1,15 +1,13 @@
 <span #appAnchor class="app-anchor">
   <span class="anchor-open animated fadeIn" *ngIf="shareCollection.showApp||shareCollection.pinApp">
     <span *ngIf="shareCollection.pinApp==false" title="Pin Apps" (click)="shareCollection.pinApp=true">
-      <img src="assets/img/pin.png" width="16" height="16">
+      <!-- <img src="assets/img/pin.png" width="16" height="16"> -->
+      &#9875;
     </span>
-    <span *ngIf="shareCollection.pinApp==true" title="Unpin Apps" (click)="shareCollection.pinApp=false">
-      <img src="assets/img/unpin.png" width="16" height="16">
+    <span *ngIf="shareCollection.pinApp==true" title="Unpin Apps" (click)="shareCollection.pinApp=false;shareCollection.showApp=false;">
+      <!--<img src="assets/img/unpin.png" width="32" height="32">-->
+      &#10008;
     </span>
-  </span>
-  <span class="anchor-close animated fadeIn" *ngIf="!shareCollection.showApp&&!shareCollection.pinApp"
-    title="Show Apps" (mouseenter)="shareCollection.showApp = !shareCollection.showApp">
-    <img src="assets/img/app-list.png" width="32" height="32">
   </span>
 </span>
 <div #appPanel class="app-panel animated"

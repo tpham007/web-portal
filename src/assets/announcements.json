@@ -1,0 +1,7 @@
+[
+    {
+        "id":"1",
+        "title": "test",
+        "content": "<div style=\"background: rgb(238,174,202);background: -moz-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);background: -webkit-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeaeca',endColorstr='#94bbe9',GradientType=1);\"> <h3 class=\"glyphicon glyphicon-conversation\" style=\"color:white;\">Attention!<\/h3>\r\n  <br>\r\n  <strong style=\"color:white;\">Hello! We are glad to inform you that the new multi-profiles transcoding MP4 is available for use.<\/strong>\r\n<\/div>"
+    }
+]

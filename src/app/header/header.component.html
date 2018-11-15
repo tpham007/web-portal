@@ -6,4 +6,13 @@
       (mouseover)="imgSrc = '../../assets/img/logo2.png'"
       (mouseout)="imgSrc = '../../assets/img/logo1.png'" style="width: 96px; height: auto;">
   </a>
+  <span *ngIf="shareCollection.selectedApp!=undefined" 
+    style="color:white;text-shadow: 1px 1px gray;cursor: pointer;"
+    (click)="shareCollection.pinApp==false?(shareCollection.showApp=true):true;">
+    &#10144;&nbsp;{{shareCollection.selectedApp.name}}
+  </span>
+  <span class="animated fadeIn" style="position:absolute; right:10px;" *ngIf="!shareCollection.showApp&&!shareCollection.pinApp"
+    title="Show Apps" (mouseenter)="shareCollection.showApp = !shareCollection.showApp">
+    <img src="assets/img/app-list.png" width="32" height="32">
+  </span>
 </nav>
