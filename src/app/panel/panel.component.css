@@ -18,7 +18,7 @@
     cursor: pointer;
     top: 10px;
 }
-.anchor-open > span  {
+.app-anchor > span {
     opacity: .5;
     animation-delay: .5s;
 }

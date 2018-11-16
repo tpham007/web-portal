@@ -7,7 +7,7 @@
       (mouseout)="imgSrc = '../../assets/img/logo1.png'" style="width: 96px; height: auto;">
   </a>
   <span *ngIf="shareCollection.selectedApp!=undefined" 
-    style="color:white;text-shadow: 1px 1px gray;cursor: pointer;"
+    style="color:black;text-shadow: 1px 1px gray;cursor: pointer;"
     (click)="shareCollection.pinApp==false?(shareCollection.showApp=true):true;">
     &#10144;&nbsp;{{shareCollection.selectedApp.name}}
   </span>
