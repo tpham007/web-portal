@@ -1,7 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { RepositoryService } from '../repository.service';
-import { WorkspaceComponent } from '../workspace/workspace.component';
-import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-body',
@@ -24,16 +22,15 @@ export class BodyComponent implements OnInit {
     console.log('currentX:'+this.currentX);
   }
   hideApp() {
-    if (this.shareCollection.pinApp == false) {
-      let timer = interval(300).subscribe(() => {
+    if (this.shareCollection.pinApp == false) {      
+      setTimeout( () => {
         console.log('this.currentX='+this.currentX+', clientWidth='+this.appWorkspace.nativeElement.clientWidth);
         let lbound = this.appWorkspace.nativeElement.clientWidth;
         lbound = lbound + (3*lbound/100);
         if (this.currentX < lbound) {
           this.shareCollection.showApp = false;
         }
-        timer.unsubscribe();
-      });
+      }, 300);
     }
   }
 }

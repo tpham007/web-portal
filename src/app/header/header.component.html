@@ -1,27 +1,27 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="text-align: center;">
-
-  <!-- logo -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" 
+  style="width: 95%;display:inline-flex;"> 
   <a class="navbar-brand">
       <img id="appLogo" [src]="imgSrc"
       (mouseover)="imgSrc = '../../assets/img/logo2.png'"
       (mouseout)="imgSrc = '../../assets/img/logo1.png'" style="width: 96px; height: auto;">
   </a>
-  <span *ngIf="shareCollection.selectedApp!=undefined" 
-    style="color:black;text-shadow: 1px 1px gray;cursor: pointer;"
+  <span *ngIf="shareCollection.selectedApp!=null" class="animated pulse"
+    style="color:black;text-shadow: 0px 0px gray;cursor: pointer;"
     (click)="shareCollection.pinApp==false?(shareCollection.showApp=true):true;">
-    &#10144;&nbsp;{{shareCollection.selectedApp.name}}
-  </span>
-  <span class="app-anchor">
-    <span id="app-list" class="animated fadeIn" *ngIf="!shareCollection.pinApp"
-      title="Show Apps" 
-      (click)="shareCollection.showApp==true?shareCollection.pinApp=true:shareCollection.showApp=true"
-      (mouseenter)="shareCollection.showApp=true">
-      <img src="assets/img/app-list.png" width="32" height="32">
-    </span>
-    <span id="app-pin" class="animated fadeIn" *ngIf="shareCollection.pinApp==true"
-      title="Unpin Apps"
-      (click)="shareCollection.pinApp=false">
-      &#10554;
-    </span>
+    <img [src]="shareCollection.selectedApp.icon" width="24" height="24">
+    <strong style="margin-left: 3px;opacity:.7;">{{shareCollection.selectedApp.name}}</strong>
   </span>
 </nav>
+<span id="app-anchor" style="width: 5%;display:inline-flex;justify-content: center;">
+  <span id="app-list" class="animated fadeIn" *ngIf="!shareCollection.pinApp"
+    title="Show Apps" 
+    (click)="shareCollection.showApp==true?shareCollection.pinApp=true:shareCollection.showApp=true"
+    (mouseenter)="shareCollection.showApp=true">
+    <img src="assets/img/app-list.png" width="32" height="32">
+  </span>
+  <span id="app-pin" class="animated fadeIn" *ngIf="shareCollection.pinApp==true"
+    title="Unpin Apps"
+    (click)="shareCollection.pinApp=false">
+    &#10554;
+  </span>
+</span>

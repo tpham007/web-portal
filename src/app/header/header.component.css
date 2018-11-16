@@ -9,27 +9,19 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#FFFFFF',GradientType=1 ); /* ie6-9 */
 }
 
-.app-anchor {
-    position: absolute;
-    cursor: pointer;
-    top: 15px;
-    right: 15px;
-    font-weight: bolder;
-}
-.app-anchor > #app-list {
+#app-list {
     opacity: .5;
     animation-delay: .5s;
+    cursor: pointer;
 }
-.app-anchor > #app-pin {
-    position: absolute;
-    top: 0px;
-    right: 5px;
-    font-size: 22px;
+#app-pin {
+    font-size: 26px;
     font-weight: bolder;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
 }
 @media screen and (max-width:  768px) {
-    .app-anchor  {
+    #app-anchor  {
         display: none;
     }
 }

@@ -20,6 +20,7 @@ import { ApplicationOrder } from './pipe/application.order';
 import { APP_BASE_HREF } from '@angular/common';
 import { BlankComponent } from './blank/blank.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function createCompiler(compilerFactory: CompilerFactory) {
   return compilerFactory.createCompiler();
@@ -37,7 +38,7 @@ export function createCompiler(compilerFactory: CompilerFactory) {
     PanelComponent,
     ApplicationFilter,
     ApplicationOrder,
-    BlankComponent,
+    BlankComponent
   ],
   imports: [
     ClarityModule,
@@ -45,7 +46,8 @@ export function createCompiler(compilerFactory: CompilerFactory) {
     AppRoutingModule,
     HttpClientModule,
     HttpModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [
     RouterService, ModuleService,

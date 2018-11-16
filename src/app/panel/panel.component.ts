@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { RepositoryService } from '../repository.service';
 import { Router, NavigationEnd  } from '@angular/router';
-
 @Component({
   selector: 'app-panel',
   templateUrl: './panel.component.html',
@@ -19,10 +18,13 @@ export class PanelComponent implements OnInit {
       if (routerEvent instanceof NavigationEnd) {
         let params = routerEvent.url.split('/');
         if (params.length > 1 && params[1] !== '') {
+          THIS.repo.shareCollection.selectedApp = null;
           THIS.repo.getApplication(params[1]).then(function(app) {
             if (app != null) {
-              THIS.repo.shareCollection.selectedApp = app;
-              THIS.repo.shareCollection.shownAppType = THIS.repo.shareCollection.selectedApp.type;
+              setTimeout( () => {
+                THIS.repo.shareCollection.selectedApp = app;
+                THIS.repo.shareCollection.shownAppType = THIS.repo.shareCollection.selectedApp.type;
+              }, 300);
             }
           });
         }
