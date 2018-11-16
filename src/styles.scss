@@ -23,5 +23,6 @@ body {
 
 .app-content { 
     @extend .animated;
-    @extend .pulse;
+    @extend .fadeIn;
+    animation-duration: 2s;
 }
