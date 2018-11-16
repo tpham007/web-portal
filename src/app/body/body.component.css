@@ -9,10 +9,10 @@
     width: 100%!important;
 }
 .workspace-app >>> app-workspace {
-    width: 94%!important;
+    width: 95%!important;
 }
 .app-panel-show {
-    width: 6%;
+    width: 5%;
 }
 .app-panel-hide {
     width: 0%;
