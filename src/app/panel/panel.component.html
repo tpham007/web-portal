@@ -1,13 +1,3 @@
-<span #appAnchor class="app-anchor">
-  <span class="animated fadeIn" *ngIf="shareCollection.showApp||shareCollection.pinApp">
-    <span *ngIf="shareCollection.pinApp==false" title="Pin Apps" (click)="shareCollection.pinApp=true">      
-      &#9875;
-    </span>
-    <span *ngIf="shareCollection.pinApp==true" title="Unpin Apps" (click)="shareCollection.pinApp=false;shareCollection.showApp=false;">      
-      &#10008;
-    </span>
-  </span>
-</span>
 <div #appPanel class="app-panel animated"
   [ngClass]="{'fadeInRight':shareCollection.showApp||shareCollection.pinApp,'fadeOutRight':!shareCollection.showApp&&!shareCollection.pinApp}">
   <app-application *ngFor="let app of shareCollection.applications | applicationFilter:[{type:'Operation'}]"

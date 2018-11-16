@@ -11,8 +11,18 @@
     (click)="shareCollection.pinApp==false?(shareCollection.showApp=true):true;">
     &#10144;&nbsp;{{shareCollection.selectedApp.name}}
   </span>
-  <span class="animated fadeIn" style="position:absolute; right:10px;" *ngIf="!shareCollection.showApp&&!shareCollection.pinApp"
-    title="Show Apps" (mouseenter)="shareCollection.showApp = !shareCollection.showApp">
-    <img src="assets/img/app-list.png" width="32" height="32">
+  <span class="app-anchor">
+    <span id="app-list" class="animated fadeIn" *ngIf="!shareCollection.showApp&&!shareCollection.pinApp"
+      title="Show Apps" (mouseenter)="shareCollection.showApp = !shareCollection.showApp">
+      <img src="assets/img/app-list.png" width="32" height="32">
+    </span>
+    <span id="app-pin" class="animated fadeIn" *ngIf="shareCollection.showApp||shareCollection.pinApp">
+      <span *ngIf="shareCollection.pinApp==false" title="Pin Apps" (click)="shareCollection.pinApp=true">      
+          &#9776;
+      </span>
+      <span *ngIf="shareCollection.pinApp==true" title="Unpin Apps" (click)="shareCollection.pinApp=false;shareCollection.showApp=false;">      
+          &#10005;
+      </span>
+    </span>
   </span>
 </nav>
