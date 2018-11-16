@@ -22,8 +22,8 @@
 }
 .app-anchor > #app-pin {
     position: absolute;
-    margin-top: 25px;
-    right: 20px;
+    top: 5px;
+    right: 10px;
 }
 
 @media screen and (max-width:  768px) {

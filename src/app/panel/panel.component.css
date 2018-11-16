@@ -1,6 +1,6 @@
 .app-panel {
     width: 100%;
-    height:  calc(100% - 140px);
+    height:  calc(100% - 60px);
     overflow-y: scroll;
     box-sizing: content-box; /* So the width will be 100% + 17px */
     text-align: center;
