@@ -8,7 +8,8 @@
         "location": "assets/dist/project.umd.js",
         "moduleName": "ProjectModule",
         "description": "Manage projects",
-        "registered": true
+        "registered": true,
+        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(236, 74, 25,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
     },
     {
         "id": 2,
@@ -19,7 +20,8 @@
         "location": "assets/dist/scheduler.umd.js",
         "moduleName": "SchedulerModule",
         "description": "Manage schedules",
-        "registered": true
+        "registered": true,
+        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(219, 189, 218,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
     },
     {
         "id": 3,
@@ -30,7 +32,8 @@
         "location": "assets/dist/task.umd.js",
         "moduleName": "TaskModule",
         "description": "Manage tasks",
-        "registered": true
+        "registered": true,
+        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(189,213,219,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
     },
     {
         "id": 4,
@@ -41,7 +44,8 @@
         "location": "assets/dist/user.umd.min.js",
         "moduleName": "UserModule",
         "description": "Manage users",
-        "registered": true
+        "registered": true,
+        "header":{"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(0,123,255,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
     },
     {
         "id": 5,
@@ -52,7 +56,8 @@
         "location": "assets/dist/report.umd.js",
         "moduleName": "ReportModule",
         "description": "View reports",
-        "registered": true
+        "registered": true,
+        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(189,0,219,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
     },
     {
         "id": 6,
@@ -63,7 +68,8 @@
         "location": "assets/dist/meeting.umd.js",
         "moduleName": "MeetingModule",
         "description": "Manage meetings",
-        "registered": true
+        "registered": true,
+        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(189,213,0,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
     },
     {
         "id": 7,
@@ -74,7 +80,8 @@
         "location": "assets/dist/support.umd.js",
         "moduleName": "SupportModule",
         "description": "Access supports",
-        "registered": true
+        "registered": true,
+        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(50,213,0,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
     },
     {
         "id": 8,
@@ -85,7 +92,8 @@
         "location": "assets/dist/dashboard.umd.js",
         "moduleName": "DashboardModule",
         "description": "Home page",
-        "registered": true
+        "registered": true,
+        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(189,50,219,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
     },
     {
         "id": 10,
@@ -96,7 +104,8 @@
         "location": "assets/dist/lookup.umd.js",
         "moduleName": "LookupModule",
         "description": "Lookup information",
-        "registered": true
+        "registered": true,
+        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(1,213,50,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
     },
     {
         "id": 20,
@@ -107,7 +116,8 @@
         "location": "assets/dist/log.umd.js",
         "moduleName": "LogModule",
         "description": "View Logs",
-        "registered": true
+        "registered": true,
+        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(100,0,100,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
     },
     {
         "id": 30,
@@ -118,6 +128,7 @@
         "location": "assets/dist/setting.umd.js",
         "moduleName": "SettingModule",
         "description": "Configure settings",
-        "registered": true
+        "registered": true,
+        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(200,213,10,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
     }
 ]

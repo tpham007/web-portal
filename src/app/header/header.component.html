@@ -1,8 +1,9 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark" 
+  [ngStyle]="shareCollection.selectedApp!=null?'':''"
   style="width: 95%;display:inline-flex;"> 
   <a class="navbar-brand">
       <img id="appLogo" [src]="imgSrc"
-      (mouseover)="imgSrc = '../../assets/img/logo2.png'"
+      (mouseover)="imgSrc = '../../assets/img/logo3.png'"
       (mouseout)="imgSrc = '../../assets/img/logo1.png'" style="width: 96px; height: auto;">
   </a>
   <span *ngIf="shareCollection.selectedApp!=null" class="animated pulse"

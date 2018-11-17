@@ -8,11 +8,10 @@ import { DashboardService } from './dashboard.service';
   styles: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  announcement: Announcement;
+  announcements: any;
   constructor(private repo: DashboardService) { }
 
   async ngOnInit() {
-    let announcements = await this.repo.getAnnouncements();
-    this.announcement = announcements[0];
+    this.announcements = await this.repo.getAnnouncements();
   }
 }

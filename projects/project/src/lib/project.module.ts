@@ -3,9 +3,10 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common'; 
 import { CustomizeModule  } from 'customize';
 import { ProjectComponent } from './project.component';
+import { ProjectLinkDirective } from './project-link.directive';
 
 @NgModule({
-  declarations: [ProjectComponent],
+  declarations: [ProjectComponent, ProjectLinkDirective],
   imports: [
     CommonModule,
     CustomizeModule,
