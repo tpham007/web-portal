@@ -20,8 +20,7 @@
       (click)="shareCollection.showApp==true?shareCollection.pinApp=true:shareCollection.showApp=true"
       (mouseenter)="shareCollection.showApp=true">
     <img class="show-anchor" src="assets/img/app-list.png" width="32" height="32"
-      (click)="shareCollection.showApp=!shareCollection.showApp"
-      (mouseenter)="shareCollection.showApp=true">
+      (click)="shareCollection.showApp=!shareCollection.showApp">
     <span style="display: none;" [class.pin-app]="shareCollection.pinApp"
       (click)="shareCollection.pinApp=false">&#10554;</span>
   </span>

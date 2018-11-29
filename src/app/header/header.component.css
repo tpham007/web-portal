@@ -46,8 +46,10 @@
     }
     .show-app {
         display: none!important;
+        pointer-events: none;
     }
     .pin-app {
         display: none!important;
+        pointer-events: none;
     }
 }
