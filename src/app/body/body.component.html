@@ -1,19 +1,19 @@
 <div class="body" 
   [style.max-height.px]="shareCollection.bodyHeight"
   [style.min-height.px]="shareCollection.bodyHeight"
-  [class.workspace-only]="!shareCollection.showApp"
-  [class.workspace-app]="shareCollection.showApp">
+  [class.workspace-only]="!shareCollection.showApp&&!shareCollection.pinApp"
+  [class.workspace-app]="shareCollection.showApp||shareCollection.pinApp">
   
   <app-workspace #appWorkspace
     (mouseover)="mouseOver($event)"
-    (mouseenter)="hideApp()"
-    [ngClass]="{'workspace-only':!shareCollection.showApp,'workspace-app':shareCollection.showApp}">
+    (mouseenter)="hideApp()">
   </app-workspace>
 
-  <div class="d-none d-md-block d-lg-block d-xl-block"
-    style="text-align:center;max-height:inherit;transition: width 0.5s;"
-    [class.app-panel-show]="shareCollection.showApp"
-    [class.app-panel-hide]="!shareCollection.showApp">
+  <div class="d-md-block d-lg-block d-xl-block app-panel animated"
+    [class.bounceInDown]="shareCollection.showApp||shareCollection.pinApp"
+    [class.bounceInUp]="!shareCollection.showApp&&!shareCollection.pinApp"
+    [class.app-panel-show]="shareCollection.showApp||shareCollection.pinApp"
+    [class.app-panel-hide]="!shareCollection.showApp&&!shareCollection.pinApp">
     <app-panel></app-panel>
   </div>
 </div>

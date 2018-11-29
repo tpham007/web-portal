@@ -7,20 +7,47 @@
     background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(189,213,219,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%); /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#FFFFFF',GradientType=1 ); /* ie6-9 */
 }
-
-#app-list {
-    opacity: .5;
-    animation-delay: .5s;
+#app-select {
+    position: fixed;
+    left: 120px;
+}
+#app-anchor {
+    width: 5%;
+    display:inline-flex;
+    justify-content: center;
+    position: fixed;
+    top: 15px;
     cursor: pointer;
 }
-#app-pin {
+.show-anchor {
+    display: none;
+}
+.pin-app {
+    display: block!important;
     font-size: 26px;
     font-weight: bolder;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     cursor: pointer;
 }
+.show-app {
+    display: block!important;
+    opacity: 1;
+    animation-delay: .5s;
+}
 @media screen and (max-width:  768px) {
-    #app-anchor  {
-        display: none;
+    #app-anchor {
+        right: 10px;
+    }
+    .show-anchor {
+        display: block;
+        opacity: 1;
+        animation-delay: .5s;
+        cursor: pointer;
+    }
+    .show-app {
+        display: none!important;
+    }
+    .pin-app {
+        display: none!important;
     }
 }

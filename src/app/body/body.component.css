@@ -11,14 +11,49 @@
 .workspace-app >>> app-workspace {
     width: 95%!important;
 }
+.app-panel {
+    width: 100%;
+    height:  calc(100% - 60px);
+    overflow-y: scroll;
+    box-sizing: content-box; /* So the width will be 100% + 17px */
+    text-align: center;
+    padding-bottom: 100px;
+    padding-top: 5px;
+    text-align: center;
+    max-height: inherit;
+    transition: width 0.5s;
+    animation-duration: 0s;
+}
 .app-panel-show {
-    width: 5%;
+    width: 5%!important;
 }
 .app-panel-hide {
-    width: 0%;
+    width: 0%!important;
 }
 @media screen and (max-width:  768px) {
     .workspace-app >>> app-workspace {
         width: 100%!important;
     }
+    .app-panel-show {
+        width: 100%!important;
+    }
+    .app-panel-hide {
+        width: 0%!important;
+    }
+    .app-panel {
+        position: fixed;
+        top: 61px;
+        background-color: #343a40;
+        transition: none!important;
+        animation-duration: 1s;
+    }
+}
+.app-panel {
+    width: 100%;
+    height:  calc(100% - 60px);
+    overflow-y: scroll;
+    box-sizing: content-box; /* So the width will be 100% + 17px */
+    text-align: center;
+    padding-bottom: 100px;
+    padding-top: 5px;
 }

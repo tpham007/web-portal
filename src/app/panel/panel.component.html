@@ -1,5 +1,4 @@
-<div #appPanel class="app-panel animated"
-  [ngClass]="{'fadeInRight':shareCollection.showApp||shareCollection.pinApp,'fadeOutRight':!shareCollection.showApp&&!shareCollection.pinApp}">
+<div #appPanel>
   <app-application *ngFor="let app of shareCollection.applications | applicationFilter:[{type:'Operation'}]"
     [attr.id]="app.id"
     [app]="app"></app-application>

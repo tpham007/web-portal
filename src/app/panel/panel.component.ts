@@ -24,6 +24,7 @@ export class PanelComponent implements OnInit {
               setTimeout( () => {
                 THIS.repo.shareCollection.selectedApp = app;
                 THIS.repo.shareCollection.shownAppType = THIS.repo.shareCollection.selectedApp.type;
+                THIS.shareCollection.showApp = false;
               }, 300);
             }
           });
