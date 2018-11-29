@@ -25,7 +25,10 @@
 .app-tooltip > .arrow {
     margin-top: -26px!important;
 }
-.app-tooltip > .arrow:after, .arrow:before {
+.app-tooltip.bs-popover-right > .arrow:after, .arrow:before {
+    border-right-color: #6c757d;
+}
+.app-tooltip.bs-popover-left > .arrow:after, .arrow:before {
     border-left-color: #6c757d;
 }
 @media screen and (max-width:  768px) {
