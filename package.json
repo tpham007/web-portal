@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev": "lite-server",
-    "lib": "./makelib"
+    "lib": "./makelib",
+    "restart": "./makelib && ng serve"
   },
   "private": true,
   "dependencies": {

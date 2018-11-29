@@ -1,25 +1,11 @@
 #!/bin/bash
-ng build customize
-cp ./dist/customize/bundles/*.* ./src/assets/dist/.
-ng build dashboard
-cp ./dist/dashboard/bundles/*.* ./src/assets/dist/.
-ng build log
-cp ./dist/log/bundles/*.* ./src/assets/dist/.
-ng build lookup
-cp ./dist/lookup/bundles/*.* ./src/assets/dist/.
-ng build meeting
-cp ./dist/meeting/bundles/*.* ./src/assets/dist/.
-ng build project
-cp ./dist/project/bundles/*.* ./src/assets/dist/.
-ng build report
-cp ./dist/report/bundles/*.* ./src/assets/dist/.
-ng build scheduler
-cp ./dist/scheduler/bundles/*.* ./src/assets/dist/.
-ng build setting
-cp ./dist/setting/bundles/*.* ./src/assets/dist/.
-ng build support
-cp ./dist/support/bundles/*.* ./src/assets/dist/.
-ng build task
-cp ./dist/task/bundles/*.* ./src/assets/dist/.
-ng build user
-cp ./dist/user/bundles/*.* ./src/assets/dist/.
+cd ./projects
+if [ -z "$1" ]; then
+    for proj in *; do
+        ng build $proj
+        cp ../dist/$proj/bundles/*.* ../src/assets/dist/.
+    done
+else
+    ng build $1
+    cp ../dist/$1/bundles/*.* ../src/assets/dist/.
+fi

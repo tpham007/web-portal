@@ -1,3 +1,3 @@
-<span *ngIf="announcement!=null" class="btn btn-sm btn-secondary" style="position:fixed;top:10px;right:10px"
+<span *ngIf="announcement!=null" class="btn btn-sm btn-secondary acknowledge"
 (click)="announcement=null">Acknowledge</span>
 <div *ngIf="announcement!=null" [innerHtml]="announcement.content | safeHtml"></div>

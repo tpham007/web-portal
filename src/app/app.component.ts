@@ -1,4 +1,4 @@
-import { Component, EventEmitter, HostListener, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, HostListener } from '@angular/core';
 import { RepositoryService } from './repository.service';
 
 
