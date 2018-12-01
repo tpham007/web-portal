@@ -1,18 +1,17 @@
 .body { 
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
 }
 .workspace-only >>>  app-workspace {
-    width: 100%!important;
+    width: 100vw!important;
 }
 .workspace-app >>> app-workspace {
-    width: 95%!important;
+    width: 95vw!important;
 }
 .app-panel {
-    width: 100%;
     height:  80vh;
     overflow-y: scroll;
     box-sizing: content-box;
@@ -22,13 +21,13 @@
     max-height: inherit;
     transition: width .5s;
     animation-duration: .5s;
-    background-color: #323133;
+    background-color: #343a40;
 }
 .app-panel-show {
-    width: 5%!important;
+    width: 5vw!important;
 }
 .app-panel-hide {
-    width: 0%!important;
+    width: 0vw;
 }
 .app-panel.bounceInDown {
     animation-name: none;
@@ -44,13 +43,13 @@
 }
 @media screen and (max-width:  768px) {
     .workspace-app >>> app-workspace {
-        width: 100%!important;
+        width: 100vw!important;
     }
     .app-panel-show {
-        width: 100%!important;
+        width: 100vw!important;
     }
     .app-panel-hide {
-        width: 0%!important;
+        width: 0vw!important;
     }
     .app-panel {
         position: fixed;

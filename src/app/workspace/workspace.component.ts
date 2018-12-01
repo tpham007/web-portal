@@ -12,4 +12,10 @@ export class WorkspaceComponent implements OnInit {
     this.shareCollection = this.repo.shareCollection;
   }
   ngOnInit() {}
+
+  showApp() {
+    if (this.shareCollection.pinApp == false && this.shareCollection.showApp == false) {      
+      this.shareCollection.showApp = true;
+    }
+  }
 }

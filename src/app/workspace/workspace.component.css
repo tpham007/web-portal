@@ -7,4 +7,13 @@
     max-height: inherit;
     min-height: inherit;
     transition: width 0.5s;
+    display: flex;
+}
+.workspace-content {
+    width: 99.9%;
+    height: inherit;
+}
+.app-trigger {
+    width: .1%;
+    height: inherit;
 }

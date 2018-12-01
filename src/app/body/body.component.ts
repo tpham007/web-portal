@@ -19,12 +19,10 @@ export class BodyComponent implements OnInit {
   }
   mouseOver(event) {
     this.currentX = event.clientX;
-    console.log('currentX:'+this.currentX);
   }
   hideApp() {
     if (this.shareCollection.pinApp == false) {      
       setTimeout( () => {
-        console.log('this.currentX='+this.currentX+', clientWidth='+this.appWorkspace.nativeElement.clientWidth);
         let lbound = this.appWorkspace.nativeElement.clientWidth;
         lbound = lbound + (3*lbound/100);
         if (this.currentX < lbound) {
