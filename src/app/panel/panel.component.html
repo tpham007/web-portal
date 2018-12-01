@@ -1,4 +1,4 @@
-<div #appPanel>
+<div id="appPanel">
   <app-application *ngFor="let app of shareCollection.applications | applicationFilter:[{type:'Operation'}]"
     [attr.id]="app.id"
     [app]="app"></app-application>

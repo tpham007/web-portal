@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RepositoryService } from '../repository.service';
 import { Router, NavigationEnd  } from '@angular/router';
 @Component({
@@ -7,7 +7,6 @@ import { Router, NavigationEnd  } from '@angular/router';
   styleUrls: ['./panel.component.css']
 })
 export class PanelComponent implements OnInit {
-  @ViewChild('appPanel') panel; 
   shareCollection: any;
   constructor(private repo: RepositoryService, private router: Router) { 
     this.shareCollection = this.repo.shareCollection;

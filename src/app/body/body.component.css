@@ -13,22 +13,34 @@
 }
 .app-panel {
     width: 100%;
-    height:  calc(100% - 60px);
+    height:  80vh;
     overflow-y: scroll;
-    box-sizing: content-box; /* So the width will be 100% + 17px */
+    box-sizing: content-box;
     text-align: center;
     padding-bottom: 100px;
     padding-top: 5px;
-    text-align: center;
     max-height: inherit;
-    transition: width 0.5s;
-    animation-duration: 0s;
+    transition: width .5s;
+    animation-duration: .5s;
+    background-color: #323133;
 }
 .app-panel-show {
     width: 5%!important;
 }
 .app-panel-hide {
     width: 0%!important;
+}
+.app-panel.bounceInDown {
+    animation-name: none;
+}
+.app-panel.bounceOutUp {
+    animation-name: none;
+}
+.app-panel.slideInLeft {
+    animation-name: slideInLeft!important;
+}
+.app-panel.slideOutRight {
+    animation-name: slideOutRight!important;
 }
 @media screen and (max-width:  768px) {
     .workspace-app >>> app-workspace {
@@ -43,17 +55,19 @@
     .app-panel {
         position: fixed;
         top: 61px;
-        background-color: #343a40;
         transition: none!important;
         animation-duration: 1s;
     }
-}
-.app-panel {
-    width: 100%;
-    height:  calc(100% - 60px);
-    overflow-y: scroll;
-    box-sizing: content-box; /* So the width will be 100% + 17px */
-    text-align: center;
-    padding-bottom: 100px;
-    padding-top: 5px;
+    .app-panel.slideInLeft {
+        animation-name: none;
+    }
+    .app-panel.slideOutRight {
+        animation-name: none;
+    }
+    .app-panel.bounceInDown {
+        animation-name: bounceInDown!important;
+    }
+    .app-panel.slideOutRight {
+        animation-name: bounceOutUp!important;
+    }
 }

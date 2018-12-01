@@ -1,4 +1,4 @@
-<div class="body" 
+<div class="body"
   [style.max-height.px]="shareCollection.bodyHeight"
   [style.min-height.px]="shareCollection.bodyHeight"
   [class.workspace-only]="!shareCollection.showApp&&!shareCollection.pinApp"
@@ -11,7 +11,9 @@
 
   <div class="d-md-block d-lg-block d-xl-block app-panel animated"
     [class.bounceInDown]="shareCollection.showApp||shareCollection.pinApp"
-    [class.bounceInUp]="!shareCollection.showApp&&!shareCollection.pinApp"
+    [class.bounceOutUp]="!shareCollection.showApp&&!shareCollection.pinApp"
+    [class.slideInLeft]="shareCollection.showApp||shareCollection.pinApp"
+    [class.slideOutRight]="!shareCollection.showApp&&!shareCollection.pinApp"
     [class.app-panel-show]="shareCollection.showApp||shareCollection.pinApp"
     [class.app-panel-hide]="!shareCollection.showApp&&!shareCollection.pinApp">
     <app-panel></app-panel>
