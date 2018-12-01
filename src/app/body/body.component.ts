@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RepositoryService } from '../repository.service';
 
 @Component({
@@ -7,7 +7,6 @@ import { RepositoryService } from '../repository.service';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent implements OnInit {
-  @ViewChild('appWorkspace', {read: ElementRef}) appWorkspace: ElementRef; 
   shareCollection: any;
   timer: any;
   currentX; any;
@@ -17,18 +16,9 @@ export class BodyComponent implements OnInit {
 
   ngOnInit() {
   }
-  mouseOver(event) {
-    this.currentX = event.clientX;
-  }
   hideApp() {
     if (this.shareCollection.pinApp == false) {      
-      setTimeout( () => {
-        let lbound = this.appWorkspace.nativeElement.clientWidth;
-        lbound = lbound + (3*lbound/100);
-        if (this.currentX < lbound) {
-          this.shareCollection.showApp = false;
-        }
-      }, 300);
+      this.shareCollection.showApp = false;
     }
   }
 }

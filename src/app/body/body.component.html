@@ -4,9 +4,7 @@
   [class.workspace-only]="!shareCollection.showApp&&!shareCollection.pinApp"
   [class.workspace-app]="shareCollection.showApp||shareCollection.pinApp">
   
-  <app-workspace #appWorkspace
-    (mouseover)="mouseOver($event)"
-    (mouseenter)="hideApp()">
+  <app-workspace (mouseenter)="hideApp()">
   </app-workspace>
 
   <div class="d-md-block d-lg-block d-xl-block app-panel animated"
