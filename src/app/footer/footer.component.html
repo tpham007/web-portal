@@ -1,9 +1,77 @@
 <footer class="footer navbar navbar-expand-sm bg-dark navbar-dark">
-  <a style="position:absolute;right:10px;font-size:12px;"
-    href>CableOS Information</a>
-  <div *ngIf="shareCollection.selectedApp!=null" 
-    style="font-size:12px;">
-    <span style="color:gray">Current app</span>
-    <span style="margin-left:5px;font-weight:bold;color:white;">{{shareCollection.selectedApp.name}}&nbsp;&#8722;&nbsp;{{shareCollection.selectedApp.description}}</span>
-</div>
+  <div class="footer-link-container">
+    <a style="position:absolute;top:1px;right:10px;font-size:12px;"
+      href>CableOS Information</a>
+    <div *ngIf="shareCollection.selectedApp!=null" 
+      style="position:absolute;top:1px;left:10px;font-size:12px;">
+      <span style="color:gray">Current app</span>
+      <span style="color:white">&nbsp;{{shareCollection.selectedApp.name}}</span>
+      <span class="app-description">&nbsp;&#8722;&nbsp;{{shareCollection.selectedApp.description}}</span>
+    </div>
+  </div>
+  
+  <div class="footer-link-container row">
+      <div class="col-6">
+        <h3 class="">Looking for Something?</h3>
+        <div class="">
+          <form role="search" method="get" class="search-form form--single-field" action="https://www.harmonicinc.com/search/">
+            <label class="">
+              <span class="">Search Harmonic.com</span>
+              <input type="search" class="addsearch search-field" placeholder="Search Harmonic.com" value="" name="q">
+            </label>
+            <input type="submit" class="search-submit" value="Search">
+          </form>
+        </div>
+        <div class="">
+          <div class="">
+            <ul class="menu">
+              <li class="menu-item">
+                <a href="#">Get Help</a>
+                <ul class="sub-menu">
+                  <li class="menu-item"><a href="https://www.harmonicinc.com/service-support/support/">Support</a></li>
+                  <li class="menu-item"><a href="https://www.harmonicinc.com/service-support/support/">Report an Issue</a></li>
+                  <li class="menu-item"><a href="https://www.harmonicinc.com/service-support/support/">Document Library</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div> 
+        </div>
+      </div>
+      <div class="col-6">
+        <h3 class="">Connect with Us</h3>
+        <div class="row">
+          <div class="col-6">
+            <div class=""><a href="https://www.harmonicinc.com/about/contact/" class="button">Get a Quote</a></div>
+            <div class="">
+              <h4 class="">Socialize</h4>
+              <ul class="" itemscope="" itemtype="http://schema.org/Organization">
+                <link itemprop="url" href="https://www.harmonicinc.com">
+                <li class="social-media__item"><a itemprop="sameAs" href="http://www.linkedin.com/company/harmonic" class="social-media__icon icon--linkedin" target="_blank">linkedin</a></li>          
+                <li class="social-media__item"><a itemprop="sameAs" href="https://twitter.com/HarmonicInc" class="social-media__icon icon--twitter" target="_blank">twitter</a></li>          
+                <li class="social-media__item"><a itemprop="sameAs" href="https://www.facebook.com/pages/Harmonic-Inc/146608178706562" class="social-media__icon icon--facebook" target="_blank">facebook</a></li>          
+                <li class="social-media__item"><a itemprop="sameAs" href="http://www.youtube.com/user/HarmonicIncVideo" class="social-media__icon icon--youtube" target="_blank">youtube</a></li>          
+                <li class="social-media__item"><a itemprop="sameAs" href="https://plus.google.com/104750110875076285290" class="social-media__icon icon--googleplus" target="_blank">googleplus</a></li>          
+                <li class="social-media__item"><a itemprop="sameAs" href="https://www.instagram.com/harmonic_inc/?hl=en" class="social-media__icon icon--instagram" target="_blank">instagram</a></li>      
+              </ul>
+            </div>
+          </div>
+          <div class="col-6">
+            <h4 class="">Don’t Miss a Thing</h4>
+            <p class="">Keep informed on the latest video delivery infrastructure best practices and trends.</p>
+            <iframe src="https://go.pardot.com/l/63742/2016-07-29/8tkqyp" width="100%" height="124" type="text/html" frameborder="0" allowtransparency="true" style="border: 0" class="pardot-form pardot-form--newsletter" scrolling="no"></iframe>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  <div class="footer-link-container">
+    <span class="copyright">© 2018 Harmonic, Inc. All rights reserved worldwide.</span>
+    <div class="menu-footer-links-container">
+      <ul class="menu-footer-links">
+        <li class="menu-item"><a href="https://www.harmonicinc.com/privacy-notice/">Privacy</a></li>
+        <li class="menu-item"><a href="https://www.harmonicinc.com/legal/">Legal</a></li>
+        <li class="menu-item"><a href="https://www.harmonicinc.com/about/contact/">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
 </footer>

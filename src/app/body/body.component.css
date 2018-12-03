@@ -1,5 +1,6 @@
 .body { 
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     width: 100vw;
     overflow: hidden;
     display: flex;
@@ -12,12 +13,11 @@
     width: 95vw!important;
 }
 .app-panel {
-    height:  80vh;
+    height:  auto;
     overflow-y: scroll;
     box-sizing: content-box;
     text-align: center;
-    padding-bottom: 100px;
-    padding-top: 5px;
+    margin-top: 10vh;
     max-height: inherit;
     transition: width .5s;
     animation-duration: .5s;

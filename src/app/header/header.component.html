@@ -1,26 +1,26 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark" 
-  [ngStyle]="shareCollection.selectedApp!=null?'':''"
-  style="width: 95%;display:inline-flex;"> 
-  <a class="navbar-brand">
-      <img id="appLogo" [src]="imgSrc"
-      (mouseover)="imgSrc = '../../assets/img/logo3.png'"
-      (mouseout)="imgSrc = '../../assets/img/logo1.png'" style="width: 96px; height: auto;">
-  </a>
-  <span id="app-select" *ngIf="shareCollection.selectedApp!=null" class="animated pulse"
-    style="color:black;text-shadow: 0px 0px gray;cursor: pointer;"
-    (click)="shareCollection.pinApp==false?(shareCollection.showApp=true):true;">
-    <img [src]="shareCollection.selectedApp.icon" width="24" height="24">
-    <strong style="margin-left: 3px;opacity:.7;">{{shareCollection.selectedApp.name}}</strong>
+<nav class="header navbar navbar-expand-sm bg-dark navbar-dark"> 
+  <span id="app-header">
+    <a class="navbar-brand">
+        <img id="appLogo" [src]="imgSrc"
+        (mouseover)="imgSrc = '../../assets/img/logo3.png'"
+        (mouseout)="imgSrc = '../../assets/img/logo1.png'" style="width: 96px; height: auto;">
+    </a>
+    <span id="app-select" *ngIf="shareCollection.selectedApp!=null" class="animated pulse"
+      style="color:black;text-shadow: 0px 0px gray;cursor: pointer;"
+      (click)="shareCollection.pinApp==false?(shareCollection.showApp=true):true;">
+      <img [src]="shareCollection.selectedApp.icon" width="24" height="24">
+      <strong style="margin-left: 3px;opacity:.7;">{{shareCollection.selectedApp.name}}</strong>
+    </span>
   </span>
+  <span id="app-anchor">
+      <span class="animated fadeIn" 
+        title="Show Apps">
+        <img style="display: none;" [class.show-app]="!shareCollection.pinApp" src="assets/img/app-list.png" width="32" height="32"
+          (click)="shareCollection.pinApp=true;shareCollection.showApp=true">
+        <img class="show-anchor" src="assets/img/app-list.png" width="32" height="32"
+          (click)="shareCollection.showApp=!shareCollection.showApp">
+        <span style="display: none;" [class.pin-app]="shareCollection.pinApp"
+          (click)="shareCollection.pinApp=false;shareCollection.showApp=false;">&#10005;</span>
+      </span>
+    </span>
 </nav>
-<span id="app-anchor">
-  <span class="animated fadeIn" 
-    title="Show Apps">
-    <img style="display: none;" [class.show-app]="!shareCollection.pinApp" src="assets/img/app-list.png" width="32" height="32"
-      (click)="shareCollection.pinApp=true;shareCollection.showApp=true">
-    <img class="show-anchor" src="assets/img/app-list.png" width="32" height="32"
-      (click)="shareCollection.showApp=!shareCollection.showApp">
-    <span style="display: none;" [class.pin-app]="shareCollection.pinApp"
-      (click)="shareCollection.pinApp=false;shareCollection.showApp=false;">&#10005;</span>
-  </span>
-</span>

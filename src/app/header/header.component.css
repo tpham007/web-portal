@@ -1,5 +1,8 @@
-.navbar {
-    height: 10hv!important;
+.header {
+    position: fixed;
+    display: inline-block;
+    width: 100vw;
+    height: 10vh!important;
     border-radius: 0px!important;
     background: -moz-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(189,213,219,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%); /* ff3.6+ */
     background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(25%, rgba(255,255,255,1)), color-stop(50%, rgba(189,213,219,1)), color-stop(78%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1))); /* safari4+,chrome */
@@ -8,12 +11,16 @@
     background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(189,213,219,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%); /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#FFFFFF',GradientType=1 ); /* ie6-9 */
 }
+#app-header {
+    width: 95vw;
+    display:inline-flex;
+}
 #app-select {
     position: fixed;
     left: 120px;
 }
 #app-anchor {
-    width: 5%;
+    width: 5vw;
     display:inline-flex;
     justify-content: center;
     position: fixed;
