@@ -134,17 +134,83 @@ a:hover {
     width: 1px;
 }
 
-.button-quote {
+.btn-quote {
     border-radius: 20px;
+    background-color: #23b2d9;
 }
-.button-quote:before {
+.btn-quote > a {
+    color : white;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.btn-quote:before {
     border: 1px solid #23b2d9;
     background: #23b2d9;
     opacity: 1;
 }
-.button-quote:after {
+.btn-quote:after {
     background: #c50041;
     opacity: 0;
+}
+.social-media__item {
+    margin-right: 6px;
+    margin-left: 6px;
+    float: left;
+}
+.social-media__icon {
+    text-indent: 102%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    display: block;
+}
+.icon--linkedin {
+    width: 50px;
+    height: 50px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIW…XtzPWbshhEkRCyEJgHZBB68KwP6JZSdIHsdCiifTgHGC//AhI074z2oYlSAAAAAElFTkSuQmCC);
+    height: 42px;
+    width: 42px;
+    background-size: cover;
+}
+.icon--twitter {
+    width: 50px;
+    height: 50px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIW…ruDlFvu4rpMKqbFRrJv3g254mcF/WGVcxgzLJOXjkDjMp/AdKsX2Ed0LBAAAAAAElFTkSuQmCC);
+    height: 42px;
+    width: 42px;
+    background-size: cover;
+}
+.icon--facebook {
+    width: 50px;
+    height: 50px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIW…9vsKOehHP64pmWRmA9UMPci2ejwICIjqKlD2eiJ50DLJZ/AeNEoNqi4UcDAAAAAElFTkSuQmCC);
+    height: 42px;
+    width: 42px;
+    background-size: cover;
+}
+.icon--youtube {
+    width: 50px;
+    height: 50px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIW…XC76V6gZkY6rBMQygHckuTF1H+wnAKS5vCCav2cJi7X4h/AHq8HVnBGYhMAAAAAElFTkSuQmCC);
+    height: 42px;
+    width: 42px;
+    background-size: cover;
+}
+.icon--googleplus {
+    width: 50px;
+    height: 50px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIW…swuEcKWS0QVVJSIAT5EC3ZCMGQRPYIKS6jcB70rmx63wr/A7fquTWlcHVeAAAAAElFTkSuQmCC);
+    height: 42px;
+    width: 42px;
+    background-size: cover;
+}
+.icon--instagram {
+    width: 50px;
+    height: 50px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIW…ojByEzQaWDsIEKB0buG/pA9IJqBlGP0ut0h3bSl9F3x/8BPsqKPRpZBlkAAAAASUVORK5CYII=);
+    height: 42px;
+    width: 42px;
+    background-size: cover;
 }
 @media screen and (max-width:  768px) {
     .app-status {
