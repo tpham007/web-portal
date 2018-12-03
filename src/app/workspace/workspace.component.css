@@ -8,6 +8,7 @@
     min-height: inherit;
     transition: width 0.5s;
     display: flex;
+    padding-top: 10vh;
 }
 .workspace-content {
     width: 99.9%;

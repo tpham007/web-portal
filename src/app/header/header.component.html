@@ -1,4 +1,4 @@
-<nav class="header navbar navbar-expand-sm bg-dark navbar-dark"> 
+<nav class="header"> 
   <span id="app-header">
     <a class="navbar-brand">
         <img id="appLogo" [src]="imgSrc"
@@ -6,7 +6,7 @@
         (mouseout)="imgSrc = '../../assets/img/logo1.png'" style="width: 96px; height: auto;">
     </a>
     <span id="app-select" *ngIf="shareCollection.selectedApp!=null" class="animated pulse"
-      style="color:black;text-shadow: 0px 0px gray;cursor: pointer;"
+      style="color:black;text-shadow: 0px 0px gray;cursor: pointer;margin-top: 10px;"
       (click)="shareCollection.pinApp==false?(shareCollection.showApp=true):true;">
       <img [src]="shareCollection.selectedApp.icon" width="24" height="24">
       <strong style="margin-left: 3px;opacity:.7;">{{shareCollection.selectedApp.name}}</strong>
