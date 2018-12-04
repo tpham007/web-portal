@@ -22,7 +22,7 @@
 #app-anchor {
     width: 5vw;
     display:inline-flex;
-    justify-content: center;
+    text-align: center;
     position: fixed;
     top: 15px;
     cursor: pointer;

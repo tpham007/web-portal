@@ -1,7 +1,6 @@
 .body { 
     top: 10vh;
     min-height: 90vh;
-    height: auto;
     width: 100vw;
     overflow: hidden;
     display: flex;
