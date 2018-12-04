@@ -152,6 +152,10 @@ a:hover {
     background: #c50041;
     opacity: 0;
 }
+.social-media__list {
+    margin-bottom: 20px;
+    margin-left: -50px;
+}
 .social-media__item {
     margin-right: 6px;
     margin-left: 6px;
