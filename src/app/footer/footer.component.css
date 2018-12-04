@@ -48,6 +48,12 @@ a:hover {
     display: inline-block;
     position: relative;
 }
+.menu-item.help {
+    display: block!important;
+}
+.menu-item.help > a {
+    font-size: 14px;
+}
 .menu-item:before {
     position: absolute;
     top: 22px;
@@ -141,7 +147,7 @@ a:hover {
 }
 .btn-quote > a {
     color : white;
-    font-size: 20px;
+    font-size: 1rem;
     text-transform: uppercase;
 }
 .btn-quote:before {
@@ -155,15 +161,16 @@ a:hover {
 }
 .social-media__list {
     margin-bottom: 20px;
-    margin-left: -50px;
+    margin-top: 20px;
+    padding-left: 0px;
 }
 .social-media__item {
-    margin-right: 6px;
-    margin-left: 6px;
+    margin-right: 12px;
     margin-top: 6px;
     margin-bottom: 6px;
     float: left;
 }
+
 .social-media__icon {
     text-indent: 102%;
     white-space: nowrap;
@@ -222,5 +229,12 @@ a:hover {
 @media screen and (max-width:  768px) {
     .app-status {
         display: none!important;
+    }
+    .btn-quote > a {
+        font-size: .8125rem!important;
+    }
+    .social-media__item {
+        margin-left: 0px;
+        margin-right: 6px;
     }
 }
