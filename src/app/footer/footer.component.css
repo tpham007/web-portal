@@ -159,6 +159,8 @@ a:hover {
 .social-media__item {
     margin-right: 6px;
     margin-left: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
     float: left;
 }
 .social-media__icon {

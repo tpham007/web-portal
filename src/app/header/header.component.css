@@ -14,17 +14,18 @@
 }
 #app-header {
     width: 95vw;
+    height: 10vh;
     display:inline-flex;
 }
 #app-select {
     left: 120px;
 }
 #app-anchor {
+    height: 10vh;
     width: 5vw;
     display:inline-flex;
     text-align: center;
     position: fixed;
-    top: 15px;
     cursor: pointer;
 }
 .show-anchor {
@@ -44,7 +45,7 @@
 }
 @media screen and (max-width:  768px) {
     #app-anchor {
-        right: 10px;
+        right: 20px;
     }
     .show-anchor {
         display: block;
