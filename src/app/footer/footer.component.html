@@ -4,10 +4,12 @@
     <a style="position:absolute;top:-22px;right:10px;font-size:12px;"
       href>CableOS Information</a>
     -->
-    <div *ngIf="shareCollection.selectedApp!=null" class="app-status">
+    <div class="app-status">
       <span style="color:gray">Current app</span>
-      <span class="app-title">&nbsp;{{shareCollection.selectedApp.name}}</span>
-      <span class="app-description">&nbsp;&#8722;&nbsp;{{shareCollection.selectedApp.description}}</span>
+      <span *ngIf="shareCollection.selectedApp!=null">
+        <span class="app-title">&nbsp;{{shareCollection.selectedApp.name}}</span>
+        <span class="app-description">&nbsp;&#8722;&nbsp;{{shareCollection.selectedApp.description}}</span>
+      </span>
     </div>
   </div>
   
@@ -40,7 +42,7 @@
           <div class="col-md-6" style="margin-top: 20px;">
             <span class="btn btn-md btn-quote"><a href="https://www.harmonicinc.com/about/contact/">Get a Quote</a></span>
             <div style="margin-top: 20px;margin-bottom: 30px;">
-              <h6 class="">Socialize</h6>
+              <h6 class="" style="margin-bottom: 20px;">Socialize</h6>
               <ul class="social-media__list" itemscope="" itemtype="http://schema.org/Organization">
                 <link itemprop="url" href="https://www.harmonicinc.com">
                 <li class="social-media__item"><a itemprop="sameAs" href="http://www.linkedin.com/company/harmonic" class="social-media__icon icon--linkedin" target="_blank">linkedin</a></li>          
