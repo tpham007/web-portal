@@ -3,15 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev": "lite-server",
     "lib": "./makelib",
-    "restart": "./makelib && ng serve",
-    "json:server": "./node_modules/json-server/bin/index.js --watch apps.json"
+    "restart": "./makelib && ng serve"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +32,7 @@
     "core-js": "^2.5.4",
     "glyphicons": "^0.2.0",
     "jquery": "^1.12.4",
+    "json-server": "^0.14.0",
     "popper.js": "^1.14.4",
     "rxjs": "^6.3.3",
     "rxjs-compat": "^6.3.3",

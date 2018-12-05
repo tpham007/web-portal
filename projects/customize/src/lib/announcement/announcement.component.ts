@@ -1,10 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { Announcement } from './announce';
 
 @Component({
   selector: 'cos-announcement',
   templateUrl: './announcement.component.html',
-  styleUrls: ['./announcement.component.css']
+  styleUrls: ['./announcement.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class AnnouncementComponent implements OnInit {
   @Input() announcement: Announcement;

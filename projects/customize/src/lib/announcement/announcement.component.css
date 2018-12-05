@@ -2,7 +2,7 @@
     width: 100vw;
 }
 .announcement > div:first-of-type {
-    min-height: 15vh;
+    min-height: 15vh!important;
 }
 .acknowledge {
     position:fixed;
