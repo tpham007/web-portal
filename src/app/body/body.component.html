@@ -1,11 +1,12 @@
 <div class="body"
   [class.workspace-only]="!shareCollection.showApp&&!shareCollection.pinApp"
   [class.workspace-app]="shareCollection.showApp||shareCollection.pinApp">
-  
-  <app-workspace (mouseenter)="hideApp()">
-  </app-workspace>
+    
+  <app-workspace (mouseenter)="hideApp()"></app-workspace>
 
-  <div class="d-md-block d-lg-block d-xl-block app-panel animated"
+  <div id="app-trigger" (mouseenter)="showApp()"></div>
+
+  <div class="app-panel animated"
     [class.bounceInDown]="shareCollection.showApp||shareCollection.pinApp"
     [class.bounceOutUp]="!shareCollection.showApp&&!shareCollection.pinApp"
     [class.slideInLeft]="shareCollection.showApp||shareCollection.pinApp"

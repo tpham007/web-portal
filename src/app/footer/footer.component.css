@@ -50,20 +50,13 @@ a:hover {
 }
 .menu-item.help {
     display: block!important;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 .menu-item.help > a {
     font-size: 14px;
 }
-.menu-item:before {
-    position: absolute;
-    top: 22px;
-    bottom: 22px;
-    left: 1px;
-    width: 1px;
-    height: auto;
-    background-color: #a9b7bb;
-    content: "";
-}
+
 .app-status {
     position:absolute;
     top:-22px;
@@ -225,6 +218,18 @@ a:hover {
     height: 42px;
     width: 42px;
     background-size: cover;
+}
+.legal:before {
+    position: absolute;
+    top: 2px;
+    bottom: 4px;
+    left: 1px;
+    width: 1px;
+    height: 14px;
+    margin-left: 1px;
+    margin-right: 1px;
+    background-color: #a9b7bb;
+    content: "";
 }
 @media screen and (max-width:  768px) {
     .app-status {

@@ -75,7 +75,7 @@
         "id": 7,
         "name": "Supports",
         "icon": "../../assets/img/support.png",
-        "type": "Operation",
+        "type": "Tool",
         "path": "support",
         "location": "assets/dist/support.umd.js",
         "moduleName": "SupportModule",

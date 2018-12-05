@@ -21,4 +21,9 @@ export class BodyComponent implements OnInit {
       this.shareCollection.showApp = false;
     }
   }
+  showApp() {
+    if (this.shareCollection.pinApp == false && this.shareCollection.showApp == false) {      
+      this.shareCollection.showApp = true;
+    }
+  }
 }

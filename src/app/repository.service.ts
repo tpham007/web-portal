@@ -28,7 +28,7 @@ export class RepositoryService {
   async getApplications(): Promise<Application[]> {
     try {
       if (this.shareCollection.applications == null) {
-        let dataUrl = '../assets/applications.json';
+        let dataUrl = 'http://localhost:3000/vos-api/app/v1/apps';
         const response = await this.http.get(dataUrl).toPromise();
         this.shareCollection.applications = response;
         this.shareCollection.applications.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)); 

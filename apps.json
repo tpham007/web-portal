@@ -1,0 +1,142 @@
+{
+    "vos-api": {
+        "app": {
+            "v1": {
+                "apps":  [
+                    {
+                        "id": 1,
+                        "name": "Projects",
+                        "icon": "../../assets/img/project.png",
+                        "type": "Operation",
+                        "path": "project",
+                        "location": "assets/dist/project.umd.js",
+                        "moduleName": "ProjectModule",
+                        "description": "Manage projects",
+                        "registered": true,
+                        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(236, 74, 25,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
+                    },
+                    {
+                        "id": 2,
+                        "name": "Schedulers",
+                        "icon": "../../assets/img/schedule.png",
+                        "type": "Operation",
+                        "path": "scheduler",
+                        "location": "assets/dist/scheduler.umd.js",
+                        "moduleName": "SchedulerModule",
+                        "description": "Manage schedules",
+                        "registered": true,
+                        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(219, 189, 218,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
+                    },
+                    {
+                        "id": 3,
+                        "name": "Tasks",
+                        "icon": "../../assets/img/task.png",
+                        "type": "Operation",
+                        "path": "task",
+                        "location": "assets/dist/task.umd.js",
+                        "moduleName": "TaskModule",
+                        "description": "Manage tasks",
+                        "registered": true,
+                        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(189,213,219,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
+                    },
+                    {
+                        "id": 4,
+                        "name": "Users",
+                        "icon": "../../assets/img/user.png",
+                        "type": "Operation",
+                        "path": "user",
+                        "location": "assets/dist/user.umd.min.js",
+                        "moduleName": "UserModule",
+                        "description": "Manage users",
+                        "registered": true,
+                        "header":{"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(0,123,255,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
+                    },
+                    {
+                        "id": 5,
+                        "name": "Reports",
+                        "icon": "../../assets/img/report.png",
+                        "type": "Operation",
+                        "path": "report",
+                        "location": "assets/dist/report.umd.js",
+                        "moduleName": "ReportModule",
+                        "description": "View reports",
+                        "registered": true,
+                        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(189,0,219,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
+                    },
+                    {
+                        "id": 6,
+                        "name": "Meetings",
+                        "icon": "../../assets/img/meeting.png",
+                        "type": "Operation",
+                        "path": "meeting",
+                        "location": "assets/dist/meeting.umd.js",
+                        "moduleName": "MeetingModule",
+                        "description": "Manage meetings",
+                        "registered": true,
+                        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(189,213,0,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
+                    },
+                    {
+                        "id": 7,
+                        "name": "Supports",
+                        "icon": "../../assets/img/support.png",
+                        "type": "Tool",
+                        "path": "support",
+                        "location": "assets/dist/support.umd.js",
+                        "moduleName": "SupportModule",
+                        "description": "Access supports",
+                        "registered": true,
+                        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(50,213,0,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
+                    },
+                    {
+                        "id": 8,
+                        "name": "Dashboard",
+                        "icon": "../../assets/img/dashboard.png",
+                        "type": "Operation",
+                        "path": "dashboard",
+                        "location": "assets/dist/dashboard.umd.js",
+                        "moduleName": "DashboardModule",
+                        "description": "Home page",
+                        "registered": true,
+                        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(189,50,219,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
+                    },
+                    {
+                        "id": 10,
+                        "name": "Lookup",
+                        "icon": "../../assets/img/search.png",
+                        "type": "Tool",
+                        "path": "lookup",
+                        "location": "assets/dist/lookup.umd.js",
+                        "moduleName": "LookupModule",
+                        "description": "Lookup information",
+                        "registered": true,
+                        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(1,213,50,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
+                    },
+                    {
+                        "id": 20,
+                        "name": "Logs",
+                        "icon": "../../assets/img/log.png",
+                        "type": "Tool",
+                        "path": "log",
+                        "location": "assets/dist/log.umd.js",
+                        "moduleName": "LogModule",
+                        "description": "View Logs",
+                        "registered": true,
+                        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(100,0,100,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
+                    },
+                    {
+                        "id": 30,
+                        "name": "Settings",
+                        "icon": "../../assets/img/settings.png",
+                        "type": "Tool",
+                        "path": "setting",
+                        "location": "assets/dist/setting.umd.js",
+                        "moduleName": "SettingModule",
+                        "description": "Configure settings",
+                        "registered": true,
+                        "header": {"background":"-webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(200,213,10,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%)"}
+                    }
+                ]
+            }
+        }
+    }
+}

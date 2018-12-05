@@ -10,11 +10,3 @@
     display: flex;
     padding-top: 10vh;
 }
-.workspace-content {
-    width: 99.9%;
-    height: inherit;
-}
-.app-trigger {
-    width: .1%;
-    height: inherit;
-}
