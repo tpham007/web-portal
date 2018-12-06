@@ -77,6 +77,7 @@ a:hover {
 .search-container-footer {
     margin-bottom: 20px;
     display: inline-block;
+    width: 100%;
 }
 .search-container-footer:after {
     clear: both;
@@ -90,6 +91,7 @@ a:hover {
     min-height: 51px;
     border-radius: 3px;
     background-color: #fff;
+    width: 80%;
 }
 .form-single-field:after {
     position: absolute;

@@ -23,6 +23,10 @@
     display: none;
 }
 .app-panel {
+    position: fixed;
+    z-index: 999;
+    right: 0px;
+    border-left: 1px solid #47585f;
     height: auto;
     min-height: 90vh;
     overflow-y: scroll;
@@ -31,7 +35,7 @@
     margin-top: 10vh;
     transition: width .5s;
     animation-duration: .5s;
-    background-color: #343a40;
+    background: rgba(52, 58, 64, 0.5);
 }
 .app-panel-show {
     width: 5vw!important;
@@ -71,6 +75,9 @@
         position: fixed;
         transition: none!important;
         animation-duration: 1s;
+        z-index: 0;
+        border-left: 1px solid #47585f;
+        background-color: #343a40;
     }
     .app-panel.slideInLeft {
         animation-name: none;
