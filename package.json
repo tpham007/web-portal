@@ -3,14 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.json",
+    "start": "ng serve --proxy-config proxy.conf.json --port 9999 --host 0.0.0.0",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev": "lite-server",
     "lib": "./makelib",
-    "restart": "./makelib && ng serve --proxy-config proxy.conf.json"
+    "restart": "./makelib && ng serve --proxy-config proxy.conf.json --port 9999 --host 0.0.0.0"
   },
   "private": true,
   "dependencies": {
