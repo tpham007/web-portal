@@ -1,3 +1,5 @@
 {
-    "/vos-api/app/v1/apps*": "/apps"
+    "/vos-api/app/v1/apps*": "/apps",
+    "/vos-api/announcements*": "/announcements",
+    "/vos-api/projects*": "/projects"
   }

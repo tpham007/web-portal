@@ -8,7 +8,7 @@ export class ProjectService {
   constructor(private http: HttpClient) { }
   async getProjects(): Promise<any> {
     try {
-      let dataUrl = '../assets/projects.json';
+      let dataUrl = '/vos-api/projects';
       let response = await this.http.get(dataUrl).toPromise();
       return response;
     } catch (error) {

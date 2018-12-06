@@ -7,7 +7,7 @@ export class DashboardService {
   constructor(private http: HttpClient) { }
   async getAnnouncements(): Promise<any> {
     try {
-      let dataUrl = '../assets/announcements.json';
+      let dataUrl = '/vos-api/announcements';
       const response = await this.http.get(dataUrl).toPromise();
       return response;
     } catch (error) {
