@@ -10,7 +10,8 @@
     "e2e": "ng e2e",
     "dev": "lite-server",
     "lib": "./makelib",
-    "restart": "./makelib && ng serve --proxy-config proxy.conf.json"
+    "restart": "./makelib && ng serve --proxy-config proxy.conf.json",
+    "mock": "json-server --routes routes.json mock.json"
   },
   "private": true,
   "dependencies": {

@@ -43,6 +43,12 @@
     opacity: 1;
     animation-delay: .5s;
 }
+.navbar-brand {
+    opacity: 0.3;
+}
+.navbar-brand:hover {
+    opacity: 1;
+}
 @media screen and (max-width:  768px) {
     #app-anchor {
         right: 20px;
