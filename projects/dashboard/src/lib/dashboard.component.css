@@ -1,0 +1,25 @@
+.harmonic-gradient-lightblue {
+    background: #00a7d4;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…IgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(-45deg, #00a7d4 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+    background: -webkit-linear-gradient(-45deg, #00a7d4 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+    background: linear-gradient(135deg, #00a7d4 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a7d4', endColorstr='#7db9e8',GradientType=1 );
+}
+.harmonic-gradient-violet{
+    background: #c974b5;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…IgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(-45deg, #c974b5 0%, #b51e80 50%, #aa1054 51%, #c44ea8 100%);
+    background: -webkit-linear-gradient(-45deg, #c974b5 0%,#b51e80 50%,#aa1054 51%,#c44ea8 100%);
+    background: linear-gradient(135deg, #c974b5 0%,#b51e80 50%,#aa1054 51%,#c44ea8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c974b5', endColorstr='#c44ea8',GradientType=1 );
+}
+
+.harmonic-gradient-green{
+    background: #bfbf5f;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…IgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(-45deg, #bfbf5f 0%, #c6ce25 50%, #9faa00 51%, #dbf043 100%);
+    background: -webkit-linear-gradient(-45deg, #bfbf5f 0%,#c6ce25 50%,#9faa00 51%,#dbf043 100%);
+    background: linear-gradient(135deg, #bfbf5f 0%,#c6ce25 50%,#9faa00 51%,#dbf043 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfbf5f', endColorstr='#dbf043',GradientType=1 );
+}
