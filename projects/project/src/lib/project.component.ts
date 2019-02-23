@@ -4,7 +4,7 @@ declare var SystemJS: any;
 @Component({
   selector: 'cos-project',
   templateUrl: './project.component.html',
-  styles: ['./project.component.css']
+  styleUrls: ['./project.component.css']
 })
 export class ProjectComponent implements OnInit {
   projects: any;

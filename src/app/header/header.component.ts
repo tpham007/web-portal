@@ -8,7 +8,7 @@ import { RepositoryService } from '../repository.service';
 export class HeaderComponent implements OnInit {
   shareCollection: any;
   title = "Harmonic Portal";
-  imgSrc ="../../assets/img/logo1.png";
+  imgSrc ="../../assets/img/Hub@2x.png";
   constructor(private repo: RepositoryService) { 
     this.shareCollection = this.repo.shareCollection;
   }

@@ -1,9 +1,10 @@
 <nav class="header"> 
   <span id="app-header">
-    <a class="navbar-brand" style="margin-top: auto; margin-bottom: auto;">
+    <a class="navbar-brand" style="margin-top: auto; margin-bottom: auto; margin-left: 10px;">
         <img id="appLogo" [src]="imgSrc"
-        (mouseover)="imgSrc = '../../assets/img/logo3.png'"
-        (mouseout)="imgSrc = '../../assets/img/logo1.png'" style="width: 96px; height: auto;">
+        (mouseover)="imgSrc = '../../assets/img/Hub@2x.png'"
+        (mouseout)="imgSrc = '../../assets/img/Hub@2x.png'" style="width: 32px; height: auto;">
+        <strong>&nbsp;Hub</strong>
     </a>
     <span id="app-select" *ngIf="shareCollection.selectedApp!=null" class="animated pulse"
       style="color:black;text-shadow: 0px 0px gray;cursor: pointer;margin-top: auto; margin-bottom: auto;"

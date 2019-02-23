@@ -5,7 +5,7 @@ import { DashboardService } from './dashboard.service';
 @Component({
   selector: 'cos-dashboard',
   templateUrl: './dashboard.component.html',
-  styles: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
   announcements: any;
