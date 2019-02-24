@@ -1,21 +1,33 @@
+
 <div *ngIf="announcements!=null" class="animated bounceInDown">
     <cos-announcement [announcement]="announcements[0]"></cos-announcement>
 </div>
 
-<div id="div-welcome" ng-controller="msuiWelcomeCtrl" class="ng-scope">
-    <h2 style="text-align: center;">Welcome to Harmonic Hub.</h2>
-    <h4 style="text-align: center;">You look great and so does your video.</h4>
-
-    <div id="div-preview" class="alert alert-info alert-dismissable ng-binding" style="margin-top: 30px; ; color:#8a6d3b; font-weight: bold;font-size: 15px" ng-show="preview">
-        <span class="glyphicon glyphicon-circle_exclamation_mark" style="font-weight: bold"></span> This is an internal preview of Harmonic Hub for Account : &nbsp;Quickplay Inc
+<div id="div-welcome" class="ng-scope">
+    <div id="div-status" class="row clearfix animated bounceIn" style="padding-top:10px;">
+        <div class="col-xs-6 col-sm-6 col-md-4">
+            <div id="mchart1" class="librato-display-media" data-chart_id="10947801" data-duration="86400" data-height="100" data-source="file-transcoding*" style="position: relative;" data-type="bignumber"></div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4">
+            <div id="mchart7" class="librato-display-media" data-chart_id="10947801" data-duration="604800" data-height="100" data-source="file-transcoding*" style="position: relative;" data-type="bignumber"></div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4">
+            <div id="mchart30" class="librato-display-media" data-chart_id="10947801" data-duration="2592000" data-height="100" data-source="file-transcoding*" style="position: relative;" data-type="bignumber"></div>
+        </div>
     </div>
 
-    <div class="row clearfix" style="margin-bottom: 10px;">
+    <div style="text-align: center; margin-bottom:5px;margin-top:5px; font-size: bold;">&sect;</div>
+    
+    <h3 style="text-align: center;">Welcome to Harmonic Hub.</h3>
+    <h6 style="text-align: center;">You look great and so does your video.</h6>
 
+    <hr>
+
+    <div class="row clearfix">
         <div class="col-xs-6 col-sm-6 col-md-3">
             <div class="panel panel-default harmonic-gradient-lightblue" style="border: 1px solid #018eb4;cursor: pointer;" ng-click="gotoPage('System')">
-                <div class="panel-body" style="text-align: center;padding-bottom: 35px;color: white;">
-                    <h2 id="RuntimeTotalId" class="ng-binding"><span class="glyphicon glyphicon-server"></span> 0</h2>
+                <div class="panel-body" style="text-align: center;padding-bottom: 35px;padding-top: 35px;color: white;">
+                    <h2 id="RuntimeTotalId" class="ng-binding"><span class="oi oi-laptop"></span> 0</h2>
                     <div id="divRuntimeLabel" style="letter-spacing: 1px;">SYSTEMS</div>
                 </div>
             </div>
@@ -23,8 +35,8 @@
 
         <div class="col-xs-6 col-sm-6 col-md-3">
             <div class="panel panel-default harmonic-gradient-violet" style="border: 1px solid #780d3c;cursor: pointer;" ng-click="gotoPage('Support')">
-                <div class="panel-body" style="text-align: center;padding-bottom: 35px;color: white;">
-                    <h2 class="ng-binding"><span class="glyphicon glyphicon-flash"></span>0</h2>
+                <div class="panel-body" style="text-align: center;padding-bottom: 35px;padding-top: 35px;color: white;">
+                    <h2 class="ng-binding"><span class="oi oi-bolt"></span>0</h2>
                     <div id="div-wel-incidents" style="letter-spacing: 1px;">INCIDENTS</div>
                 </div>
             </div>
@@ -32,114 +44,20 @@
 
         <div class="col-xs-6 col-sm-6 col-md-3">
             <div class="panel panel-default harmonic-gradient-green" style="border: 1px solid #7e8701;cursor: pointer;" ng-click="gotoStartConversation()">
-                <div class="panel-body" style="text-align: center;padding-bottom: 35px;color: white;">
-                    <h2 class="ng-binding"><span class="glyphicon glyphicon-conversation"></span> 0</h2>
+                <div class="panel-body" style="text-align: center;padding-bottom: 35px;padding-top: 35px;color: white;">
+                    <h2 class="ng-binding"><span class="oi oi-chat"></span> 0</h2>
                     <div style="letter-spacing: 1px;">CONVERSATIONS</div>
                 </div>
             </div>
         </div>
-        <!-- remove per Vincent request NG-10014
-            <div class="col-xs-6 col-sm-6 col-md-3">
-                <div class="panel panel-default" style="background-color: #04375a;border: 1px solid #777;cursor: pointer;" ng-click="gotoPage('Account')">
-                    <div class="panel-body" style="text-align: center;padding-bottom: 35px;color: white;">
-                        <h2><span class="glyphicon glyphicon-money"></span></h2>
-                        <div style="letter-spacing: 1px;">ACCOUNT BILLING</div>
-                    </div>
-                </div>
-            </div>
-        -->
+    
         <div class="col-xs-6 col-sm-6 col-md-3">
             <div class="panel panel-default" style="background-color: #04375a;border: 1px solid #777;cursor: pointer;" ng-click="gotoPage('Software')">
-                <div class="panel-body" style="text-align: center;padding-bottom: 35px;color: white;">
-                    <h2><span class="glyphicon glyphicon-package"></span></h2>
+                <div class="panel-body" style="text-align: center;padding-bottom: 35px;padding-top: 35px;color: white;">
+                    <h2><span class="oi oi-layers"></span></h2>
                     <div id="divCommunity" style="letter-spacing: 1px;">SOFTWARE</div>
                 </div>
             </div>
-        </div>
-
-    </div>
-
-    <hr>
-
-    <h4 style="text-align: center;">Urgent</h4>
-
-    <br>
-
-    <div class="row clearfix">
-
-        <div class="col-md-6">
-            <div class="panel panel-default">
-
-                <div class="panel-heading clearfix" style="padding-bottom: 5px;">
-                    <div class="pull-left" style="margin-right: 15px;">
-                        <span class="glyphicon glyphicon-flash glyphicon-event"></span>
-                    </div>
-                    <div class="pull-left" style="letter-spacing: 1px;font-weight: bold;font-size: 12px;margin-top: 2px;" title="Cases reported by your users"> INCIDENTS
-                        <!-- ngIf: openIncidents.length>0 -->
-                        <span style="color: #666;font-size: 12px;letter-spacing: 0;">— Broadcast by Harmonic</span>
-                    </div>
-                </div>
-
-                <div class="panel-body">
-                    <table style="width: 100%;">
-                        <!-- ngIf: openIncidents!=undefined && openIncidents.length==0 --><tbody ng-if="openIncidents!=undefined &amp;&amp; openIncidents.length==0" class="ng-scope">
-                            <tr>
-                                <td colspan="6" valign="top"><span class="label label-success">No open incidents</span></td>
-                            </tr>
-                            <tr style="height: 20px;">
-                                    <td valign="top" colspan="6"><hr></td>
-                            </tr>
-                        </tbody><!-- end ngIf: openIncidents!=undefined && openIncidents.length==0 -->
-                        <!-- ngRepeat: incident in openIncidents | limitTo:5 | orderBy: '-lastmodifieddate' -->
-                    </table>
-                </div>
-
-                <div class="panel-footer">
-                    <a href="" ng-click="gotoPage('Support')">Past incidents</a>
-                </div>
-
-            </div> <!--/panel-->
-
-        </div>
-
-        <div class="col-md-6" ng-show="!hideConversation">
-
-            <div class="panel panel-default">
-
-                <div class="panel-heading clearfix" style="padding-bottom: 5px;">
-                    <div class="pull-left" style="margin-right: 15px;">
-                        <span class="glyphicon glyphicon-conversation glyphicon-event"></span>
-                    </div>
-                    <div id="lbl-support-conversations" class="pull-left" style="letter-spacing: 1px;font-weight: bold;font-size: 12px;margin-top: 2px;" title="Cases reported by your users"> URGENT SUPPORT
-                        <!-- ngIf: openConversations.length>0 -->
-                        <span style="color: #666;font-size: 12px;letter-spacing: 0;"></span>
-                    </div>
-                </div>
-
-                <div class="panel-body">
-                    <table style="width: 100%;">
-
-                        <!-- ngRepeat: conversation in openConversations | limitTo:5 | orderBy: '-latestTime' -->
-                        <tbody>
-
-                            <!-- ngIf: openConversations.length==0 --><tr ng-if="openConversations.length==0" class="ng-scope">
-                                <td valign="top">&nbsp;</td>
-                                <td style="width: 15px;"></td>
-                                <td><span id="lbl-nosupport-conversations" class="label label-success">No conversations</span></td>
-                                <td valign="top" style="width: 15px;"></td>
-                            </tr><!-- end ngIf: openConversations.length==0 -->
-
-                        </tbody>
-                    </table>
-
-                </div>
-
-                <div class="panel-footer">
-                    <a id="link-start-conversation" href="" ng-click="gotoStartConversation()">Start conversation</a>
-                </div>
-
-            </div>
-
         </div>
 
     </div>
