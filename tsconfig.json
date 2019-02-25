@@ -107,6 +107,12 @@
       ],
       "system/*": [
         "dist/system/*"
+      ],
+      "software": [
+        "dist/software"
+      ],
+      "software/*": [
+        "dist/software/*"
       ]
     }
   }
