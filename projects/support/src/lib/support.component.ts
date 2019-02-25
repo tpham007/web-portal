@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'cos-support',
+  selector: 'hub-support',
   templateUrl: './support.component.html',
   styleUrls: ['./support.component.css']
 })

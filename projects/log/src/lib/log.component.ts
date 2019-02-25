@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'cos-log',
+  selector: 'hub-log',
   templateUrl: './log.component.html',
   styleUrls: ['./log.component.css']
 })

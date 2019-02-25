@@ -2,7 +2,7 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { Announcement } from './announce';
 
 @Component({
-  selector: 'cos-announcement',
+  selector: 'hub-announcement',
   templateUrl: './announcement.component.html',
   styleUrls: ['./announcement.component.css'],
   encapsulation: ViewEncapsulation.None

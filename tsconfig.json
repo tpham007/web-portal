@@ -95,6 +95,18 @@
       ],
       "dashboard/*": [
         "dist/dashboard/*"
+      ],
+      "account": [
+        "dist/account"
+      ],
+      "account/*": [
+        "dist/account/*"
+      ],
+      "system": [
+        "dist/system"
+      ],
+      "system/*": [
+        "dist/system/*"
       ]
     }
   }

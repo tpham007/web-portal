@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'cos-scheduler',
+  selector: 'hub-scheduler',
   templateUrl: './scheduler.component.html',
   styles: ['./scheduler.component.css']
 })

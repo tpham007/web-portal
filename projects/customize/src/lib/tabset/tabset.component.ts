@@ -2,7 +2,7 @@ import { Component, AfterContentInit , Input, Output, ContentChildren, EventEmit
 import { TabComponent } from '../tab/tab.component';
 
 @Component({
-  selector: 'cos-tabset',
+  selector: 'hub-tabset',
   templateUrl: './tabset.component.html',
   styleUrls: ['./tabset.component.css']
 })

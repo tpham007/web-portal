@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'cos-user',
+  selector: 'hub-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })

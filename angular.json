@@ -138,7 +138,7 @@
       "root": "projects/user",
       "sourceRoot": "projects/user/src",
       "projectType": "library",
-      "prefix": "cos",
+      "prefix": "hub",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -173,7 +173,7 @@
       "root": "projects/customize",
       "sourceRoot": "projects/customize/src",
       "projectType": "library",
-      "prefix": "cos",
+      "prefix": "hub",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -208,7 +208,7 @@
       "root": "projects/log",
       "sourceRoot": "projects/log/src",
       "projectType": "library",
-      "prefix": "cos",
+      "prefix": "hub",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -243,7 +243,7 @@
       "root": "projects/report",
       "sourceRoot": "projects/report/src",
       "projectType": "library",
-      "prefix": "cos",
+      "prefix": "hub",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -278,7 +278,7 @@
       "root": "projects/setting",
       "sourceRoot": "projects/setting/src",
       "projectType": "library",
-      "prefix": "cos",
+      "prefix": "hub",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -313,7 +313,7 @@
       "root": "projects/meeting",
       "sourceRoot": "projects/meeting/src",
       "projectType": "library",
-      "prefix": "cos",
+      "prefix": "hub",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -348,7 +348,7 @@
       "root": "projects/project",
       "sourceRoot": "projects/project/src",
       "projectType": "library",
-      "prefix": "cos",
+      "prefix": "hub",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -383,7 +383,7 @@
       "root": "projects/scheduler",
       "sourceRoot": "projects/scheduler/src",
       "projectType": "library",
-      "prefix": "cos",
+      "prefix": "hub",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -418,7 +418,7 @@
       "root": "projects/task",
       "sourceRoot": "projects/task/src",
       "projectType": "library",
-      "prefix": "cos",
+      "prefix": "hub",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -453,7 +453,7 @@
       "root": "projects/support",
       "sourceRoot": "projects/support/src",
       "projectType": "library",
-      "prefix": "cos",
+      "prefix": "hub",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -488,7 +488,7 @@
       "root": "projects/lookup",
       "sourceRoot": "projects/lookup/src",
       "projectType": "library",
-      "prefix": "cos",
+      "prefix": "hub",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -523,7 +523,7 @@
       "root": "projects/dashboard",
       "sourceRoot": "projects/dashboard/src",
       "projectType": "library",
-      "prefix": "cos",
+      "prefix": "hub",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -538,6 +538,76 @@
             "main": "projects/dashboard/src/test.ts",
             "tsConfig": "projects/dashboard/tsconfig.spec.json",
             "karmaConfig": "projects/dashboard/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/dashboard/tsconfig.lib.json",
+              "projects/dashboard/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "account": {
+      "root": "projects/account",
+      "sourceRoot": "projects/account/src",
+      "projectType": "library",
+      "prefix": "hub",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/account/tsconfig.lib.json",
+            "project": "projects/account/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/account/src/test.ts",
+            "tsConfig": "projects/account/tsconfig.spec.json",
+            "karmaConfig": "projects/account/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/account/tsconfig.lib.json",
+              "projects/account/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "system": {
+      "root": "projects/system",
+      "sourceRoot": "projects/system/src",
+      "projectType": "library",
+      "prefix": "hub",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/system/tsconfig.lib.json",
+            "project": "projects/system/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/system/src/test.ts",
+            "tsConfig": "projects/system/tsconfig.spec.json",
+            "karmaConfig": "projects/system/karma.conf.js"
           }
         },
         "lint": {

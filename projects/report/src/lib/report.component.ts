@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'cos-report',
+  selector: 'hub-report',
   templateUrl: './report.component.html',
   styles: ['./report.component.css']
 })

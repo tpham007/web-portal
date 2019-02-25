@@ -2,7 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { ProjectService } from './project.service';
 declare var SystemJS: any;
 @Component({
-  selector: 'cos-project',
+  selector: 'hub-project',
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.css']
 })

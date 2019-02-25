@@ -3,7 +3,7 @@ import { Announcement } from 'customize';
 import { DashboardService } from './dashboard.service';
 
 @Component({
-  selector: 'cos-dashboard',
+  selector: 'hub-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
   encapsulation: ViewEncapsulation.None

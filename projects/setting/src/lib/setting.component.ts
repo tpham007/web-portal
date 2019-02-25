@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'cos-setting',
+  selector: 'hub-setting',
   templateUrl: './setting.component.html',
   styleUrls: ['./setting.component.css']
 })
