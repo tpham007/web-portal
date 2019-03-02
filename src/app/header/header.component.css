@@ -49,6 +49,95 @@
 .navbar-brand:hover {
     opacity: 1;
 }
+
+#mchart1 {
+    font-size: inherit!important;
+}
+
+#mchart1 .big_number__title {
+    visibility: hidden;
+    position: relative;
+}
+
+#mchart7 {
+    font-size: inherit!important;
+}
+
+#mchart7 .big_number__title {
+    visibility: hidden;
+    position: relative;
+}
+
+#mchart30 {
+    font-size: inherit!important;
+}
+
+#mchart30 .big_number__title {
+    visibility: hidden;
+    position: relative;
+}
+
+#mchart1 .big_number__title:after {
+    visibility: visible;
+    content: 'Availability (1 Day)';
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#mchart7 .big_number__title:after {
+    visibility: visible;
+    content: 'Availability (1 Week)';
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#mchart30 .big_number__title:after {
+    visibility: visible;
+    content: 'Availability (1 Month)';
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#div-status {
+    animation-delay: 1.5s;
+}
+
+.big_number__title {
+    font-size: inherit!important;
+}
+
+.big_number__main {
+    margin: auto!important;
+    padding-top: 0px!important;
+}
+
+.big_number__dimension_value {
+    display: none!important;
+}
+
+.big_number__value {
+    font-size: 25px!important;
+    padding: 5px!important;
+}
+
+.big_number {
+    height: 50px!important;
+    padding: 4px!important;
+}
+
+.big_number__face_container {
+    right: 10px!important;
+    height: 25%!important;
+    width: 15px!important;
+}
+
+.big_number__barChart {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 @media screen and (max-width:  768px) {
     #app-anchor {
         right: 20px;
