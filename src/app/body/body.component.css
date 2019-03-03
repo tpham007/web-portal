@@ -1,6 +1,6 @@
 .body { 
-    top: 10vh;
-    min-height: 90vh;
+    top: 11vh;
+    min-height: 89vh;
     width: 100vw;
     overflow: hidden;
     display: flex;
@@ -28,11 +28,11 @@
     right: 0px;
     border-left: 1px solid #47585f;
     height: auto;
-    min-height: 90vh;
+    min-height: 89vh;
     overflow-y: scroll;
     box-sizing: content-box;
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 11vh;
     transition: width .5s;
     animation-duration: .5s;
     background: rgba(52, 58, 64, 0.5);
