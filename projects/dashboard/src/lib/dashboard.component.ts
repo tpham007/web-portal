@@ -11,6 +11,9 @@ export class DashboardComponent implements OnInit {
   announcements: any;
   constructor(private repo: DashboardService) { }
   async ngOnInit() {
-    this.announcements = await this.repo.getAnnouncements();
+    //this.announcements = await this.repo.getAnnouncements();
+  }
+  public ann() {
+    this.announcements = this.repo.getAnnouncements();
   }
 }
