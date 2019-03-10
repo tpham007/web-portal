@@ -9,7 +9,7 @@ import { ModuleService } from './module.service';
 import { RouterService } from './router.service';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
-import { FooterComponent } from './footer/footer.component';
+import { AppInfoContent, FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { ApplicationComponent } from './application/application.component';
@@ -38,7 +38,8 @@ export function createCompiler(compilerFactory: CompilerFactory) {
     PanelComponent,
     ApplicationFilter,
     ApplicationOrder,
-    BlankComponent
+    BlankComponent,
+    AppInfoContent,
   ],
   imports: [
     ClarityModule,
@@ -48,6 +49,9 @@ export function createCompiler(compilerFactory: CompilerFactory) {
     HttpModule,
     NgbModule,
     BrowserAnimationsModule
+  ],
+  entryComponents: [
+    AppInfoContent
   ],
   providers: [
     RouterService, ModuleService,

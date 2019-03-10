@@ -1,6 +1,5 @@
 import { NgModule, Injector, APP_INITIALIZER } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BlankComponent } from './blank/blank.component';
 import { ModuleService } from './module.service';
 const routes: Routes = [  
   { path: '', redirectTo: '/dashboard', pathMatch: 'full'}

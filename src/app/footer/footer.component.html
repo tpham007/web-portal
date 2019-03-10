@@ -1,5 +1,5 @@
 <div class="footer">
-   <div class="app-status">
+   <div class="app-status" (click)="showAppInfo()">
       <span *ngIf="shareCollection.selectedApp!=null">
          <span class="app-title oi oi-info">&nbsp;{{shareCollection.selectedApp.name}}</span>
          <span class="app-description">&ndash;&nbsp;{{shareCollection.selectedApp.description}}</span>
