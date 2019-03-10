@@ -27,6 +27,16 @@ export class PanelComponent implements OnInit {
               }, 300);
             }
           });
+        } else {
+          THIS.repo.getApplication('dashboard').then(function(app) {
+            if (app != null) {
+              setTimeout( () => {
+                THIS.repo.shareCollection.selectedApp = app;
+                THIS.repo.shareCollection.shownAppType = THIS.repo.shareCollection.selectedApp.type;
+                THIS.repo.shareCollection.showApp = false;
+              }, 300);
+            }
+          });
         }
       }
     });

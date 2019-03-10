@@ -165,4 +165,7 @@
         display: none!important;
         pointer-events: none;
     }
+    #div-status {
+        display: none!important;
+    }
 }
