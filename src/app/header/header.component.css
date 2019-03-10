@@ -3,7 +3,7 @@
     position: fixed;
     display: inline-block;
     width: 100vw;
-    height: 80px!important;
+    height: 78px!important;
     border-radius: 0px!important;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -12,14 +12,14 @@
 }
 #app-header {
     width: 95vw;
-    height: 80px;
+    height: 78px;
     display:inline-flex;
 }
 #app-select {
     left: 120px;
 }
 #app-anchor {
-    height: 80px;
+    height: 78px;
     width: 60px;
     display:inline-flex;
     text-align: center;
