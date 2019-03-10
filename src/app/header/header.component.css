@@ -52,6 +52,13 @@
     opacity: .3;
 }
 
+#app-select {
+    opacity: 1;
+}
+#app-select:hover {
+    opacity: .3;
+}
+
 #mchart1 {
     font-size: inherit!important;
 }
