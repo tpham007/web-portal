@@ -1,8 +1,23 @@
 <div id="appPanel">
+  <!--
+  <span id="logout-anchor">
+    <span class="oi oi-account-logout" title="Logout"
+      style="margin: auto;padding-top:15px;padding-bottom:15px;font-size:20px;color:black;cursor:pointer;">
+    </span>
+  </span>
+  -->
+  <a>
+      <img src="assets/img/logout.png"
+        class="app-logo"
+        ngbPopover="Logout" 
+        triggers="mouseenter:mouseleave"
+        placement="auto" container="body"
+        popoverClass="app-tooltip">
+  </a>
   <app-application *ngFor="let app of shareCollection.applications | applicationFilter:[{type:'Operation'}]"
     [attr.id]="app.id"
     [app]="app"></app-application>
-  <hr style="width: 50%;">
+  <hr style="width: 100%;">
   <app-application *ngFor="let app of shareCollection.applications | applicationFilter:[{type:'Tool'}]"
     [attr.id]="app.id"
     [app]="app"></app-application>

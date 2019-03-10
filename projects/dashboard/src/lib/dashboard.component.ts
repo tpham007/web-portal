@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
   async ngOnInit() {
     //this.announcements = await this.repo.getAnnouncements();
   }
-  public ann() {
-    this.announcements = this.repo.getAnnouncements();
+  public async ann() {
+    this.announcements = await this.repo.getAnnouncements();
   }
 }

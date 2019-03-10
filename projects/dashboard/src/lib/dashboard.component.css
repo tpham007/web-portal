@@ -23,3 +23,10 @@
     background: linear-gradient(135deg, #bfbf5f 0%,#c6ce25 50%,#9faa00 51%,#dbf043 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfbf5f', endColorstr='#dbf043',GradientType=1 );
 }
+
+.oi {
+    opacity:1;
+}
+.oi:hover {
+    opacity: .3;
+}

@@ -9,5 +9,15 @@
     text-decoration: none!important;
 }
 .sub_footer {
-    height: 135px!important;
+    height: auto!important;
+}
+.app-title {
+    color:black;
+    font-weight: 600;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.app-description {
+    margin-left:5px;
+    color:black;
 }

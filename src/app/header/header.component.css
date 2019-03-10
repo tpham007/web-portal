@@ -25,6 +25,10 @@
     text-align: center;
     position: fixed;
     cursor: pointer;
+    opacity: 1;
+}
+#app-anchor:hover {
+    opacity: .3;
 }
 .show-anchor {
     display: none;
@@ -42,10 +46,10 @@
     animation-delay: .5s;
 }
 .navbar-brand {
-    opacity: 0.3;
+    opacity: 1;
 }
 .navbar-brand:hover {
-    opacity: 1;
+    opacity: .3;
 }
 
 #mchart1 {

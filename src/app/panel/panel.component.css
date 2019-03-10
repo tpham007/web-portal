@@ -1,1 +1,6 @@
-
+#logout-anchor {
+    opacity: 1;
+}
+#logout-anchor:hover {
+    opacity: .3;
+}

@@ -1,183 +1,115 @@
-<!--
-   <footer class="footer navbar navbar-expand-sm bg-dark navbar-dark">
-     <div class="footer-link-container">
-       
-       <div class="app-status">
-         <span *ngIf="shareCollection.selectedApp!=null">
-           <span class="app-title">&nbsp;{{shareCollection.selectedApp.name}}</span>
-           <span class="app-description">&nbsp;&#8722;&nbsp;{{shareCollection.selectedApp.description}}</span>
-         </span>
-       </div>
-     </div>
-     
-     <div class="footer-link-container row">
-         <div class="col-md-5">
-           <h5 class="footer-label">Looking for Something?</h5>
-           <div class="search-container-footer">
-             <form role="search" method="get" class="search-form form-single-field" action="https://www.harmonicinc.com/search/">
-               <label style="width:100%;">
-                 <span class="screen-reader-text">Search Harmonic.com</span>
-                 <input style="width:100%;" type="search" placeholder="Search Harmonic.com" value="" name="q">
-               </label>
-               <input type="submit" class="search-submit" value="Search">
-             </form>
-           </div>
-           <div class="footer-link-container">
-             <h6 style="color: white;">Get Help</h6>
-             <div class="menu-footer-links-container">
-               <ul class="menu-footer-links">
-                 <li class="menu-item help"><a href="https://www.harmonicinc.com/service-support/support/">Support</a></li>
-                 <li class="menu-item help"><a href="https://www.harmonicinc.com/service-support/support/">Report an Issue</a></li>
-                 <li class="menu-item help"><a href="https://www.harmonicinc.com/service-support/support/">Document Library</a></li>
+<div class="footer">
+   <div class="app-status">
+      <span *ngIf="shareCollection.selectedApp!=null">
+         <span class="app-title oi oi-info">&nbsp;{{shareCollection.selectedApp.name}}</span>
+         <span class="app-description">&ndash;&nbsp;{{shareCollection.selectedApp.description}}</span>
+      </span>
+   </div>
+   <div class="sub_footer">
+      <div class="c">
+         <div class="col_row">
+            <div class="col col_half">
+               <h5 class="social_title">FOLLOW US</h5>
+               <ul class="social_links">
+                  <li><a rel="nofollow" class="fa fa-twitter link" href="https://twitter.com/HarmonicInc" target="_blank"></a></li>
+                  <li><a rel="nofollow" class="fa fa-facebook link" href="https://www.facebook.com/pages/Harmonic-Inc/146608178706562" target="_blank"></a></li>
+                  <li><a rel="nofollow" class="fa fa-linkedin link" href="https://www.linkedin.com/company/harmonic" target="_blank"></a></li>
+                  <li><a rel="nofollow" class="fa fa-instagram link" href="https://www.instagram.com/harmonic_inc/?hl=en" target="_blank"></a></li>
+                  <li><a rel="nofollow" class="fa fa-youtube-play link" href="http://www.youtube.com/user/HarmonicIncVideo" target="_blank"></a></li>
+                  <li><a rel="nofollow" class="fa fa-google-plus link" href="https://plus.google.com/104750110875076285290" target="_blank"></a></li>
                </ul>
-             </div>
-           </div>
+            </div>
+            <div class="col col_half text_right">
+               <a class="general_link" href="https://www.harmonicinc.com/resources"><img src="https://www.harmonicinc.com/wp-content/uploads/fly-images/3401/resource-60x75.png" alt="Resources"><span>Resources</span></a>
+               <a class="general_link" href="https://www.harmonicinc.com/news-insights/"><img src="https://www.harmonicinc.com/wp-content/uploads/fly-images/25/news-60x60.png" alt="News"><span>News</span></a>
+               <a class="general_link" href="https://www.harmonicinc.com/news-insights/events/"><img src="https://www.harmonicinc.com/wp-content/uploads/fly-images/27/events-60x60.png" alt="Events"><span>Events</span></a>
+               <a class="general_link" href="https://www.harmonicinc.com/news-insights/blog/"><img src="https://www.harmonicinc.com/wp-content/uploads/fly-images/26/blogs-60x58.png" alt="Blogs"><span>Blogs</span></a>
+            </div>
          </div>
-         <div class="col-md-7">
-           <h5 class="footer-label">Connect with Us</h5>
-           <div class="row">
-             <div class="col-md-6">
-               <span class="btn btn-md btn-quote"><a href="https://www.harmonicinc.com/about/contact/">Get a Quote</a></span>
-               <div style="margin-top: 20px;margin-bottom: 30px;">
-                 <h6 class="" style="color: white;">Socialize</h6>
-                 <ul class="social-media__list" itemscope="" itemtype="http://schema.org/Organization">
-                   <link itemprop="url" href="https://www.harmonicinc.com">
-                   <li class="social-media__item"><a itemprop="sameAs" href="http://www.linkedin.com/company/harmonic" class="social-media__icon icon--linkedin" target="_blank">linkedin</a></li>          
-                   <li class="social-media__item"><a itemprop="sameAs" href="https://twitter.com/HarmonicInc" class="social-media__icon icon--twitter" target="_blank">twitter</a></li>          
-                   <li class="social-media__item"><a itemprop="sameAs" href="https://www.facebook.com/pages/Harmonic-Inc/146608178706562" class="social-media__icon icon--facebook" target="_blank">facebook</a></li>          
-                   <li class="social-media__item"><a itemprop="sameAs" href="http://www.youtube.com/user/HarmonicIncVideo" class="social-media__icon icon--youtube" target="_blank">youtube</a></li>          
-                   <li class="social-media__item"><a itemprop="sameAs" href="https://plus.google.com/104750110875076285290" class="social-media__icon icon--googleplus" target="_blank">googleplus</a></li>          
-                   <li class="social-media__item"><a itemprop="sameAs" href="https://www.instagram.com/harmonic_inc/?hl=en" class="social-media__icon icon--instagram" target="_blank">instagram</a></li>      
-                 </ul>
+      </div>
+   </div>
+   <div class="footer_menus">
+      <div class="c">
+         <div class="footer_logo text_right">
+            <a href="https://www.harmonicinc.com" class="f_logo_link"><img src="https://www.harmonicinc.com/wp-content/uploads/2018/08/harmonic-logo.svg" alt="logo" class="logo"></a>
+         </div>
+         <div class="col_row col_menus">
+            <div class="col col_1_4">
+               <h4 class="title myriad_semi">This is Harmonic</h4>
+               <ul class="ft_menu">
+                  <li><a href="https://www.harmonicinc.com/leadership/">Leadership</a></li>
+                  <li><a href="https://www.harmonicinc.com/investor/">Investor Relations</a></li>
+                  <li><a href="https://www.harmonicinc.com/customers/">Customers</a></li>
+                  <li><a href="https://www.harmonicinc.com/careers/">Careers</a></li>
+                  <li><a href="https://www.harmonicinc.com/global-citizenship/">Global Citizenship</a></li>
+               </ul>
+            </div>
+            <div class="col col_1_4">
+               <h4 class="title myriad_semi">My Account</h4>
+               <ul class="ft_menu">
+                  <li><a href="https://www.vos.tv/VosCPLoginPage" target="_blank">VOS360 SaaS</a></li>
+                  <li><a href="https://www.file360.harmonicinc.com/login" target="_blank">File360 Transcoding SaaS</a></li>
+                  <li><a href="https://www.harmonicinc.com/video-appliances-software/technical-support/">Technical Support</a></li>
+                  <li><a href="https://harmonic.force.com/SWAccess/SWDownloadLogin" target="_blank">Customer Portal</a></li>
+                  <li><a href="https://harmonic.channeltivity.com/Login" target="_blank">Channel Partner Portal</a></li>
+               </ul>
+            </div>
+            <div class="col col_1_4">
+               <h4 class="title myriad_semi">Contact Us</h4>
+               <ul class="ft_menu">
+                  <li><a href="https://www.harmonicinc.com/contact?g=request-a-quote">General Information</a></li>
+                  <li><a href="https://www.harmonicinc.com/video-appliances-software/technical-support/">Technical Support</a></li>
+               </ul>
+               <a class="title myriad_semi mt30 footer-partner-name" href="https://www.harmonicinc.com/partners/">OUR PARTNERS</a>                    
+               <ul class="ft_menu">
+                  <li><a href="https://www.harmonicinc.com/partners/become-partner/">Become Channel Partner</a></li>
+                  <li><a href="https://www.harmonicinc.com/partners/technology-partners/">Technology Partners</a></li>
+               </ul>
+            </div>
+            <div class="col col_1_4">
+               <h4 class="title myriad_semi">Don't miss a thing</h4>
+               <p class="desc myriad_reg">Keep informed on the latest solutions to produce, deliver and monetize amazing video experiences</p>
+               <div role="form" class="wpcf7" id="wpcf7-f58-o1" lang="en-US" dir="ltr">
+                  <div class="screen-reader-response"></div>
+                  <form action="/saas-for-video/360-services/file360-transcoding-saas/#wpcf7-f58-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+                     <div style="display: none;">
+                        <input type="hidden" name="_wpcf7" value="58">
+                        <input type="hidden" name="_wpcf7_version" value="5.1.1">
+                        <input type="hidden" name="_wpcf7_locale" value="en_US">
+                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f58-o1">
+                        <input type="hidden" name="_wpcf7_container_post" value="0">
+                        <input type="hidden" name="g-recaptcha-response" value="">
+                     </div>
+                     <div class="footer_newsletter">
+                        <span class="wpcf7-form-control-wrap Email"><input type="email" name="Email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email"></span>
+                        <p></p>
+                        <div class="submit">
+                           <input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span>
+                        </div>
+                     </div>
+                     <div class="wpcf7-response-output wpcf7-display-none"></div>
+                  </form>
                </div>
-             </div>
-             <div class="col-md-6" style="margin-top: 30px;">
-               <h6 class="" style="color: white;">Don’t Miss a Thing</h6>
-               <p style="font-size: 14px;">Keep informed on the latest video delivery infrastructure best practices and trends.</p>
-               <iframe src="https://go.pardot.com/l/63742/2016-07-29/8tkqyp" width="80%" height="124" type="text/html" frameborder="0" allowtransparency="true" style="border: 0" class="pardot-form pardot-form--newsletter" scrolling="no"></iframe>
-             </div>
-           </div>
+            </div>
          </div>
-     </div>
-     
-     <div class="footer-link-container" style="text-align: center;">
-       <span class="copyright">© 2018 Harmonic, Inc. All rights reserved worldwide.</span>
-       <div class="menu-footer-links-container">
-         <ul class="menu-footer-links">
-           <li class="menu-item legal"><a href="https://www.harmonicinc.com/privacy-notice/">Privacy</a></li>
-           <li class="menu-item legal"><a href="https://www.harmonicinc.com/legal/">Legal</a></li>
-           <li class="menu-item legal"><a href="https://www.harmonicinc.com/about/contact/">Contact Us</a></li>
-         </ul>
-       </div>
-     </div>
-   </footer>
-   -->
-   <div class="footer">
-    <div class="sub_footer">
-       <div class="c">
-          <div class="col_row">
-             <div class="col col_half">
-                <h5 class="social_title">FOLLOW US</h5>
-                <ul class="social_links">
-                   <li><a rel="nofollow" class="fa fa-twitter link" href="https://twitter.com/HarmonicInc" target="_blank"></a></li>
-                   <li><a rel="nofollow" class="fa fa-facebook link" href="https://www.facebook.com/pages/Harmonic-Inc/146608178706562" target="_blank"></a></li>
-                   <li><a rel="nofollow" class="fa fa-linkedin link" href="https://www.linkedin.com/company/harmonic" target="_blank"></a></li>
-                   <li><a rel="nofollow" class="fa fa-instagram link" href="https://www.instagram.com/harmonic_inc/?hl=en" target="_blank"></a></li>
-                   <li><a rel="nofollow" class="fa fa-youtube-play link" href="http://www.youtube.com/user/HarmonicIncVideo" target="_blank"></a></li>
-                   <li><a rel="nofollow" class="fa fa-google-plus link" href="https://plus.google.com/104750110875076285290" target="_blank"></a></li>
-                </ul>
-             </div>
-             <div class="col col_half text_right">
-                <a class="general_link" href="https://www.harmonicinc.com/resources"><img src="https://www.harmonicinc.com/wp-content/uploads/fly-images/3401/resource-60x75.png" alt="Resources"><span>Resources</span></a>
-                <a class="general_link" href="https://www.harmonicinc.com/news-insights/"><img src="https://www.harmonicinc.com/wp-content/uploads/fly-images/25/news-60x60.png" alt="News"><span>News</span></a>
-                <a class="general_link" href="https://www.harmonicinc.com/news-insights/events/"><img src="https://www.harmonicinc.com/wp-content/uploads/fly-images/27/events-60x60.png" alt="Events"><span>Events</span></a>
-                <a class="general_link" href="https://www.harmonicinc.com/news-insights/blog/"><img src="https://www.harmonicinc.com/wp-content/uploads/fly-images/26/blogs-60x58.png" alt="Blogs"><span>Blogs</span></a>
-             </div>
-          </div>
-       </div>
-    </div>
-    <div class="footer_menus">
-       <div class="c">
-          <div class="footer_logo text_right">
-             <a href="https://www.harmonicinc.com" class="f_logo_link"><img src="https://www.harmonicinc.com/wp-content/uploads/2018/08/harmonic-logo.svg" alt="logo" class="logo"></a>
-          </div>
-          <div class="col_row col_menus">
-             <div class="col col_1_4">
-                <h4 class="title myriad_semi">This is Harmonic</h4>
-                <ul class="ft_menu">
-                   <li><a href="https://www.harmonicinc.com/leadership/">Leadership</a></li>
-                   <li><a href="https://www.harmonicinc.com/investor/">Investor Relations</a></li>
-                   <li><a href="https://www.harmonicinc.com/customers/">Customers</a></li>
-                   <li><a href="https://www.harmonicinc.com/careers/">Careers</a></li>
-                   <li><a href="https://www.harmonicinc.com/global-citizenship/">Global Citizenship</a></li>
-                </ul>
-             </div>
-             <div class="col col_1_4">
-                <h4 class="title myriad_semi">My Account</h4>
-                <ul class="ft_menu">
-                   <li><a href="https://www.vos.tv/VosCPLoginPage" target="_blank">VOS360 SaaS</a></li>
-                   <li><a href="https://www.file360.harmonicinc.com/login" target="_blank">File360 Transcoding SaaS</a></li>
-                   <li><a href="https://www.harmonicinc.com/video-appliances-software/technical-support/">Technical Support</a></li>
-                   <li><a href="https://harmonic.force.com/SWAccess/SWDownloadLogin" target="_blank">Customer Portal</a></li>
-                   <li><a href="https://harmonic.channeltivity.com/Login" target="_blank">Channel Partner Portal</a></li>
-                </ul>
-             </div>
-             <div class="col col_1_4">
-                <h4 class="title myriad_semi">Contact Us</h4>
-                <ul class="ft_menu">
-                   <li><a href="https://www.harmonicinc.com/contact?g=request-a-quote">General Information</a></li>
-                   <li><a href="https://www.harmonicinc.com/video-appliances-software/technical-support/">Technical Support</a></li>
-                </ul>
-                <a class="title myriad_semi mt30 footer-partner-name" href="https://www.harmonicinc.com/partners/">OUR PARTNERS</a>                    
-                <ul class="ft_menu">
-                   <li><a href="https://www.harmonicinc.com/partners/become-partner/">Become Channel Partner</a></li>
-                   <li><a href="https://www.harmonicinc.com/partners/technology-partners/">Technology Partners</a></li>
-                </ul>
-             </div>
-             <div class="col col_1_4">
-                <h4 class="title myriad_semi">Don't miss a thing</h4>
-                <p class="desc myriad_reg">Keep informed on the latest solutions to produce, deliver and monetize amazing video experiences</p>
-                <div role="form" class="wpcf7" id="wpcf7-f58-o1" lang="en-US" dir="ltr">
-                   <div class="screen-reader-response"></div>
-                   <form action="/saas-for-video/360-services/file360-transcoding-saas/#wpcf7-f58-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-                      <div style="display: none;">
-                         <input type="hidden" name="_wpcf7" value="58">
-                         <input type="hidden" name="_wpcf7_version" value="5.1.1">
-                         <input type="hidden" name="_wpcf7_locale" value="en_US">
-                         <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f58-o1">
-                         <input type="hidden" name="_wpcf7_container_post" value="0">
-                         <input type="hidden" name="g-recaptcha-response" value="">
-                      </div>
-                      <div class="footer_newsletter">
-                         <span class="wpcf7-form-control-wrap Email"><input type="email" name="Email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email"></span>
-                         <p></p>
-                         <div class="submit">
-                            <input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span>
-                         </div>
-                      </div>
-                      <div class="wpcf7-response-output wpcf7-display-none"></div>
-                   </form>
-                </div>
-             </div>
-          </div>
-          <div class="bottom_menu">
-             <ul class="ft_bottom_menu">
-                <li><a href="https://www.harmonicinc.com/news-insights/">News &amp; Events</a></li>
-                <li><a href="https://www.harmonicinc.com/contact/">Contact</a></li>
-                <li><a href="https://www.harmonicinc.com/privacy-notice/">Privacy</a></li>
-                <li><a href="https://www.harmonicinc.com/video-appliances-software/services/training/university/harmonic-training-terms-use/">Terms &amp; Conditions</a></li>
-                <li><a href="https://www.harmonicinc.com/cookie-policy/">Cookie Policy</a></li>
-             </ul>
-          </div>
-          <div class="copy_right myriad">© 2019 Harmonic, Inc. All rights reserved worldwide.</div>
-       </div>
-    </div>
-    <div class="cookie_policy_footer">
-       <div class="c">
-          <div class="cookie_policy_content c_editor dosis_medium tit_lft">
-             <p>We are using cookies to give you the best experience on our site. By continuing to use our website without changing the settings, you are agreeing to our use of cookies. <a href="https://www.harmonicinc.com/privacy-notice/" target="_blank" rel="noopener">No, I want to find out more</a></p>
-          </div>
-          <div class="cookie_policy_btn"><a class="cookie_policy_accept trans_btn">YES, I AGREE</a></div>
-       </div>
-    </div>
- </div>
+         <div class="bottom_menu">
+            <ul class="ft_bottom_menu">
+               <li><a href="https://www.harmonicinc.com/news-insights/">News &amp; Events</a></li>
+               <li><a href="https://www.harmonicinc.com/contact/">Contact</a></li>
+               <li><a href="https://www.harmonicinc.com/privacy-notice/">Privacy</a></li>
+               <li><a href="https://www.harmonicinc.com/video-appliances-software/services/training/university/harmonic-training-terms-use/">Terms &amp; Conditions</a></li>
+               <li><a href="https://www.harmonicinc.com/cookie-policy/">Cookie Policy</a></li>
+            </ul>
+         </div>
+         <div class="copy_right myriad">© 2019 Harmonic, Inc. All rights reserved worldwide.</div>
+      </div>
+   </div>
+   <div class="cookie_policy_footer">
+      <div class="c">
+         <div class="cookie_policy_content c_editor dosis_medium tit_lft">
+            <p>We are using cookies to give you the best experience on our site. By continuing to use our website without changing the settings, you are agreeing to our use of cookies. <a href="https://www.harmonicinc.com/privacy-notice/" target="_blank" rel="noopener">No, I want to find out more</a></p>
+         </div>
+         <div class="cookie_policy_btn"><a class="cookie_policy_accept trans_btn">YES, I AGREE</a></div>
+      </div>
+   </div>
+</div>
