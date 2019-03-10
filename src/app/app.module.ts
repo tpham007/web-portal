@@ -18,7 +18,6 @@ import { PanelComponent } from './panel/panel.component';
 import { ApplicationFilter } from './pipe/application.filter';
 import { ApplicationOrder } from './pipe/application.order';
 import { APP_BASE_HREF } from '@angular/common';
-import { BlankComponent } from './blank/blank.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -29,7 +28,6 @@ export function createCompiler(compilerFactory: CompilerFactory) {
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
     FooterComponent,
     HeaderComponent,
     WorkspaceComponent,
@@ -38,7 +36,6 @@ export function createCompiler(compilerFactory: CompilerFactory) {
     PanelComponent,
     ApplicationFilter,
     ApplicationOrder,
-    BlankComponent,
     AppInfoContent,
   ],
   imports: [
