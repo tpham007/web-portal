@@ -26,7 +26,7 @@
         },
         {
             "id": 8,
-            "name": "System",
+            "name": "Systems",
             "icon": "../../assets/img/system.png",
             "type": "Operation",
             "path": "system",
@@ -50,7 +50,7 @@
         },
         {
             "id": 9,
-            "name": "Software",
+            "name": "Softwares",
             "icon": "../../assets/img/software.png",
             "type": "Operation",
             "path": "software",
