@@ -12,7 +12,7 @@
     opacity: .3;
 }
 .app-logo.active {
-    box-shadow: 0px 0px 20px 5px lightslategrey;
+    box-shadow: 0px 0px 20px 5px white;
 }
 .app-tooltip {
     font-size: 12px;

@@ -29,7 +29,7 @@
             "name": "System",
             "icon": "../../assets/img/system.png",
             "type": "Operation",
-            "path": "System",
+            "path": "system",
             "location": "assets/dist/system.umd.js",
             "moduleName": "SystemModule",
             "description": "System information",

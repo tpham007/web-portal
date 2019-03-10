@@ -1,5 +1,5 @@
 
-<div *ngIf="announcements!=null" class="animated bounceInDown">
+<div *ngIf="announcements!=null" class="animated bounceInDown" style="margin-top:0.2vw;">
     <hub-announcement [announcement]="announcements[0]"></hub-announcement>
 </div>
 
@@ -13,10 +13,10 @@
 
     <div class="row clearfix">
         <div class="col-xs-6 col-sm-6 col-md-3">
-            <div class="panel panel-default harmonic-gradient-lightblue" style="border: 1px solid #018eb4;cursor: pointer;" ng-click="gotoPage('System')">
+            <div [routerLink]="['/system']" class="panel panel-default harmonic-gradient-lightblue" style="border: 1px solid #018eb4;cursor: pointer;" ng-click="gotoPage('System')">
                 <div class="panel-body" style="text-align: center;padding-bottom: 35px;padding-top: 35px;color: white;">
                     <h2 id="RuntimeTotalId" class="ng-binding"><span class="oi oi-laptop"></span> 0</h2>
-                    <div id="divRuntimeLabel" style="letter-spacing: 1px;" (click)="ann()">SYSTEMS</div>
+                    <div id="divRuntimeLabel" style="letter-spacing: 1px;">SYSTEMS</div>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
             <div class="panel panel-default harmonic-gradient-violet" style="border: 1px solid #780d3c;cursor: pointer;" ng-click="gotoPage('Support')">
                 <div class="panel-body" style="text-align: center;padding-bottom: 35px;padding-top: 35px;color: white;">
                     <h2 class="ng-binding"><span class="oi oi-bolt"></span>0</h2>
-                    <div id="div-wel-incidents" style="letter-spacing: 1px;">INCIDENTS</div>
+                    <div id="div-wel-incidents" style="letter-spacing: 1px;" (click)="ann()">INCIDENTS</div>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
         </div>
     
         <div class="col-xs-6 col-sm-6 col-md-3">
-            <div class="panel panel-default" style="background-color: #04375a;border: 1px solid #777;cursor: pointer;" ng-click="gotoPage('Software')">
+            <div [routerLink]="['/software']" class="panel panel-default" style="background-color: #04375a;border: 1px solid #777;cursor: pointer;" ng-click="gotoPage('Software')">
                 <div class="panel-body" style="text-align: center;padding-bottom: 35px;padding-top: 35px;color: white;">
                     <h2><span class="oi oi-layers"></span></h2>
                     <div id="divCommunity" style="letter-spacing: 1px;">SOFTWARE</div>
