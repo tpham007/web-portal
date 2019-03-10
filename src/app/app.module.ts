@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { ModuleService } from './module.service';
 import { RouterService } from './router.service';
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
 import { AppInfoContent, FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { WorkspaceComponent } from './workspace/workspace.component';

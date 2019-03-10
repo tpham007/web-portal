@@ -75,7 +75,7 @@
         position: fixed;
         transition: none!important;
         animation-duration: 1s;
-        z-index: 0;
+        z-index: 999;
         border-left: 1px solid #47585f;
         background-color: #343a40;
     }
