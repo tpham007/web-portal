@@ -1,4 +1,7 @@
-<div id="appPanel">
+<div id="appPanel" (mouseover)="roll=true">
+  <button class="circle-top" [ngStyle]="{'display':(roll==true&&!isTop())?'':'none'}">
+    <i class="up"></i>
+  </button>
   <a>
       <img src="assets/img/logout.png"
         class="app-logo"
@@ -14,4 +17,7 @@
   <app-application *ngFor="let app of shareCollection.applications | applicationFilter:[{type:'Tool'}]"
     [attr.id]="app.id"
     [app]="app"></app-application>
+  <button class="circle-bottom" [ngStyle]="{'display':(roll==true&&!isBottom())==true?'':'none'}">
+    <i class="down"></i>
+  </button>
 </div>
