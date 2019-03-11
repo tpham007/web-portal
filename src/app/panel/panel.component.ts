@@ -43,18 +43,30 @@ export class PanelComponent implements OnInit {
       }
     });
   }
+  /*
   isTop() {
     if (this.topAppElm == null) {
       let topAppId = this.shareCollection.applications[0].id;
       this.topAppElm = document.getElementById(topAppId);
     }
-    return this.topAppElm.parentElement.parentElement.parentElement.scrollTop <= 30;
+    if (this.topAppElm != null) {      
+      return this.topAppElm.parentElement.parentElement.parentElement.scrollTop <= 30;
+    } else {
+      return true;
+    }
   }
   isBottom() {
     if (this.bottomAppElm == null) {
       let bottomAppId = this.shareCollection.applications[this.shareCollection.applications.length-1].id;
       this.bottomAppElm = document.getElementById(bottomAppId);
     }
-    return (this.bottomAppElm.offsetTop+this.bottomAppElm.parentElement.parentElement.parentElement.offsetTop+this.bottomAppElm.parentElement.parentElement.parentElement.scrollTop-this.bottomAppElm.parentElement.parentElement.parentElement.offsetHeight) >= -30;
+    if (this.bottomAppElm != null) {
+      var offs = this.bottomAppElm.parentElement.parentElement.parentElement.offsetHeight-(this.bottomAppElm.offsetTop+this.bottomAppElm.parentElement.parentElement.parentElement.scrollTop);
+      console.log("offs="+offs);
+      return  offs <= 65;
+    } else {
+      return true;
+    }
   }
+  */
 }
