@@ -11,11 +11,12 @@
     background-image: url("https://www.harmonicinc.com/wp-content/themes/harmonics/assets/css/../images/triangles-bg-blue.jpg");
 }
 .burger_menu {
-    right: 17px!important;
+    right: 20px!important;
     left: unset!important;
 }
 .burger .line {
     background-color: white!important;
+    height: 4px!important;
 }
 .open-menu .burger .line {
     background-color: transparent!important;
