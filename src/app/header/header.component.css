@@ -10,9 +10,18 @@
     background-size: cover;
     background-image: url("https://www.harmonicinc.com/wp-content/themes/harmonics/assets/css/../images/triangles-bg-blue.jpg");
 }
+.app-mobile {
+    display: none;
+}
+.app-desktop {
+    display: block;
+}
 .burger_menu {
     right: 20px!important;
     left: unset!important;
+}
+.burger_menu:hover {
+    opacity: .3;
 }
 .burger .line {
     background-color: white!important;
@@ -21,33 +30,26 @@
 .open-menu .burger .line {
     background-color: transparent!important;
 }
-.open-menu .burger .line:before, .open-menu .burger .line:after {
+.open-menu .app-mobile .burger .line {
     background-color: white!important;
 }
-#app-header {
-    width: 100vw;
-    height: 78px;
-    display:inline-flex;
+.app-mobile .burger .line:before {
+    top: -9px!important;
 }
-#app-select {
-    left: 120px;
+.open-menu .app-mobile .burger .line:before {
+    top: -9px!important;
+    transform: rotate(0)!important;
 }
-#app-anchor {
-    height: 4.5vh;
-    width: 4.5vw;
-    display: inline-flex;
-    text-align: center;
-    position: fixed;
-    cursor: pointer;
-    opacity: 1;
-    right: 0px;
-    top: 25px;
+.open-menu .app-mobile .burger .line:after {
+    bottom: -9px!important;
+    transform: rotate(0)!important;
 }
-#app-anchor:hover {
-    opacity: .3;
+.app-mobile .burger .line:after {
+    bottom: -9px!important;
 }
-.show-anchor {
-    display: none;
+
+.open-menu .burger .line:before, .open-menu .burger .line:after {
+    background-color: white!important;
 }
 .pin-app {
     display: block!important;
@@ -67,13 +69,6 @@
     opacity: 1;
 }
 .navbar-brand:hover {
-    opacity: .3;
-}
-
-#app-select {
-    opacity: 1;
-}
-#app-select:hover {
     opacity: .3;
 }
 
@@ -128,7 +123,7 @@
     left: 0;
 }
 
-#div-status {
+.server-status {
     animation-delay: 1.5s;
 }
 
@@ -166,15 +161,6 @@
 }
 
 @media screen and (max-width:  768px) {
-    #app-anchor {
-        right: 20px;
-    }
-    .show-anchor {
-        display: block;
-        opacity: 1;
-        animation-delay: .5s;
-        cursor: pointer;
-    }
     .show-app {
         display: none!important;
         pointer-events: none;
@@ -183,7 +169,13 @@
         display: none!important;
         pointer-events: none;
     }
-    #div-status {
+    .server-status {
         display: none!important;
+    }
+    .app-mobile {
+        display: block;
+    }
+    .app-desktop {
+        display: none;
     }
 }
