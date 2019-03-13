@@ -8,6 +8,11 @@
     position:fixed;
     top:10px;
     right:10px;
-    background-color: #6c757d;
-    background: rgba(52, 58, 64, 0.5);
+    background: transparent;
+    border-radius: 3px;
+    padding: 7px;
+}
+.acknowledge:hover {
+    background: white;
+    color: black;
 }

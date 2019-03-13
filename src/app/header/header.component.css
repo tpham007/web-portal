@@ -20,7 +20,7 @@
 }
 #app-anchor {
     height: 78px;
-    width: 70px;
+    width: 5vw;
     display:inline-flex;
     text-align: center;
     position: fixed;
