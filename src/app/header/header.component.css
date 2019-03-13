@@ -1,4 +1,4 @@
-.sticky, .header {
+.app-header {
     z-index: 999;
     position: fixed;
     display: inline-block;
