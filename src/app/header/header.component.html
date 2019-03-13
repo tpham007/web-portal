@@ -1,4 +1,10 @@
 <nav class="header"> 
+  <div class="burger_menu">
+      <a class="link burger"
+        (click)="shareCollection.pinApp=!shareCollection.pinApp;shareCollection.showApp=!shareCollection.showApp">
+        <span class="line"></span>
+      </a>                            
+  </div>
   <span id="app-header">
     <a class="navbar-brand" style="margin-top: auto; margin-bottom: auto; margin-left: 10px;">
         <img id="appLogo" [src]="imgSrc"
@@ -26,14 +32,13 @@
         </div>                
     </span>
   </span>
-  <span id="app-anchor">
+  <!-- <span id="app-anchor">
     <span class="animated fadeIn" style="margin:auto;" title="Show Apps">
-      <img style="display: none;" [class.show-app]="!shareCollection.pinApp" src="assets/img/app-list.png" width="32" height="32"
+      <img style="display: none;" [class.show-app]="!shareCollection.pinApp" 
+        src="assets/img/app-list.png" width="32" height="32"
         (click)="shareCollection.pinApp=true;shareCollection.showApp=true">
-      <img class="show-anchor" src="assets/img/app-list.png" width="32" height="32"
-        (click)="shareCollection.showApp=!shareCollection.showApp">
       <span style="display: none;color:white;" [class.pin-app]="shareCollection.pinApp"
         (click)="shareCollection.pinApp=false;shareCollection.showApp=false;">&#10005;</span>
     </span>
-  </span>
+  </span> -->
 </nav>
