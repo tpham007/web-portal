@@ -9,6 +9,7 @@ export class TabComponent implements OnInit {
   @Input() title = '';
   @Input() active = false;
   @Input() disabled = false;
+  @Input() url = '';
   constructor() { }
 
   ngOnInit() {

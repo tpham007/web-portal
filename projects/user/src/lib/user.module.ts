@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common'; 
-import { UserComponent } from './user.component';
+import { UserComponent, UserHarmonicIdComponent } from './user.component';
 import { CustomizeModule  } from 'customize';
 @NgModule({
   imports: [
@@ -9,11 +9,16 @@ import { CustomizeModule  } from 'customize';
     CustomizeModule,
     RouterModule.forChild([
       {
-        path: '', pathMatch: 'full', component: UserComponent
+        path: '', 
+        component: UserComponent,
+        children: [
+          { path: '', redirectTo: 'harmonicid'},
+          { path: 'harmonicid', component: UserHarmonicIdComponent }
+        ]
       }
     ])
   ],
-  declarations: [UserComponent],
-  exports: [UserComponent]
+  declarations: [UserComponent, UserHarmonicIdComponent],
+  exports: [UserComponent, UserHarmonicIdComponent]
 })
 export class UserModule { }

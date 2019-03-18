@@ -13,3 +13,17 @@ export class SettingComponent implements OnInit {
   }
 
 }
+
+@Component({
+  selector: 'hub-setting-notifications',
+  templateUrl: './setting.notifications.component.html',
+  styleUrls: ['./setting.component.css']
+})
+export class SettingNotificationsComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

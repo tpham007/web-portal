@@ -1,17 +1,22 @@
-import { Component, AfterContentInit , Input, Output, ContentChildren, EventEmitter} from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterContentInit , Input, Output, ContentChildren, EventEmitter} from '@angular/core';
 import { TabComponent } from '../tab/tab.component';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'hub-tabset',
   templateUrl: './tabset.component.html',
   styleUrls: ['./tabset.component.css']
 })
-export class TabsetComponent implements AfterContentInit  {
+export class TabsetComponent implements OnInit, AfterContentInit  {
   @Input() vertical;
   @Output() onSelect = new EventEmitter();
   @ContentChildren(TabComponent) tabs;
-  constructor() { }
+  activeTab: any;
+  constructor(private route: ActivatedRoute) { }
 
+  ngOnInit() {
+    this.activeTab = this.route.snapshot['_routerState'].url.split('/', 3)[2];
+  }
   ngAfterContentInit() {
     const tabs = this.tabs.toArray();
     const actives = this.tabs.filter(t => { return t.active });
@@ -22,13 +27,7 @@ export class TabsetComponent implements AfterContentInit  {
       tabs[0].active = true;
     }
   }
-
-  tabClicked(tab) {
-    const tabs = this.tabs.toArray();
-
-    tabs.forEach(tab => tab.active = false);
-    tab.active = true;
-
-    this.onSelect.emit(tab);
+  public isActive(tab) {
+    return tab == this.activeTab;
   }
 }

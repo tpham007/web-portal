@@ -16,3 +16,17 @@ export class UserComponent implements OnInit {
   }
 
 }
+
+@Component({
+  selector: 'hub-user-harmonicid',
+  templateUrl: './user.harmonicid.component.html',
+  styleUrls: ['./user.component.css']
+})
+export class UserHarmonicIdComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

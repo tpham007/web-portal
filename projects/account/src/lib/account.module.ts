@@ -1,20 +1,25 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common'; 
 import { CustomizeModule  } from 'customize';
-import { AccountComponent } from './account.component';
-
+import { AccountComponent, AccountInformationComponent, AccountInvoicesComponent } from './account.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
-  declarations: [AccountComponent],
+  declarations: [AccountComponent, AccountInformationComponent, AccountInvoicesComponent],
   imports: [
     CommonModule,
     CustomizeModule,
     RouterModule.forChild([
       {
-        path: '', pathMatch: 'full', component: AccountComponent
+        path: '',
+        component: AccountComponent,
+        children: [
+          { path: '', redirectTo: 'information'},
+          { path: 'information', component: AccountInformationComponent },
+          { path: 'invoices', component: AccountInvoicesComponent }
+        ]    
       }
     ])
   ],
-  exports: [AccountComponent]
+  exports: [AccountComponent, AccountInformationComponent, AccountInvoicesComponent]
 })
 export class AccountModule { }

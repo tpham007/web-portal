@@ -5,9 +5,9 @@
     [class.nav-tabs]="!vertical">
     <li
       *ngFor="let tab of tabs"
-      [class.active]="tab.active">
+      [ngClass]="{'active': isActive(tab.url)}">
       <a
-        (click)="tabClicked(tab)"
+        [routerLink]="tab.url"
         class="btn"
         [class.disabled]="tab.disabled">
         <span>{{tab.title}}</span>
@@ -15,6 +15,6 @@
     </li>
   </ul>
   <div class="tab-content">
-    <ng-content></ng-content>
+    <router-outlet></router-outlet>
   </div>
 </section>

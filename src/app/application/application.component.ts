@@ -5,8 +5,8 @@ import { RepositoryService } from '../repository.service';
 @Component({
   selector: 'app-application',
   templateUrl: './application.component.html',
-  encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./application.component.css']
+  styleUrls: ['./application.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ApplicationComponent implements OnInit {
   @Input() app: Application;

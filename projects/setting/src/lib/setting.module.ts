@@ -2,19 +2,24 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common'; 
 import { CustomizeModule  } from 'customize';
-import { SettingComponent } from './setting.component';
+import { SettingComponent, SettingNotificationsComponent } from './setting.component';
 
 @NgModule({
-  declarations: [SettingComponent],
+  declarations: [SettingComponent, SettingNotificationsComponent],
   imports: [
     CommonModule,
     CustomizeModule,
     RouterModule.forChild([
       {
-        path: '', pathMatch: 'full', component: SettingComponent
+        path: '', 
+        component: SettingComponent,
+        children: [
+          { path: '', redirectTo: 'notifications'},
+          { path: 'notifications', component: SettingNotificationsComponent }
+        ] 
       }
     ])
   ],
-  exports: [SettingComponent]
+  exports: [SettingComponent, SettingNotificationsComponent]
 })
 export class SettingModule { }
