@@ -1,6 +1,7 @@
 #!/bin/bash
 cd ./projects
 if [ -z "$1" ]; then
+    ng build customize
     for proj in *; do
         ng build $proj
         cp ../dist/$proj/bundles/*.* ../src/assets/dist/.
