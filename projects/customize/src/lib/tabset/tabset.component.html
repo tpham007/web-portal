@@ -5,7 +5,7 @@
     [class.nav-tabs]="!vertical">
     <li
       *ngFor="let tab of tabs"
-      [ngClass]="{'active': isActive(tab.url)}">
+      routerLinkActive="active">
       <a
         [routerLink]="tab.url"
         class="btn"
