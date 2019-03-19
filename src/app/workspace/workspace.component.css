@@ -10,3 +10,9 @@
     display: flex;
     padding-top: 78px;
 }
+
+@media screen and (max-width:  768px) {
+    :host {
+        padding-top: 70px;
+    }
+}

@@ -55,6 +55,10 @@
     animation-name: slideOutRight!important;
 }
 @media screen and (max-width:  768px) {
+    .body {
+        top: 86.px;
+        min-height: calc(100vh - 70px - 20px);
+    }
     .workspace-app >>> app-workspace {
         width: 100vw!important;
         margin-left: 0vw;
@@ -77,6 +81,8 @@
         z-index: 999;
         border-left: 1px solid #47585f;
         background-color: #343a40;
+        height: calc(100vh - 70px);
+        margin-top: 70px;
     }
     .app-panel.slideInLeft {
         animation-name: none;

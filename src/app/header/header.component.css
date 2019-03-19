@@ -11,10 +11,10 @@
     background-image: url("https://www.harmonicinc.com/wp-content/themes/harmonics/assets/css/../images/triangles-bg-blue.jpg");
 }
 .app-mobile {
-    display: none;
+    display: none!important;
 }
 .app-desktop {
-    display: block;
+    display: inline-flex!important;
 }
 .burger_menu {
     right: 20px!important;
@@ -173,9 +173,15 @@
         display: none!important;
     }
     .app-mobile {
-        display: block;
+        display: inline-flex!important;
+    }
+    .app-mobile > span {
+        font-size: 18px!important;
     }
     .app-desktop {
-        display: none;
+        display: none!important;
+    }
+    .app-header {
+        height: 70px!important;
     }
 }
