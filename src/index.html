@@ -7,7 +7,21 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <script type="text/javascript" defer="" src="https://www.harmonicinc.com/wp-content/cache/autoptimize/js/autoptimize_b6e1c9cf873662fafe25f472178a0225.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <!-- <script type="text/javascript" defer="" src="https://www.harmonicinc.com/wp-content/cache/autoptimize/js/autoptimize_b6e1c9cf873662fafe25f472178a0225.js"></script> -->
+  <script>
+    $(function () {
+      $('body').on('click', '.burger', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if ($('html').hasClass('open-menu')) {
+            $('html').removeClass('open-menu');
+        } else {
+            $('html').addClass('open-menu');
+        }
+      });
+    });
+  </script>
 </head>
 <body>
   <app-root></app-root>
