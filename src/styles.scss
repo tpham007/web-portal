@@ -1,12 +1,12 @@
 @import "./assets/css/animate.min";
-@import './assets/css/harmonic.css';
+
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
 }
   
 body {
-    font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+    // font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif!important;
     text-align: center;
     font-style: normal;
     font-weight: 300;
